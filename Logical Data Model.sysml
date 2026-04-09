@@ -1,6 +1,6 @@
 package 'Logical Data Model' {
     package 'Requirement Attributes' {
-        item def 'Base Requirement' {
+        item def 'Requirement' {
             item 'Requirement Status' : 'Requirement Attributes'::'Requirement Status';
             item 'Requirement ID' : 'Requirement Attributes'::'Requirement ID';
             item 'Requirement Name' : 'Requirement Attributes'::'Requirement Name';
@@ -136,15 +136,15 @@ package 'Logical Data Model' {
         }
     }
     package 'Requirement Abstraction Levels' {
-        item def 'System Requirement' :> 'Requirement Attributes'::'Base Requirement';
-        item def 'Subsystem Requirement' :> 'Requirement Attributes'::'Base Requirement';
-        item def 'Component Requirement' :> 'Requirement Attributes'::'Base Requirement';
+        item def 'System Requirement' :> 'Requirement Attributes'::'Requirement';
+        item def 'Subsystem Requirement' :> 'Requirement Attributes'::'Requirement';
+        item def 'Component Requirement' :> 'Requirement Attributes'::'Requirement';
     }
     package 'Requirement Derivation Abstraction Levels' {
-        item def 'Scoping Requirement' :> 'Requirement Attributes'::'Base Requirement' {
+        item def 'Scoping Requirement' :> 'Requirement Attributes'::'Requirement' {
             doc /* This is a requirement that forms the basis for some requirement derivation effort. */
         }
-        item def 'Resulting Requirement' :> 'Requirement Attributes'::'Base Requirement' {
+        item def 'Resulting Requirement' :> 'Requirement Attributes'::'Requirement' {
             doc /* This is a requirement authored from some requirement derivation effort.*/
         }
     }
@@ -226,7 +226,7 @@ package 'Logical Data Model' {
             doc /* An individual interaction with the system. */
         }
     }
-    package 'Types of Analyses' {
+    package 'Analyses and Procedures' {
         item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
             item def 'Functional Analysis' :> 'Analysis Case' {
                 item 'Use Case Actor' : 'Analysis Attributes'::'Use Case Actor';
@@ -303,6 +303,36 @@ package 'Logical Data Model' {
         }
         item def 'Software CI'{
             doc /* A designated, manageable work product within a software system that requires separate configuration control, such as source code files, documentation, test cases, or data files  */ 
+        }
+    }
+    package 'Types of Software' {
+        item def 'Software' {
+            doc /* A Computer Program */
+        }
+        item def 'System Software' :> 'Software' {
+            doc /* Software that works with hardware of the computer and performs tasks that are machine oriented. It can also provide a platoform for other software */
+        }
+        item def 'Operating System' :> 'System Software' {
+            doc /* Software that supports a computer's basic functions */
+        }
+        item def 'Application' :> 'Software' {
+            doc /* A program or piece of software designed to meet a particular purpose of a user */
+        }
+        item def 'Application Version' :> 'Application' {
+            doc /* A particular iteration of an application */
+        }
+        item def 'Application Instance' :> 'Application Version' {
+            doc /* A particular deployment of an application */
+        }
+    }
+    package 'Software Attributes' {
+        item def 'Application Class' {
+            item def 'Client Application' {
+                doc /* An application that runs on a user's local device and connects to a server as necessary */
+            }
+            item def 'Server Application' {
+                doc /* An application that runs on a remote server and communicates with a client upon request */
+            }
         }
     }
 }
