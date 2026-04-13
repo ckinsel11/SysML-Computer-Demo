@@ -1,6 +1,7 @@
 package 'Logical Data Model' {
     package 'Requirement Attributes' {
         item def 'Requirement' {
+            doc /* A requirement is a documented, verifiable statement that indicates a function, capability, constraint, or or performance that a system, product or part needs to meet. */
             item 'Requirement Status' : 'Requirement Attributes'::'Requirement Status';
             item 'Requirement ID' : 'Requirement Attributes'::'Requirement ID';
             item 'Requirement Name' : 'Requirement Attributes'::'Requirement Name';
@@ -15,7 +16,6 @@ package 'Logical Data Model' {
             item 'Verification Rationale' : 'Requirement Attributes'::'Verification Rationale';
             item 'Requirement Category' : 'Requirement Attributes'::'Requirement Category';
             item 'Requirement Location' : 'Requirement Attributes'::'Requirement Location';
-            doc /* A requirement is a documented, verifiable statement that indicates a function, capability, constraint, or or performance that a system, product or part needs to meet. */
         }
         item def 'Requirement Status' {
             item def New :> 'Requirement Attributes'::'Requirement Status' {
@@ -97,11 +97,11 @@ package 'Logical Data Model' {
             doc /* A short summary of the requirement element. These do need to be unique.*/
         }
         item def 'Requirement Type' {
+            doc /* This is the descriptive kind of requirement. These typically inlcude "Functional", "Performance", "Constraint" and "Interface".*/
             item def Functional :> 'Requirement Attributes'::'Requirement Type';
             item def Constraint :> 'Requirement Attributes'::'Requirement Type';
             item def Performance :> 'Requirement Attributes'::'Requirement Type';
             item def Interface :> 'Requirement Attributes'::'Requirement Type';
-            doc /* This is the descriptive kind of requirement. These typically inlcude "Functional", "Performance", "Constraint" and "Interface".*/
         }
         item def 'Requirement Text' {
             doc /* The words of the requirement. This is typically in the "The <<noun>> shall..." format.*/
@@ -116,8 +116,7 @@ package 'Logical Data Model' {
             doc /* This is a description of how the requirement will be verified. */
         }
         item def 'Verification Frequency' {
-            doc /* Indicates when/how many times the requirement needs to be verified. 
-             */
+            doc /* Indicates when/how many times the requirement needs to be verified. */
             item def 'Non-Recurring' :> 'Requirement Attributes'::'Verification Frequency' {
                 doc /* Used to indentify requirements that are only verified once.*/
             }
@@ -150,11 +149,11 @@ package 'Logical Data Model' {
     }
     package 'Source Document Attributes' {
         item def 'Source Document' {
+            doc /* A record that contains details about a requirment, process, or practice. These can be standards.*/
             item 'Source Document ID' : 'Source Document Attributes'::'Source Document ID';
             item 'Source Document Name' : 'Source Document Attributes'::'Source Document Name';
             item 'Source Document Version' : 'Source Document Attributes'::'Source Document Version';
             item 'Source Document Section' : 'Source Document Attributes'::'Source Document Section';
-            doc /* A record that contains details about a requirment, process, or practice. These can be standards.*/
         }
         item def 'Source Document ID' {
             doc /* Unique Identifier for a source document. This is typically assigned by the authoring agency.*/
@@ -184,6 +183,7 @@ package 'Logical Data Model' {
             doc /* This is a textual description of the desired result from executing the analysis */
         }
         item def 'Analysis Priority' {
+            doc /* Discretionary descriptor for organizing analysis efforts. Each team may have different ways of assigning priority and this attribute allows those to be assigned.*/
             item def 'High Priority' :> 'Analysis Attributes'::'Analysis Priority' {
                 doc /* Highest Priority*/
             }
@@ -199,7 +199,6 @@ package 'Logical Data Model' {
             item def 'Low Priority' :> 'Analysis Attributes'::'Analysis Priority' {
                 doc /* Lowest Priority*/
             }
-            doc /* Discretionary descriptor for organizing analysis efforts. Each team may have different ways of assigning priority and this attribute allows those to be assigned.*/
         }
         item def Author {
             doc /* This attribute provides an identification for the team responsible for providing the analysis results. Note: This is not meant for individual identification as those people may leave the team */
@@ -228,21 +227,21 @@ package 'Logical Data Model' {
     }
     package 'Analyses and Procedures' {
         item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
+            doc /* An anlysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
             item def 'Functional Analysis' :> 'Analysis Case' {
-                item 'Use Case Actor' : 'Analysis Attributes'::'Use Case Actor';
-                item 'Precondition' : 'Analysis Attributes'::'Precondition';
-                item 'Postcondition' : 'Analysis Attributes'::'Postcondition';
-                item 'Flow of Events' : 'Analysis Attributes':: 'Flow of Events';
                 doc /* A functional case derives requirements that describe behaviors and functionality of the system when interacted with by an actor. In an ideal state, the behavior should be defined agnostic of the system. */
+                item 'Use Case Actor' : 'Analysis Attributes'::'Use Case Actor';
+                item Precondition : 'Analysis Attributes'::Precondition;
+                item Postcondition : 'Analysis Attributes'::Postcondition;
+                item 'Flow of Events' : 'Analysis Attributes'::'Flow of Events';
             }
             item def 'Performance Analysis' :> 'Analysis Case' {
-                item 'Assumption' : 'Analysis Attributes'::'Assumption';
                 doc /* Performance cases derive requirements from system performance parameters into lower level performance parameters. Simply put, this case is meant for number crunching.*/
+                item Assumption : 'Analysis Attributes'::Assumption;
             }
             item def 'Constraint Analysis' :> 'Analysis Case' {
                 doc /* The constraint case is for direct flow down of system requirements to lower level architecture elements Examples: This can be used for a direct copy, or identifying specific requirements from standards for the lower level elements. */
             }
-            doc /* An anlysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
         }
         item def 'Trade Study' :> 'Analysis Attributes'::'Analytic Context' {
             doc /* An analysis that identifies a preferred solution out of a list of possible solutions. These are done throughout the lifecycle and work to find a balance of technical requirements including cost, schedule, and performance.*/
@@ -254,9 +253,10 @@ package 'Logical Data Model' {
             doc /* This analysis looks at the functionality of a the system and it's response under attack from external systems or actors. This is different from functional analyses in that there aren't lower-level requirements being authored.*/
         }
         item def 'Procedure Case' :> 'Analysis Attributes'::'Analytic Context'{
+            doc /* Describes proceses that are executed with the physical manifestation of the system or sub-elements */
             item def 'Verification Procedure' :> 'Procedure Case' {
-                item 'Verification Procedure Step' : 'Analysis Attributes'::'Procedure Step';
                 doc /* Process to provide objective evidence that a system or element meets the specified requirement(s) */
+                item 'Verification Procedure Step' : 'Analysis Attributes'::'Procedure Step';
             }
             item def 'Integration Procedure' :> 'Procedure Case' {
                 doc /* Process to take a set of system elements and pull them together into a unified system. */
@@ -273,16 +273,15 @@ package 'Logical Data Model' {
             item def 'Disposal Procedure' :> 'Procedure Case' {
                 doc /* Process to bring the system or retired elements of the system to end of life */
             }
-            doc /* Describes proceses that are executed with the physical manifestation of the system or sub-elements */
         }
     }
     package 'Configuration Item Attributes' {
         item def 'Configuration Item' {
+            doc /* A product, allocated component of a product, or both that satisfies an end use function, has distinct requirements, functionality and/or product relationships, and is designated for distinct control in the configuration-management system. */
             item 'Part Number' : 'Configuration Item Attributes'::'Part Number';
             item 'Revision' : 'Configuration Item Attributes'::'Part Number Revision';
             item 'Structure Name' : 'Configuration Item Attributes'::'Product Structure Name';
             item 'Abbreviation' : 'Configuration Item Attributes'::'CI Abbreviation';
-            doc /* A product, allocated component of a product, or both that satisfies an end use function, has distinct requirements, functionality and/or product relationships, and is designated for distinct control in the configuration-management system. */
         }
         item def 'Part Number' {
             doc /* Unique identifier associated with the configuration item */
