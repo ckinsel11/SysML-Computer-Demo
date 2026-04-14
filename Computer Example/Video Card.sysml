@@ -1,4 +1,6 @@
 package 'Video Card' {
+    private import ScalarValues::*;
+    
     part def 'Video Card' {
         attribute Chipset;
         attribute Memory : Real;

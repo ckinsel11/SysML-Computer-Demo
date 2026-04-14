@@ -1,4 +1,7 @@
 package Motherboard {
+    private import ScalarValues::*;
+
+
     part def Motherboard {
         doc /*  */
         port Socket;

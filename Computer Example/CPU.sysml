@@ -1,4 +1,6 @@
 package CPU {
+    private import ScalarValues::*;
+
     part def 'Central Processing Unit' {
         doc /* Primary Processor of a Computer */
         port Socket;

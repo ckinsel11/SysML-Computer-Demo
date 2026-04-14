@@ -1,4 +1,6 @@
 package Storage {
+    private import ScalarValues::*;
+
     part def Storage {
         attribute Capacity : Real;
         attribute 'Drive Type';

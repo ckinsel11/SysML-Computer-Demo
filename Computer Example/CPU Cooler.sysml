@@ -1,4 +1,6 @@
 package 'CPU Cooler' {
+    private import ScalarValues::*;
+
     part def 'CPU Cooler' {
         doc /*  */
         attribute 'Fan RPM' : Real;

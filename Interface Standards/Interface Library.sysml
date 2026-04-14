@@ -17,7 +17,7 @@ library package 'Interface Library' {
         port def 'USB 1.0' :> USB {
             doc /*  */
         }
-        port def 'USB 1.0' :> USB {
+        port def 'USB 1.1' :> USB {
             doc /*  */
         }
         port def 'USB 2.0' :> USB {
@@ -35,7 +35,7 @@ library package 'Interface Library' {
         port def 'USB4' :> USB {
             doc /*  */
         }
-        port def 'USB4 2.0 :> USB {
+        port def 'USB4 2.0' :> USB {
             doc /*  */
         }
         
