@@ -1,0 +1,43 @@
+library package 'Interface Library' {
+    package 'Video Interfaces'{
+        port def DisplayPort {
+            doc /* Digital interface used to connect a video source to a display device */
+        }
+        port def HDMI {
+            doc /* High-Definition Multimedia Interface */
+        }
+        port def VGA {
+            doc /* Video Graphics Array */
+        }
+    }
+    package 'Peripheral Interfaces' {
+        abstract port def 'USB' {
+            doc /*  */
+        }
+        port def 'USB 1.0' :> USB {
+            doc /*  */
+        }
+        port def 'USB 1.0' :> USB {
+            doc /*  */
+        }
+        port def 'USB 2.0' :> USB {
+            doc /*  */
+        }
+        port def 'USB 3.0' :> USB {
+            doc /*  */
+        }
+        port def 'USB 3.1' :> USB {
+            doc /*  */
+        }
+        port def 'USB 3.2' :> USB {
+            doc /*  */
+        }
+        port def 'USB4' :> USB {
+            doc /*  */
+        }
+        port def 'USB4 2.0 :> USB {
+            doc /*  */
+        }
+        
+    }
+}
