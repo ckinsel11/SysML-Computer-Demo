@@ -1,5 +1,8 @@
 library package 'Connector Library'{
     package HDMI {
+        port def 'Type A' {
+            doc /*  */
+        }
     }
     package USB {
         port def 'Standard-A'{
@@ -30,5 +33,4 @@ library package 'Connector Library'{
             doc /*  */
         }
     }
-
 }
