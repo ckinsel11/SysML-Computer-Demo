@@ -2,12 +2,12 @@ package Case {
     private import ScalarValues::*;
 
     part def Case {
-        attribute 'Case Type';
+        attribute 'Case Type' : 'enum_Case Type';
         attribute 'Internal 3.5 Bays' : Integer;
         attribute Volume : Real;
     }
 
-    enum def 'Case Type' {
+    enum def 'enum_Case Type' {
         enum SFF {
             doc /* Small Form Factor for Mini-ITX motherboards */
         }

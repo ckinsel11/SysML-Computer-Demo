@@ -18,6 +18,7 @@ package 'Logical Data Model' {
             item 'Requirement Location' : 'Requirement Attributes'::'Requirement Location';
         }
         item def 'Requirement Status' {
+            doc /* Current Status of the requirement*/
             item def New :> 'Requirement Attributes'::'Requirement Status' {
                 doc /* These are brand new requirements ready for peer review*/
             }
@@ -36,7 +37,6 @@ package 'Logical Data Model' {
             item def Draft :> 'Requirement Attributes'::'Requirement Status' {
                 doc /* These are requirements that are work in progress (i.e. just written) that are not ready for peer review.*/
             }
-            doc /* Current Status of the requirement*/
         }
         item def 'Verification Method' {
             item def Analysis :> 'Verification Method' {
