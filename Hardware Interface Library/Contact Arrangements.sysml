@@ -83,4 +83,27 @@ package 'Contact Arrangements' {
             port '5';
         }
     }
+    package HDMI{
+        port def 'HDMI Type A' {
+            port '1';
+            port '2';
+            port '3';
+            port '4';
+            port '5';
+            port '6';
+            port '7';
+            port '8';
+            port '9';
+            port '10';
+            port '11';
+            port '12';
+            port '13';
+            port '14';
+            port '15';
+            port '16';
+            port '17';
+            port '18';
+            port '19';
+        }
+    }
 }

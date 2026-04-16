@@ -46,4 +46,18 @@ package 'Unit Library'{
             }
         }
     }
+    package 'Frequency' {
+        attribute <MHz> megahertz :> hertz{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = mega;
+                :>>referenceUnit = hertz;
+            }
+        }
+        attribute <GHz> gigahertz :> hertz{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = giga;
+                :>>referenceUnit = hertz;
+            }
+        }
+    }
 }

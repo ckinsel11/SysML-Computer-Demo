@@ -1,8 +1,8 @@
-package 'CPU Cooler Library'{
+package 'CPU Cooler Catalog'{
     private import 'CPU Cooler'::'CPU Cooler';
 
     package 'MSI'{
-        part 'MAG Coreliquid A13' :'CPU Cooler'{
+        part def 'MAG Coreliquid A13' :> 'CPU Cooler'{
             doc /*  */
         }
     }

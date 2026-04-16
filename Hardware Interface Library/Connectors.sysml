@@ -4,6 +4,11 @@ library package 'Cable Connector Library'{
             doc /*  */
         }
     }
+    package DisplayPort {
+        port def 'DisplayPort'{
+            doc /*  */
+        }
+    }
     package USB {
         port def 'Standard-A'{
             doc /*  */
