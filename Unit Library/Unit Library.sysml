@@ -13,10 +13,36 @@ package 'Unit Library'{
                 :>>referenceUnit = 'bit/s';
             }
         }
-        attribute <'Gbit/s'> 'gigabit per second' :> 'bit/s' {
+        attribute <'Gbit/s'> 'gigabit per second' :> 'bit/s'{
             :>> unitConversion:MeasurementReferences::ConversionByPrefix{
                 :>>prefix = giga;
                 :>>referenceUnit = 'bit/s';
+            }
+        }
+    }
+    package 'Digital Storage' {
+        attribute <kB> kilobyte :> byte{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = kilo;
+                :>>referenceUnit = byte;
+            }
+        }
+        attribute <MB> megabyte :> byte{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = mega;
+                :>>referenceUnit = byte;
+            }
+        }
+        attribute <GB> gigabyte :> byte{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = giga;
+                :>>referenceUnit = byte;
+            }
+        }
+        attribute <TB> terabyte :> byte{
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix{
+                :>>prefix = tera;
+                :>>referenceUnit = byte;
             }
         }
     }
