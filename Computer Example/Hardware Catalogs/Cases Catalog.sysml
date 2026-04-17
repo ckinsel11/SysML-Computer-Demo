@@ -5,8 +5,8 @@ package 'Cases Catalog'{
     private import 'SI'::*;
     
     package 'be quiet!'{
-        part def 'Dark Base Pro 901' :> Case {
-            attribute :>> 'Case Type' : 'enum_Case Type'= 'enum_Case Type'::'Full-Tower';
+        part def 'Dark Base Pro 901' :> Case{
+            attribute :>>'Case Type' : 'enum_Case Type' = 'enum_Case Type'::'Full-Tower';
             attribute :>>Volume = 94.511 [L];
             attribute :>>'Internal 3.5 Bays' = 2;
             port 'USB 3.2 Type A'[4] : 'Standard-A';
@@ -15,9 +15,9 @@ package 'Cases Catalog'{
             port 'Headphone' : '3.5 mm';
         }
     }
-    package DIYPC {
-        part def 'Vanguard-RGB' :> Case {
-            attribute :>> 'Case Type' : 'enum_Case Type'= 'enum_Case Type'::'Mid-Tower';
+    package DIYPC{
+        part def 'Vanguard-RGB' :> Case{
+            attribute :>>'Case Type' : 'enum_Case Type' = 'enum_Case Type'::'Mid-Tower';
             attribute :>>'Internal 3.5 Bays' = 3;
             port 'USB 2.0 Type A'[2] : 'Standard-A';
             port 'USB 3.0 Type A'[2] : 'Standard-A';
