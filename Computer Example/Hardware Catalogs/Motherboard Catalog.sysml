@@ -1,6 +1,6 @@
 package 'Motherboard Catalog' {
     private import 'Unit Library':: 'Digital Storage'::*;
-    private import 'Motherboard'::Motherboard;
+    private import 'Motherboard'::*;
     private import 'CPU Sockets'::*;
     private import 'Cable Connector Library'::*;
 
@@ -10,8 +10,8 @@ package 'Motherboard Catalog' {
             attribute :>> Socket : AM5;
             attribute :>> 'Max Memory' = 256 [GB];
             attribute :>> 'Memory Slots' = 4;
-            attribute :>> 'Form Factor';
-            part :>> Chipset: AMD::X870E;
+            attribute :>> 'Form Factor' : 'enum_Motherboard Form Factor' = 'enum_Motherboard Form Factor'::ATX;
+            part :>> 'Motherboard Chipset': AMD::X870E;
             port HDMI1 [1]: HDMI::'Type A';
             port 'USB-A' [9] : USB::'Standard-A';
             port 'USB-C' [4] : USB::'Type-C';

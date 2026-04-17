@@ -1,6 +1,10 @@
 package Chipsets {
+    abstract part def Chipset {
+        doc /*  */
+    }
+
     package AMD {
-        abstract part def 'AMD Chipset';
+        abstract part def 'AMD Chipset' :> Chipset;
         abstract part def 'AM5 Chipset' :> 'AMD Chipset';
             part def A620 :> 'AM5 Chipset';
             part def A620A :> 'AM5 Chipset';
