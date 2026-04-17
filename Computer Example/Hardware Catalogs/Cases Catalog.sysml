@@ -15,4 +15,14 @@ package 'Cases Catalog'{
             port 'Headphone' : '3.5 mm';
         }
     }
+    package DIYPC {
+        part def 'Vanguard-RGB' :> Case {
+            attribute :>> 'Case Type' : 'enum_Case Type'= 'enum_Case Type'::'Mid-Tower';
+            attribute :>>'Internal 3.5 Bays' = 3;
+            port 'USB 2.0 Type A'[2] : 'Standard-A';
+            port 'USB 3.0 Type A'[2] : 'Standard-A';
+            port 'Microphone' : '3.5 mm';
+            port 'Headphone' : '3.5 mm';
+        }
+    }
 }

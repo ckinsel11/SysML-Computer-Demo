@@ -26,5 +26,14 @@ package 'CPU Catalog'{
             attribute :>>'Thread Count' = 28;
             attribute :>>'Maximum Supported Memory' = 192 [GB];
         }
+        part def 'Core i7-7700K' :> 'Central Processing Unit'{
+            port :>> Socket : LGA1151;
+            attribute :>>'Performance Core Clock' = 4.2 [GHz];
+            attribute :>>'Performance Core Boost Clock' = 4.5 [GHz];
+            attribute :>>'Thermal Design Power' = 91 [W];
+            attribute :>>'Core Count' = 4;
+            attribute :>>'Thread Count' = 8;
+            attribute :>>'Maximum Supported Memory' = 64 [GB];
+        }
     }
 }

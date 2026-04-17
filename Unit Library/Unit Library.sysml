@@ -1,6 +1,6 @@
 package 'Unit Library'{
     private import SI::*;
-    package 'Data Transfer' {
+    package 'Data Transfer'{
         attribute <'kbit/s'> 'kilobit per second' :> 'bit/s'{
             :>>unitConversion:MeasurementReferences::ConversionByPrefix{
                 :>>prefix = kilo;
@@ -20,7 +20,7 @@ package 'Unit Library'{
             }
         }
     }
-    package 'Digital Storage' {
+    package 'Digital Storage'{
         attribute <kB> kilobyte :> byte{
             :>>unitConversion:MeasurementReferences::ConversionByPrefix{
                 :>>prefix = kilo;
@@ -46,7 +46,7 @@ package 'Unit Library'{
             }
         }
     }
-    package 'Frequency' {
+    package 'Frequency'{
         attribute <MHz> megahertz :> hertz{
             :>>unitConversion:MeasurementReferences::ConversionByPrefix{
                 :>>prefix = mega;

@@ -18,6 +18,12 @@ package Chipsets {
             part def X870E :> 'AM5 Chipset';
     }
     package Intel {
-
-    }
+        abstract part def 'Intel Chipset' :> Chipset;
+        abstract part def 'Kaby Lake Chipset' :> 'Intel Chipset';
+            part def B250 :> 'Kaby Lake Chipset';
+            part def Q250 :> 'Kaby Lake Chipset';
+            part def H270 :> 'Kaby Lake Chipset';
+            part def Q270 :> 'Kaby Lake Chipset';
+            part def Z270 :> 'Kaby Lake Chipset';    
+    }   
 }

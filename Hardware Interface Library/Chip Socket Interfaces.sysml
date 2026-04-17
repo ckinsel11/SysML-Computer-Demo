@@ -13,7 +13,11 @@ package 'CPU Sockets' {
     }
     port def LGA1700 :> 'CPU Socket' {
         doc /*  */
-        atribute :>> 'Pin Count' = 1700;
+        attribute :>> 'Pin Count' = 1700;
+    }
+    port def LGA1151 :> 'CPU Socket' {
+        doc /*  */
+        attribute :>>'Pin Count' = 1151;
     }
     
 }

@@ -15,7 +15,7 @@ package Case {
             doc /* For Mini-ITX motherboards */
         }
         enum 'Micro-Tower' {
-            doc /* For Micro-ATX motherboards, smaller than full siz but not super small*/
+            doc /* For Micro-ATX motherboards, smaller than full size but not super small*/
         }
         enum 'Mid-Tower' {
             doc /* For ATX and larger mother boards. The "standard" size desktop case */
