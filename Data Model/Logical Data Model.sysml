@@ -39,6 +39,7 @@ package 'Logical Data Model' {
             }
         }
         item def 'Verification Method' {
+            doc /* How a requirement is intended to be verified. */
             item def Analysis :> 'Verification Method' {
                 doc /* The use of mathematical modeling and analytical techniques to predict the suitability of a design to stakeholder expectations based on calculated data or data derived from lower system structure end product verifications. Analysis is generally used when a prototype; engineering model; or fabricated, assembled, and integrated product is not available. Analysis includes the use of modeling and simulation as analytical tools. A model is a mathematical representation of reality. A simulation is the manipulation of a model. Analysis can include verification by similarity of a heritage product.*/
             }
@@ -51,9 +52,9 @@ package 'Logical Data Model' {
             item def Test :> 'Verification Method' {
                 doc /* The use of an end product to obtain detailed data needed to verify performance or provide sufficient information to verify performance through further analysis. Testing can be conducted on final end products, breadboards, brassboards, or prototypes. Testing produces data at discrete points for each specified requirement under controlled conditions and is the most resource-intensive verification technique. As the saying goes, “Test as you fly, and fly as you test.” (See Section 5.3.2.5 in the NASA Expanded Guidance for Systems Engineering at https://nen.nasa.gov/web/se/doc-repository)*/
             }
-            doc /* How a requirement is intended to be veririfed. */
         }
         item def 'Verification Status' {
+            doc /* Current status of verification efforts for the requirement.*/
             item def 'Complete - Failed' :> 'Requirement Attributes'::'Verification Status' {
                 doc /* This status indicates that the requirement has failed verification*/
             }
@@ -66,9 +67,9 @@ package 'Logical Data Model' {
             item def 'Incomplete - Not Started' :> 'Requirement Attributes'::'Verification Status' {
                 doc /* This status indicates that the requirement has not entered any verification process yet.*/
             }
-            doc /* Current status of verification efforts for the requirement.*/
         }
         item def 'Requirement Category' {
+            doc /* This lists out the type of object the requirement is. Requirement objects are not exclusively shall statements and this helps differentiate those types of elements.*/
             item def Heading :> 'Requirement Attributes'::'Requirement Category' {
                 doc /* Type of requirement object that provides and organizational structure.*/
             }
@@ -87,11 +88,9 @@ package 'Logical Data Model' {
             item def Table :> 'Requirement Attributes'::'Requirement Category' {
                 doc /* These objects are tabular views of information related to the set of requirements*/
             }
-            doc /* This lists out the type of object the requirement is. Requirement objects are not exclusively shall statements and this helps differentiate those types of elements.*/
         }
         item def 'Requirement ID' {
-            doc /* Unique Identifier for Requirement element
-             */
+            doc /* Unique Identifier for Requirement element */
         }
         item def 'Requirement Name' {
             doc /* A short summary of the requirement element. These do need to be unique.*/

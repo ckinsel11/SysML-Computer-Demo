@@ -85,6 +85,7 @@ package Profile {
             attribute 'Verification Status' : Enumerations::'enum_Verification Status';
             attribute 'Object Type' : Enumerations::'enum_Requirement Category';
             attribute 'Requirement Type' : Enumerations::'enum_Requirement Type';
+            attribute 'Requirement Rationale' : String;
         }
     }
 }
