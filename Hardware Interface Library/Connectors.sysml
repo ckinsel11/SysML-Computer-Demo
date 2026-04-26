@@ -1,40 +1,40 @@
-library package 'Cable Connector Library'{
+library package 'Cable Connector Library' {
     package HDMI {
         port def 'Type A' {
             doc /*  */
         }
     }
     package DisplayPort {
-        port def 'DisplayPort'{
+        port def 'DisplayPort' {
             doc /*  */
         }
     }
     package USB {
-        port def 'Standard-A'{
+        port def 'Standard-A' {
             doc /*  */
         }
-        port def 'Standard-B'{
+        port def 'Standard-B' {
             doc /*  */
         }
-        port def 'Mini-A'{
+        port def 'Mini-A' {
             doc /*  */
         }
-        port def 'Mini-AB'{
+        port def 'Mini-AB' {
             doc /*  */
         }
-        port def 'Mini-B'{
+        port def 'Mini-B' {
             doc /*  */
         }
-        port def 'Micro-A'{
+        port def 'Micro-A' {
             doc /*  */
         }
-        port def 'Micro-AB'{
+        port def 'Micro-AB' {
             doc /*  */
         }
-        port def 'Micro-B'{
+        port def 'Micro-B' {
             doc /*  */
         }
-        port def 'Type-C'{
+        port def 'Type-C' {
             doc /*  */
         }
     }

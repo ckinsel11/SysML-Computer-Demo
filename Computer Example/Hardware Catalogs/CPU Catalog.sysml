@@ -1,4 +1,4 @@
-package 'CPU Catalog'{
+package 'CPU Catalog' {
     private import CPU::*;
     private import 'CPU Sockets'::*;
     private import 'Unit Library'::Frequency::*;
@@ -6,7 +6,7 @@ package 'CPU Catalog'{
     private import SI::*;
 
     package AMD {
-        part def 'Ryzen 7 9800 X3D' :>'Central Processing Unit'{
+        part def 'Ryzen 7 9800 X3D' :>'Central Processing Unit' {
             port :>> Socket : AM5;
             attribute :>>'Performance Core Clock' = 4.7 [GHz];
             attribute :>>'Performance Core Boost Clock' = 5.2 [GHz];
@@ -17,7 +17,7 @@ package 'CPU Catalog'{
         }
     }
     package Intel {
-        part def 'Core i7-14700K' :> 'Central Processing Unit'{
+        part def 'Core i7-14700K' :> 'Central Processing Unit' {
             port :>> Socket : LGA1700;
             attribute :>>'Performance Core Clock' = 3.4 [GHz];
             attribute :>>'Performance Core Boost Clock' = 5.6 [GHz];
@@ -26,7 +26,7 @@ package 'CPU Catalog'{
             attribute :>>'Thread Count' = 28;
             attribute :>>'Maximum Supported Memory' = 192 [GB];
         }
-        part def 'Core i7-7700K' :> 'Central Processing Unit'{
+        part def 'Core i7-7700K' :> 'Central Processing Unit' {
             port :>> Socket : LGA1151;
             attribute :>>'Performance Core Clock' = 4.2 [GHz];
             attribute :>>'Performance Core Boost Clock' = 4.5 [GHz];

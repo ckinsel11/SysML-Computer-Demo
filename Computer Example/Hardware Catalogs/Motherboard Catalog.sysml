@@ -1,12 +1,12 @@
-package 'Motherboard Catalog'{
+package 'Motherboard Catalog' {
     private import 'Unit Library':: 'Digital Storage'::*;
     private import 'Motherboard'::*;
     private import 'CPU Sockets'::*;
     private import 'Cable Connector Library'::*;
 
     private import Chipsets::*;
-    package ASUS{
-        part def 'ROG STRIX X870E-E' :> Motherboard{
+    package ASUS {
+        part def 'ROG STRIX X870E-E' :> Motherboard {
             attribute :>> Socket : AM5;
             attribute :>> 'Max Memory' = 256 [GB];
             attribute :>> 'Memory Slots' = 4;
@@ -19,7 +19,7 @@ package 'Motherboard Catalog'{
             port '5G' [1];
             port 'SPDIF' [1]; 
         }
-        part def 'Prime Z270-A' :> Motherboard{
+        part def 'Prime Z270-A' :> Motherboard {
             attribute :>> Socket : LGA1151;
             attribute :>> 'Max Memory' = 64 [GB];
             attribute :>> 'Memory Slots' = 4;

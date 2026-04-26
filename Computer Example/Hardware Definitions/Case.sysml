@@ -20,7 +20,7 @@ package Case {
         enum 'Mid-Tower' {
             doc /* For ATX and larger mother boards. The "standard" size desktop case */
         }
-        enum 'Full-Tower'{
+        enum 'Full-Tower' {
             doc /* HUGE. Can fit any motherboard. */
         }
     }

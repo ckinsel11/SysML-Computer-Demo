@@ -349,7 +349,7 @@ package 'Logical Data Model' {
         item def Finish {
             doc /* Material and/or coating of the cable connector */
         }
-        item def 'Contact Type'{
+        item def 'Contact Type' {
             doc /* Identifies pins or Sockets */
         }
         item def Shell {

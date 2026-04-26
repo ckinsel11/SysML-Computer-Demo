@@ -5,7 +5,7 @@ library package 'Interface Library' {
     package 'Abstract Definitions' {
         
     }
-    package 'Video Interfaces'{
+    package 'Video Interfaces' {
         port def DisplayPort {
             doc /* Digital interface used to connect a video source to a display device */
         }
