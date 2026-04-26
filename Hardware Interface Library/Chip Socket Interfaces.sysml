@@ -19,5 +19,4 @@ package 'CPU Sockets' {
         doc /*  */
         attribute :>>'Pin Count' = 1151;
     }
-    
 }

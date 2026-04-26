@@ -331,6 +331,9 @@ package 'Logical Data Model' {
             item def 'Server Application' {
                 doc /* An application that runs on a remote server and communicates with a client upon request */
             }
+            item def 'Plug-In' {
+                doc /*  */
+            }
         }
     }
     package 'Cable Connectors' {
