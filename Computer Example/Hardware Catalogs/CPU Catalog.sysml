@@ -15,6 +15,15 @@ package 'CPU Catalog' {
             attribute :>> 'Thread Count' = 16;
             attribute :>> 'Maximum Supported Memory' = 192 [GB];
         }
+        part def 'Ryzen 7 9850 X3D' :> 'Central Processing Unit' {
+            port :>> Socket : AM5;
+            attribute :>>'Performance Core Clock' = 4.7 [GHz];
+            attribute :>>'Performance Core Boost Clock' = 5.6 [GHz];
+            attribute :>>'Thermal Design Power' = 120 [W];
+            attribute :>> 'Core Count' = 8;
+            attribute :>> 'Thread Count' = 16;
+            attribute :>> 'Maximum Supported Memory' = 192 [GB];
+        }
     }
     package Intel {
         part def 'Core i7-14700K' :> 'Central Processing Unit' {
