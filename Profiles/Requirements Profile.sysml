@@ -1,4 +1,4 @@
-package Profile {
+package 'Requirements Profile' {
     private import ScalarValues::*;
     package Enumerations {
         enum def 'enum_Requirement Status' {

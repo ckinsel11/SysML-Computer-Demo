@@ -1,6 +1,6 @@
 package 'Customer Needs' {
-    private import Profile::Stereotypes::*;
-    private import Profile::Enumerations::*;
+    private import 'Requirements Profile'::Stereotypes::*;
+    private import 'Requirements Profile'::Enumerations::*;
 
 /* I really am not a fan using doc as the place for the shall statement. It works but feels 
 * almost too generic when used as part of the definition. I'm thinking about making text part

@@ -1,7 +1,7 @@
 package ' Template Flow Down ' {
     /* INSERT IMPORT FOR SOURCE REQUIREMENTS HERE */
-    private import Profile::Stereotypes::*;
-    private import Profile::Enumerations::*;
+    private import 'Requirements Profile'::Stereotypes::*;
+    private import 'Requirements Profile'::Enumerations::*;
     private import RequirementDerivation::*;
 
     case def 'Template Flow Down' {

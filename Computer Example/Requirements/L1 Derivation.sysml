@@ -1,7 +1,7 @@
 package 'L1 Derivation' {
     private import 'Customer Needs'::*;
-    private import Profile::Stereotypes::*;
-    private import Profile::Enumerations::*;
+    private import 'Requirements Profile'::Stereotypes::*;
+    private import 'Requirements Profile'::Enumerations::*;
     private import RequirementDerivation::*;
 
     doc /* This package deals with the analyses for taking the customer level needs/requirements/documents
@@ -30,11 +30,10 @@ package 'L1 Derivation' {
                         'Requirement Rationale' = "The customer has made it clear that they will only accept Samsung Solid State drives.";
                 }
             }
-            
         }
 
         /* Step 4: Establish Traceability. This is done by creating a connection between parent/child requirements. */
-        #derivation connection def 'Solid State Drive Derivation' {
+        #derivation connection 'Solid State Drive Derivation' {
             end #original r1 : 'Part Vendors'::'SSD Vendor';
             end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';
         }
