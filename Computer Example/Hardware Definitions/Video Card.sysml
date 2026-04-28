@@ -7,5 +7,6 @@ package 'Video Card' {
         attribute 'Core Clock' : Real;
         attribute 'Boost Clock' : Real;
         attribute Length : Real;
+        attribute 'Thermal Design Power' : Real;
     }
 }

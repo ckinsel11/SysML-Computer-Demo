@@ -1,10 +1,13 @@
 package Case {
     private import ScalarValues::*;
+    private import CollectionFunctions::*;
+    private import Motherboard::*;
 
     part def Case {
         attribute 'Case Type' : 'enum_Case Type';
         attribute 'Internal 3.5 Bays' : Integer;
         attribute Volume : Real;
+        attribute 'Supported Motherboard Sizes'[1..*] : Set;
     }
 
     enum def 'enum_Case Type' {
