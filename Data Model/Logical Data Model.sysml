@@ -306,21 +306,33 @@ package 'Logical Data Model' {
     package 'Types of Software' {
         item def 'Software' {
             doc /* A Computer Program */
-        }
-        item def 'System Software' :> 'Software' {
-            doc /* Software that works with hardware of the computer and performs tasks that are machine oriented. It can also provide a platoform for other software */
-        }
-        item def 'Operating System' :> 'System Software' {
-            doc /* Software that supports a computer's basic functions */
-        }
-        item def 'Application' :> 'Software' {
-            doc /* A program or piece of software designed to meet a particular purpose of a user */
-        }
-        item def 'Application Version' :> 'Application' {
-            doc /* A particular iteration of an application */
-        }
-        item def 'Application Instance' :> 'Application Version' {
-            doc /* A particular deployment of an application */
+            item def 'System Software' :> 'Software' {
+                doc /* Software that works with hardware of the computer and performs tasks that are machine oriented. It can also provide a platoform for other software */
+                item def 'Operating System' :> 'System Software' {
+                    doc /* Software that supports a computer's basic functions */
+                }
+                item def 'Utility Software' :> 'System Software' {
+                    doc /* Software that provides additional functionality to the operating system. Examples include file management, disk cleanup and antivirus software */
+                }
+                item def Firmware :> 'System Software' {
+                    doc /* Software that is embedded into hardware and provides low-level control for the device's specific hardware. Examples include software embedded in a hard drive or a graphics card */
+                }
+                item def 'Device Drivers' :> 'System Software' {
+                    doc /* Software that allows higher level software to interact with hardware devices. Examples include software that allows the operating system to interact with a printer or a mouse */
+                }
+                item def 'Programming Language Translators' :> 'System Software' {
+                    doc /* Software that translates programming language code into machine code. Examples include compilers, assemblers, and interpreters */
+                }            
+            }
+            item def 'Application' :> 'Software' {
+                doc /* A program or piece of software designed to meet a particular purpose of a user */
+                item def 'Application Version' :> 'Application' {
+                    doc /* A particular iteration of an application */
+                    item def 'Application Instance' :> 'Application Version' {
+                        doc /* A particular deployment of an application */
+                    }
+                }
+            }
         }
     }
     package 'Software Attributes' {
@@ -332,7 +344,7 @@ package 'Logical Data Model' {
                 doc /* An application that runs on a remote server and communicates with a client upon request */
             }
             item def 'Plug-In' {
-                doc /*  */
+                doc /* A software component that adds functionality to an existing application without requiring the software to be re-built */
             }
         }
     }
