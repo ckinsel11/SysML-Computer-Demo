@@ -8,5 +8,9 @@ package 'Video Card' {
         attribute 'Boost Clock' : Real;
         attribute Length : Real;
         attribute 'Thermal Design Power' : Real;
+        
+        port PCIe;  /* Note: This is both a physical connector and a communication interface */
+        port VideoOut[1..*];  /* Note: These can both a physical connector and a communication interface */
+        port PowerIn;  /* Note: This is both a physical connector and a communication interface */
     }
 }
