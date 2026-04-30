@@ -2,11 +2,13 @@ package 'Logical Data Model' {
     package 'Requirement Attributes' {
         item def 'Requirement' {
             doc /* A requirement is a documented, verifiable statement that indicates a function, capability, constraint, or or performance that a system, product or part needs to meet. */
-            item 'Requirement Status' : 'Requirement Attributes'::'Requirement Status';
-            item 'Requirement ID' : 'Requirement Attributes'::'Requirement ID';
             item 'Requirement Name' : 'Requirement Attributes'::'Requirement Name';
-            item 'Requirement Type' : 'Requirement Attributes'::'Requirement Type';
+            item 'Requirement ID' : 'Requirement Attributes'::'Requirement ID';
             item 'Requirement Text' : 'Requirement Attributes'::'Requirement Text';
+            item 'Requirement Type' : 'Requirement Attributes'::'Requirement Type';
+            item 'Requirement Status' : 'Requirement Attributes'::'Requirement Status';
+            item 'Requirement Location' : 'Requirement Attributes'::'Requirement Location';
+            item 'Requirement Category' : 'Requirement Attributes'::'Requirement Category';
             item 'Requirement Rationale' : 'Requirement Attributes'::'Requirement Rationale';
             item 'Requirement Comment' : 'Requirement Attributes'::'Requirement Comment';
             item 'Notional Verification' : 'Requirement Attributes'::'Notional Verification';
@@ -14,8 +16,6 @@ package 'Logical Data Model' {
             item 'Verification Frequency' : 'Requirement Attributes'::'Verification Frequency';
             item 'Verification Status' : 'Requirement Attributes'::'Verification Status';
             item 'Verification Rationale' : 'Requirement Attributes'::'Verification Rationale';
-            item 'Requirement Category' : 'Requirement Attributes'::'Requirement Category';
-            item 'Requirement Location' : 'Requirement Attributes'::'Requirement Location';
         }
         item def 'Requirement Status' {
             doc /* Current Status of the requirement*/
@@ -281,6 +281,13 @@ package 'Logical Data Model' {
             item 'Revision' : 'Configuration Item Attributes'::'Part Number Revision';
             item 'Structure Name' : 'Configuration Item Attributes'::'Product Structure Name';
             item 'Abbreviation' : 'Configuration Item Attributes'::'CI Abbreviation';
+            
+            item def 'Hardware CI' :> 'Configuration Item' {
+                doc /* A specific piece of hardware, or an aggregation of hardware and related software, designated for tracking within a Configuration Management (CM) system */
+            }
+            item def 'Software CI' :> 'Configuration Item' {
+                doc /* A designated, manageable work product within a software system that requires separate configuration control, such as source code files, documentation, test cases, or data files  */ 
+            }
         }
         item def 'Part Number' {
             doc /* Unique identifier associated with the configuration item */
@@ -293,14 +300,6 @@ package 'Logical Data Model' {
         }
         item def 'CI Abbreviation' {
             doc /* Common name for the configuration item, usually shorter and less formal than the name on the drawing */
-        }
-    }
-    package 'Types of Configuration Items' {
-        item def 'Hardware CI' {
-            doc /* A specific piece of hardware, or an aggregation of hardware and related software, designated for tracking within a Configuration Management (CM) system */
-        }
-        item def 'Software CI'{
-            doc /* A designated, manageable work product within a software system that requires separate configuration control, such as source code files, documentation, test cases, or data files  */ 
         }
     }
     package 'Types of Software' {
@@ -348,6 +347,47 @@ package 'Logical Data Model' {
             }
         }
     }
+    package 'Software License Models'{
+        item def 'Software License' {
+            doc /* A legal instrument governing the use and distribution of software. */
+            item def Perpetual :> 'Software License' {
+                doc /* A license that allows the licensee to use the software indefinitely */
+            }
+            item def Concurrent :> 'Software License' {
+                doc /* A license that allows a specific number of users to use the software at the same time. */
+            }
+            item def Floating :> 'Software License' {
+                doc /* A license that allows a specific number of users to use the software at the same time, but the license can be shared across an organization. */
+            }
+            item def Metered :> 'Software License' {
+                doc /* License that limits the access of users to specific features or usage metrics */
+            }
+            item def 'Subscription-Based' :> 'Software License' {
+                doc /* A license that allows the licensee to use the software for a specific period of time, typically with recurring fees */
+            }
+            item def 'Named User' :> 'Software License' {
+                doc /* A license that allows a specific user to use the software, regardless of how many devices they use */
+            }
+            item def 'Node-Locked' :> 'Software License' {
+                doc /* A license that allows the software to be used on a specific device, regardless of the user */
+            }
+            item def 'Dongle-Based' :> 'Software License' {
+                doc /* A license that requires a physical device (dongle) to be plugged into the computer in order for the software to run */
+            }
+            item def 'Token-Based' :> 'Software License' {
+                doc /* A license that allows a specific number of tokens to be used to access the software, where a token is a unit of access that can be used by any user */
+            }
+            item def 'Pay-Per-Use' :> 'Software License' {
+                doc /* A license that requires the licensee to pay for each use of the software */
+            }
+            item def 'Flat Fee' :> 'Software License' {
+                doc /* A license that requires the licensee to pay a fixed fee for access to the software, regardless of usage */
+            }
+            item def 'Open Source' :> 'Software License' {
+                doc /* A license that allows users to access and modify the source code of the software, typically with few restrictions on use and distribution */
+            }
+        }
+    }
     package 'Cable Connectors' {
         item def 'Cable Connector' {
             doc /* Device that joins cables to other cables or electronic devices */
@@ -384,6 +424,67 @@ package 'Logical Data Model' {
             item def 'EMI Shielding' :> Shielding {
                 doc /* Shield for the entire harness terminate at the cable connector */
             }
+        }
+    }
+    package 'Technology Readiness Levels' {
+        item def 'Technology Readiness Level' {
+            doc /* A measure of the maturity of a particular technology. The scale goes from 1 to 9, with 1 being the least mature and 9 being the most mature. */
+            item def 'TRL 1' :> 'Technology Readiness Level' {
+                doc /* Basic principles observed and reported */
+            }
+            item def 'TRL 2' :> 'Technology Readiness Level' {
+                doc /* Technology concept and/or application formulated */
+            }
+            item def 'TRL 3' :> 'Technology Readiness Level' {
+                doc /* Analytical and experimental critical function and/or characteristic proof of concept */
+            }
+            item def 'TRL 4' :> 'Technology Readiness Level' {
+                doc /* Component and/or breadboard validation in laboratory environment */
+            }
+            item def 'TRL 5' :> 'Technology Readiness Level' {
+                doc /* Component and/or breadboard validation in relevant environment */
+            }
+            item def 'TRL 6' :> 'Technology Readiness Level' {
+                doc /* System/subsystem model or prototype demonstration in a relevant environment (ground or space) */
+            }
+            item def 'TRL 7' :> 'Technology Readiness Level' {
+                doc /* System prototype demonstration in a space environment */
+            }
+            item def 'TRL 8' :> 'Technology Readiness Level' {
+                doc /* Actual system completed and qualified through test and demonstration (ground or space) */
+            }
+            item def 'TRL 9' :> 'Technology Readiness Level' {
+                doc /* Actual system proven through successful mission operations */
+            }
+        }
+    }
+    package 'Business Processes' {
+        item def 'Business Process' {
+            doc /* A set of activities that are performed in order to achieve a specific organizational goal. */
+            item 'Process Name' : 'Business Processes'::'Process Name';
+            item 'Process Description' : 'Business Processes'::'Process Description';
+            item 'Process Owner' : 'Business Processes'::'Process Owner';
+            item 'Process Inputs' : 'Business Processes'::'Process Inputs';
+            item 'Process Outputs' : 'Business Processes'::'Process Outputs';
+            item Procedure : 'Business Processes'::Procedure;
+        }
+        item def 'Process Name' {
+            doc /* A textual identifier for the business process */
+        }
+        item def 'Process Description' {
+            doc /* A textual description of the business process */
+        }
+        item def 'Process Owner' {
+            doc /* An identifier for the team responsible for executing the business process */
+        }
+        item def 'Process Inputs' {
+            doc /* A list of inputs required to execute the business process */
+        }
+        item def 'Process Outputs' {
+            doc /* A list of outputs produced by the business process */
+        }
+        item def Procedure {
+            doc /* A specific set of steps to execute a business process */
         }
     }
 }

@@ -8,6 +8,8 @@ package Case {
         attribute 'Internal 3.5 Bays' : Integer;
         attribute Volume : Real;
         attribute 'Supported Motherboard Sizes'[1..*] : Set;
+        
+        port PWRButton;
     }
 
     enum def 'enum_Case Type' {

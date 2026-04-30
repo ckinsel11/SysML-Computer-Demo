@@ -93,4 +93,22 @@ library package 'Interface Library' {
             attribute :>> 'Signaling Rate' = 80 ['Gbit/s'];
         }
     }
+    package 'Electrical Power Interfaces'{
+            abstract port def 'Electrical Power' {
+                doc /*  */
+                attribute 'Nominal Voltage' : Real;
+                item def 'Electrical Power DC' {
+                    doc /* Direct Current Power Interfaces */
+                }
+                item def 'Electrical Power AC' {
+                    doc /* Alternating Current Power Interfaces */
+                }
+            }
+            abstract port def 'Load Controller' {
+                doc /*  */
+            }
+            abstract port def 'Power System Device' {
+                doc /*  */
+            }
+    }   
 }
