@@ -9,10 +9,10 @@ package 'Motherboard Catalog' {
         part def 'ROG STRIX X870E-E' :> Motherboard {
             attribute :>> Socket : AM5;
             attribute :>> 'Max Memory' = 256 [GB];
-            attribute :>> 'Memory Slots' = 4;
             attribute :>> 'Form Factor' : 'enum_Motherboard Form Factor' = 'enum_Motherboard Form Factor'::ATX;
             part :>> 'Motherboard Chipset': AMD::X870E;
-            port HDMI1 [1]: HDMI::'Type A';
+            port :>> 'Memory Slots' [4];
+            port HDMI1 [1]: 'HDMI Connectors'::'Type A';
             port 'USB-A' [9] : USB::'Standard-A';
             port 'USB-C' [4] : USB::'Type-C';
             port 'Line Out' [1] : Audio::'3.5 mm';
@@ -22,10 +22,10 @@ package 'Motherboard Catalog' {
         part def 'Prime Z270-A' :> Motherboard {
             attribute :>> Socket : LGA1151;
             attribute :>> 'Max Memory' = 64 [GB];
-            attribute :>> 'Memory Slots' = 4;
             attribute :>> 'Form Factor' : 'enum_Motherboard Form Factor' = 'enum_Motherboard Form Factor'::ATX;
             part :>> 'Motherboard Chipset': Intel::Z270;
-            port HDMI1 [1]: HDMI::'Type A'; /* HDMI 1.4B*/
+            port :>> 'Memory Slots' [4];
+            port HDMI1 [1]: 'HDMI Connectors'::'Type A'; /* HDMI 1.4B*/
             port 'USB-A' [5] : USB::'Standard-A'; /* 1x 3.1, 4x 3.0*/
             port 'USB-C' [1] : USB::'Type-C'; /* USB 3.1*/
             port 'Gigabit Lan' [1];

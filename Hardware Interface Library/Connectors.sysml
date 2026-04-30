@@ -1,7 +1,15 @@
 library package 'Cable Connector Library' {
-    package HDMI {
-        port def 'Type A' {
+    private import 'Contact Arrangements'::*;
+
+    abstract port def 'Cable Connector' {
+        doc /*  */
+        port 'CA' ;
+    }
+
+    package 'HDMI Connectors' {
+        port def 'Type A' :> 'Cable Connector' {
             doc /*  */
+            port :>> CA : HDMI::'HDMI Type A';
         }
     }
     package DisplayPort {

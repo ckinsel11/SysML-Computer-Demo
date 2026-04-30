@@ -1,4 +1,4 @@
-library package 'Interface Library' {
+library package 'Communication Interface Library' {
     private import ScalarValues::*;
     private import 'Unit Library'::'Data Transfer'::*;
 
@@ -11,31 +11,31 @@ library package 'Interface Library' {
         }
         abstract port def HDMI {
             doc /* High-Definition Multimedia Interface */
-            port def 'data 0 +' {
+            port 'data 0 +' {
                 doc /*  */
             }
-            port def 'data 0 -' {
+            port 'data 0 -' {
                 doc /*  */
             }
-            port def 'data 0 GND' {
+            port 'data 0 GND' {
                 doc /*  */
             }
-            port def 'data 1 +' {
+            port 'data 1 +' {
                 doc /*  */
             }
-            port def 'data 1 -' {
+            port 'data 1 -' {
                 doc /*  */
             }
-            port def 'data 1 GND' {
+            port 'data 1 GND' {
                 doc /*  */
             }
-            port def 'data 2 +' {
+            port 'data 2 +' {
                 doc /*  */
             }
-            port def 'data 2 -' {
+            port 'data 2 -' {
                 doc /*  */
             }
-            port def 'data 2 GND' {
+            port 'data 2 GND' {
                 doc /*  */
             }
         }

@@ -10,7 +10,7 @@ package 'GPU Catalog' {
             attribute :>> Memory = 16 [GB];
             attribute :>> 'Core Clock' = 2300 [MHz];
             attribute :>> Length = 306 [mm];
-            port 'GPU-HDMI' [1] : HDMI::'Type A';
+            port 'GPU-HDMI' [1] : 'HDMI Connectors'::'Type A';
             port 'GPU-DP' [3] : DisplayPort::DisplayPort;
         }
     }
@@ -20,7 +20,7 @@ package 'GPU Catalog' {
             attribute :>> 'Core Clock' = 1594 [MHz];
             attribute :>> 'Boost Clock' = 1708 [MHz];
             attribute :>> Length = 293 [mm];
-            port 'GPU-HDMI'[2] : HDMI::'Type A';
+            port 'GPU-HDMI'[2] : 'HDMI Connectors'::'Type A';
             port 'GPU-DP'[3] : DisplayPort::DisplayPort;
             port 'GPU-DVI'[1];
         }

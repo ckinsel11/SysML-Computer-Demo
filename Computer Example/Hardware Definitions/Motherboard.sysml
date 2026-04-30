@@ -8,10 +8,10 @@ package Motherboard {
         part 'Motherboard Chipset' : Chipset;
         attribute 'Form Factor' : 'enum_Motherboard Form Factor';
         attribute 'Max Memory' : Integer;
-        attribute 'Memory Slots' : Integer;
-
+        
         port Socket : 'CPU Socket';
         port PowerIn;
+        port 'Memory Slots'[1..*];
 
     }
 
