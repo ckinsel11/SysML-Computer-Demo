@@ -487,4 +487,7 @@ package 'Logical Data Model' {
             doc /* A specific set of steps to execute a business process */
         }
     }
+    package 'Agile Task Attributes' {
+        
+    }
 }
