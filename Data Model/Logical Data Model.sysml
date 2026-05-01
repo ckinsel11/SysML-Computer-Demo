@@ -97,10 +97,18 @@ package 'Logical Data Model' {
         }
         item def 'Requirement Type' {
             doc /* This is the descriptive kind of requirement. These typically inlcude "Functional", "Performance", "Constraint" and "Interface".*/
-            item def Functional :> 'Requirement Attributes'::'Requirement Type';
-            item def Constraint :> 'Requirement Attributes'::'Requirement Type';
-            item def Performance :> 'Requirement Attributes'::'Requirement Type';
-            item def Interface :> 'Requirement Attributes'::'Requirement Type';
+            item def Functional :> 'Requirement Attributes'::'Requirement Type' {
+                doc /* A requirement that describes a function or capability of the system.*/
+            }
+            item def Constraint :> 'Requirement Attributes'::'Requirement Type' {
+                doc /* A requirement that describes a constraint on the design of the system. These can be derived from standards, or they can be unique constraints on the design. */
+            }
+            item def Performance :> 'Requirement Attributes'::'Requirement Type' {
+                doc /* A requirement that describes the performance characteristics of the system. */
+            }
+            item def Interface :> 'Requirement Attributes'::'Requirement Type' {
+                doc /* A requirement that describes an interface of the system. */
+            }
         }
         item def 'Requirement Text' {
             doc /* The words of the requirement. This is typically in the "The <<noun>> shall..." format.*/

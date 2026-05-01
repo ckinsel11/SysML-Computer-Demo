@@ -4,8 +4,8 @@ package 'Combined Interfaces Library' {
 
     port def 'HDMI Standard A Interface' {
         doc /* The typical commercial HDMI Type A interface */
-        port 'Connector' : 'HDMI Connectors'::'Type A';
-        port 'Signal' : 'Video Interfaces'::HDMI;
+        port 'connector' : 'HDMI Connectors'::'Type A';
+        port 'signal' : 'Video Interfaces'::HDMI;
         
     }
 }
