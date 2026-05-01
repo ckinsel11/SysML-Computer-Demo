@@ -2,7 +2,7 @@ package 'CPU Cooler' {
     private import ScalarValues::*;
 
     part def 'CPU Cooler' {
-        doc /*  */
+        doc /* A device that dissipates heat from the CPU */
         attribute 'Fan RPM' : Real;
         attribute 'Noise Level' : Real;
         attribute 'Cooling Type' : String;

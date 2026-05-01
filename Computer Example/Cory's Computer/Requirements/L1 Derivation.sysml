@@ -20,13 +20,13 @@ package 'L1 Derivation' {
         /* Step 3 : Author Requirements */
         requirement def <'ASys 1.0'>'Solid-State Drive' {
             @'Base Requirement' {
-                'Object Type' : 'enum_Requirement Category' = 'enum_Requirement Category'::Heading;
+                'Object Type' = 'enum_Requirement Category'::Heading;
             }
                 requirement def <'ASys 1.1'> 'Solid-State Drive Manufacturer' {
                    doc /* The manufacturer of any solid-state drive shall be Samsung. */
                     @'Base Requirement' {
-                        'Object Type' : 'enum_Requirement Category' = 'enum_Requirement Category'::Threshold;
-                        'Requirement Type' : 'enum_Requirement Type' = 'enum_Requirement Type'::Constraint;
+                        'Object Type' = 'enum_Requirement Category'::Threshold;
+                        'Requirement Type' = 'enum_Requirement Type'::Constraint;
                         'Requirement Rationale' = "The customer has made it clear that they will only accept Samsung Solid State drives.";
                 }
             }

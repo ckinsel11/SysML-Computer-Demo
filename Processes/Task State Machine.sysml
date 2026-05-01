@@ -14,5 +14,4 @@ package 'Agile Tasking States' {
     state 'Overcome by Events' {
         doc /*This is the state of a task that has been identified as something that is no longer relevant or necessary. */
     }
-
 }

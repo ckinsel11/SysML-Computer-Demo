@@ -2,7 +2,7 @@ package Memory {
     private import ScalarValues::*;
 
     part def Memory {
-        doc /*  */
+        doc /* A device that stores data temporarily while the computer is running */
         attribute 'First Word Latency' : Real;
         attribute 'CAS Latency' : Real;
         attribute Speed;

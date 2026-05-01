@@ -2,6 +2,7 @@ package 'Video Card' {
     private import ScalarValues::*;
     
     part def 'Video Card' {
+        doc /* A video card, also known as a graphics card, is a hardware component responsible for rendering images and video output. */
         attribute Chipset;
         attribute Memory : Real;
         attribute 'Core Clock' : Real;

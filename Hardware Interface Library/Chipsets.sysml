@@ -1,6 +1,6 @@
 package Chipsets {
     abstract part def Chipset {
-        doc /*  */
+        doc /* A set of integrated circuits that manages data flow between components */
     }
 
     package AMD {
