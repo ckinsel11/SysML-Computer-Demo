@@ -8,10 +8,10 @@ package 'Cases Catalog' {
     
     package 'be quiet!' {
         part def 'Dark Base Pro 901' :> Case {
-            attribute :>>'Case Type' : 'enum_Case Type' = 'enum_Case Type'::'Full-Tower';
+            attribute :>>'Case Type' = 'enum_Case Type'::'Full-Tower';
             attribute :>>Volume = 94.511 [L];
             attribute :>>'Internal 3.5 Bays' = 2;
-            attribute :>>'Supported Motherboard Sizes'; /* TODO: Need to figure out how to make this equal to a set of supported sizes */
+            attribute :>> 'Supported Motherboard Sizes' = ('enum_Motherboard Form Factor'::ATX, 'enum_Motherboard Form Factor'::'Micro-ATX', 'enum_Motherboard Form Factor'::'Mini-ITX');
             port 'USB 3.2 Type A'[4] : 'Standard-A';
             port 'USB 3.2 Type C'[1] : 'Type-C';
             port 'Microphone' : '3.5 mm';
@@ -20,7 +20,7 @@ package 'Cases Catalog' {
     }
     package DIYPC {
         part def 'Vanguard-RGB' :> Case {
-            attribute :>>'Case Type' : 'enum_Case Type' = 'enum_Case Type'::'Mid-Tower';
+            attribute :>>'Case Type' = 'enum_Case Type'::'Mid-Tower';
             attribute :>>'Internal 3.5 Bays' = 3;
             port 'USB 2.0 Type A'[2] : 'Standard-A';
             port 'USB 3.0 Type A'[2] : 'Standard-A';

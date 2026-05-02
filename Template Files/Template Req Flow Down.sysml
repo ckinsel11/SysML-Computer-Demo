@@ -7,15 +7,15 @@ package ' Template Flow Down ' {
     case def 'Template Flow Down' {
          doc /* This case takes a subset of parent requirements and derives lower level children reqiurements. */
     
-        /* Step 1 : Group Requirements. This is done by creating a dependency from the case to the scoping requirements */
+        comment /* Step 1 : Group Requirements. This is done by creating a dependency from the case to the scoping requirements */
     
         /*Uncomment the next line and replace XXX with the appropriate source requirement. Copy and repeat as necessary*/
         /* dependency from 'Template Flow Down' to XXX; */
 
-        /* Step 2 : Analyze Requirements. For direct flow-downs, there isn't much to discuss here as it's about taking
+        comment /* Step 2 : Analyze Requirements. For direct flow-downs, there isn't much to discuss here as it's about taking
         * source requirements and tailoring or getting more specific needs at a lower level. */
 
-        /* Step 3 : Author Requirements */
+        comment /* Step 3 : Author Requirements */
 
         /* Put IDs in <''> for the authored requirements. .0 for the headers and .1 for anything underneath it. Note these IDs are only
         * used within the sysml context and your requirements management tool will provide more specific IDs which will be used in the
@@ -36,7 +36,7 @@ package ' Template Flow Down ' {
             }
         }
         
-        /* Step 4: Establish Traceability. This is done by creating a connection between parent/child requirements. */
+        comment /* Step 4: Establish Traceability. This is done by creating a connection between parent/child requirements. */
         #derivation connection def 'Template Derivation' {
             /* Use the format below to create a derivation relationship. The first line should be the parent requirement.
             * and uses #original with r1 just being the name of the end and typed by the parent requirement. Any line below 
@@ -47,6 +47,6 @@ package ' Template Flow Down ' {
             end #derive r1_1; /* : CHILD REQUIREMENT DEF; */
         }
 
-        /* Step 5. Allocate Requirements. This is done by creating a connection to the reference architecture. */
+        comment /* Step 5. Allocate Requirements. This is done by creating a connection to the reference architecture. */
     }
 }

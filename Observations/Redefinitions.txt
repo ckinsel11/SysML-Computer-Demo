@@ -1,0 +1,9 @@
+There are 2 x 2 ways to redefine properties.
+
+Rename the property during the redfinition and set the value.
+    attribute 'New Name' = New Value :>> 'Old Name';
+    attribute 'New Name' = New Value redefines 'Old Name';
+
+Keep the property name and set the Value
+    attribute :>> 'Old Name' = New Value;
+    attribute redefines 'Old Name' = New Value;

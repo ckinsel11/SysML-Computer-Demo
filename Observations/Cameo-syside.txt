@@ -1,0 +1,12 @@
+For standard interfaces (USB, HDMI etc.) I created a new port definition that connected the two.
+    Syside gave the following error "Owned usages of a port definition other than ports must be referential"
+        I was able to fix by using "ref connection connect x to y".
+    Cameo allowed for connections to be created and owned by a port without the usage of 'ref but works either way.
+
+For set definitions i.e. attribute :>> 'Supported Motherboard Sizes' = ('enum_Motherboard Form Factor'::ATX, 'enum_Motherboard Form Factor'::'Micro-ATX', 'enum_Motherboard Form Factor'::'Mini-ITX');
+    Cameo has no issue with this setup and recognizes the () as a set
+    Syside gives an error "Motherboard::'enum_Motherboard Form Factor'::ATX does not conform to Collections::Set"
+
+For redefinition trees (i.e. configuration management version changes over time)
+    Syside gives this error 'Cannot override a binding feature value' when trying to redefined a previously redfined value in the tree.
+    Cameo has no issue with this practice.

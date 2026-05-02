@@ -1,5 +1,5 @@
 package 'Contact Arrangements' {
-    package 'USB'{
+    package 'USB Contact Arrangements'{
         port def 'USB Type A' {
             port '1';
             port '2';
@@ -81,6 +81,32 @@ package 'Contact Arrangements' {
             port '3';
             port '4';
             port '5';
+        }
+        port def 'USB Type C' {
+            port A1;
+            port A2;
+            port A3;
+            port A4;
+            port A5;
+            port A6;
+            port A7;
+            port A8;
+            port A9;
+            port A10;
+            port A11;
+            port A12;
+            port B1;
+            port B2;
+            port B3;
+            port B4;
+            port B5;
+            port B6;
+            port B7;
+            port B8;
+            port B9;
+            port B10;
+            port B11;
+            port B12;
         }
     }
     package HDMI{

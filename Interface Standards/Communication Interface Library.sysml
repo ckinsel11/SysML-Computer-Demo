@@ -64,17 +64,29 @@ library package 'Communication Interface Library' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
         }
-        port def 'USB 1.1' :> USB {
+        port def 'USB 1.1' :> 'USB 1.0' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
         }
-        port def 'USB 2.0' :> USB {
+        port def 'USB 2.0' :> 'USB 1.1' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 480 ['Mbit/s'];
         }
         port def 'USB 3.0' :> USB {
             doc /*  */
             attribute :>> 'Signaling Rate' = 5 ['Gbit/s'];
+            port 'SSTX+' {
+                doc /* SuperSpeed Transmit+ */
+            }
+            port 'SSTX-' {
+                doc /* SuperSpeed Transmit- */
+            }
+            port 'SSRX+' {
+                doc /* SuperSpeed Receive+ */
+            }
+            port 'SSRX-' {
+                doc /* SuperSpeed Receive- */
+            }
         }
         port def 'USB 3.1' :> USB {
             doc /*  */

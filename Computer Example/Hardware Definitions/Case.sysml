@@ -8,7 +8,7 @@ package Case {
         attribute 'Case Type' : 'enum_Case Type';
         attribute 'Internal 3.5 Bays' : Integer;
         attribute Volume : Real;
-        attribute 'Supported Motherboard Sizes'[1..*] : Set;
+        attribute 'Supported Motherboard Sizes' : Set;
         
         port PWRButton;
     }

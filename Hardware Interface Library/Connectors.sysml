@@ -18,11 +18,13 @@ library package 'Cable Connector Library' {
         }
     }
     package USB {
-        port def 'Standard-A' {
+        port def 'Standard-A' :> 'Cable Connector' {
             doc /*  */
+                port :>> CA : 'USB Contact Arrangements'::'USB Type A';
         }
-        port def 'Standard-B' {
+        port def 'Standard-B' :> 'Cable Connector' {
             doc /*  */
+                port :>> CA : 'USB Contact Arrangements'::'USB Type B';
         }
         port def 'Mini-A' {
             doc /*  */
@@ -42,8 +44,9 @@ library package 'Cable Connector Library' {
         port def 'Micro-B' {
             doc /*  */
         }
-        port def 'Type-C' {
+        port def 'Type-C' :> 'Cable Connector' {
             doc /*  */
+            port :>> CA : 'USB Contact Arrangements'::'USB Type C';
         }
     }
     package Audio {
