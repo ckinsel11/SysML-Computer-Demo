@@ -1,0 +1,71 @@
+In an object oriented approach we can define many independent layers of an architectural integration.
+    Each layer can be defined independently and in any order, even though they can be eventually interconnected. You only need to do the layers required to communicate with your stakeholders.
+
+Layer numbers are going from abstract to more concrete in a physical sense.
+
+Layer 1: Functional
+Functions are defined independently of the boxes that may perform them. This enables the behavior and requirements to be applied consistently wherever needed. 
+Functions are defined in a client-service architecture. This also splits out the function so that it's clear what each component is responsible for without identifying how it's being accomplished.
+In an interconnect view, the client function port can be connected to the service function port. 
+    This connection is from Box A to Box B.
+    Note: This also helps in scenarios where there are multiple service items being returned to a single client.
+
+Layer 2: Communication 
+Communication ports (interfaces) are pre-defined as part of a library. These are ways for boxes to communicate, receive power etc. (e.g. USB, RS-422, HDMI, 5vDC)
+Multiple of the same communication ports can be added to a box. Example: In A&D scenarios, some boxes have 8+ Ethernet connections to communicate with other computers or sensors..
+In an interconnect view, the communication ports will typically be 1:1. For example Eth2 on Box A will connect to Eth 5 on Box B.
+    This connection is from Box A to Box B.
+
+Layer 3: Physical (cable) Connectors
+Generally referred to as cable connectors, these are the physical interfaces of a box.
+    This could be a wire coming out of a box (i.e. Mouse has the usb connector attached)
+    It could also need a wire/cable/harness to plug into it. (i.e. Power Supply cable is standalone and plugs both into wall and power supply)
+For a box, there are two major things that need to be defined, the connector housing/shell, and the contact arrangement.
+    The housing/shell defines the physical shape/attributes of the connector (keying, materials, shape, etc). 
+    The contact arangement defines the number of pins and their layout within the shell.
+In an interconnect view, the cable connectors will be 1:1 connected to it's mate. Either in the form of a cable harness or another box.
+    This connection is from Box A to Harness 1 OR Box A to Box B.
+
+Layer 4: Cable Harness
+Cable harnesses connect two boxes anywhere in the system.
+    There can be multiple harnesses between the connecting boxes, and harnesses can branch off to other boxes as well.
+In an interconnect view, the pins of one cable connector will connect to the pins of another cable connector.
+    This connection is within a singular harness definition.
+
+Layer 5: Cable Harness Wiring
+Wires within a cable harness can have different characteristics (color, gauge, etc)
+These wires should be predefined in a library.
+In an interconnect view, the wires will be exposed and should be lined up for pin to pin connections
+    This connection is displayed within a singular harness definition
+
+Connecting Layers 1 and 2 
+This connection is done within a singular box context. 
+To connect the Functional and communication layers create a relationship between the functional port and the communication port. 
+    In SysML v1, this would have been an assign relationship to identify the behavior as being assigned to the communication port(s).
+        There could be a 1:1 or 1:Many between the function (singular) and communication ports.
+
+Connecting Layers 2 and 3: Part A
+This connection is done within a singular box context and is commonly referred to as a pin out.
+To connect the communication and cable connector, create a connection between the signal of the communication port and the individual pin of the cable connector.
+    Example: Connect Ground of USB to Pin 4 of the USB type A connector.
+    This is just using a connector.
+
+Connecting Layers 2 and 3: Part B
+This connection is done within the system context. 
+This connection comes from Layers 2 and 3 by definition.
+    If we know the pin-outs of both boxes that need to talk, and the pin-out of the communication ports, then the pin-to pin requirements come for free.
+        Connect the pin of Box A cable connector to the pin of the Box B cable connector.
+            This corresponds to the appropriate communication port signal (i.e. Gnd to Gnd)
+            These connections are passed to the cable harness design engineers to design the cable.
+        This is just using a connector.
+
+Connecting Layers 3 and 4
+This connection is done within the system context and is your system interconnect view showing all boxes and harnesses within the system.
+To connect the wire harness to the box cable connectors, create a connection between the connector on the harness and the connector on the box.
+    This is just using a connector
+
+Connecting Layers 4 and 5
+This connection is done within a singular cable harness context
+Connect one end of the wire and the individual pin of the cable connector on the harness and the other end of the wire to another individual pin of a cable connector on the harness.
+    There should be a view showing the communication ports on both ends of the harness to help verify gauges and shielding are correct for that type of signal. 
+        This is just using a connector.

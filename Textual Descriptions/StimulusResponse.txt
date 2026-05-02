@@ -1,0 +1,26 @@
+The stimulus response model is prevalent and ubiquitous in systems design I might go so far as to describe it as the "universal behavior".
+
+What does this look like?
+    Generically, Box A sends signal to Box B. Box B recieves the signal and then does something, and responds back to Box A.
+    Specifically, user enters a website into their browser, the browser then fetches the page, and displays it back to the user.
+This is probably the most simplistic behavioral interaction and is used by itself and in combination with other behavior patterns.
+
+Abstracting even further to a function context. There is a client and a service. 
+    The client asks/orders something to be done
+    The service provides what was requested.
+    In the examples above Box A and the user were the clients, and the browser and Box B were the services. 
+
+Defining our functionality in a client-service oriented way allows for the behavior to be agnostic. 
+    The service/client can be allocated to the N number of appropriate boxes. 
+
+We can also get requirements from this behavior that can be rolled out without being completely rewritten.
+    The client shall send signal to the service.
+    Upon receipt of signal, the service shall return the requested item.
+Why these requirements?
+    Within a system, we can only verify certain things and some things are unverifiable
+    Verifiable: Sending signals is always verifiable, this can be verified through checking wires on the box for example.
+    Verifiable: A box responds to a stimulus. You can verify any response to a stimulus that when a box does get a message, that it does respond in the appropriate way.
+
+    Not-Verifiable: A box recieved the message. Even if a signal was sent, we can't verify that the box received it. Messages can get lost in traffic.
+
+
