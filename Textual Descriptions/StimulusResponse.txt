@@ -22,5 +22,3 @@ Why these requirements?
     Verifiable: A box responds to a stimulus. You can verify any response to a stimulus that when a box does get a message, that it does respond in the appropriate way.
 
     Not-Verifiable: A box recieved the message. Even if a signal was sent, we can't verify that the box received it. Messages can get lost in traffic.
-
-
