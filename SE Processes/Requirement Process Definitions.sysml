@@ -9,31 +9,31 @@ package 'Process Definition' {
                 in 'Baselined Set of Requirements';
                 out 'Requirement Grouping';
             }
-            first start then 'Group Requirements';
-            binding bind 'Baselined Set of Requirements' = 'Group Requirements'.'Baselined Set of Requirements';
             action 'Analyze Requirements' {
                 doc /* Using our grouping, we will evaluate the requirements. This could included developing use cases, behaviors, numerical computations, or breaking down a standard document so only the relevant parts are included. */
                 in 'Requirement Grouping';
                 out 'List of Work Efforts';
             }
-            flow from 'Group Requirements'.'Requirement Grouping' to 'Analyze Requirements'.'Requirement Grouping';
             action 'Author Requirements' {
                 doc /* As a result of our analysis and work efforts, we will write our lower-level resulting requirements. */
                 in 'List of Work Efforts';
                 out 'Authored Requirements';
             }
-            flow from 'Analyze Requirements'.'List of Work Efforts' to 'Author Requirements'.'List of Work Efforts';
             action 'Establish Traceability' {
                 doc /* We will take our authored requirements (children) and create a link to the parent requirements. */
                 in 'Authored Requirements';
                 out Requirements;
             }
-            flow from 'Author Requirements'.'Authored Requirements' to 'Establish Traceability'.'Authored Requirements';
             action 'Allocate Requirements' {
                 doc /* We can create a relationship to the elements of the architecture that will be responsible for implementing those requirements. Note: Requirements can be tied to multiple elements. Examples include: standards, basic functionality, power etc. */
                 in Requirements;
                 out 'Authored Requirements';
             }
+            binding bind 'Baselined Set of Requirements' = 'Group Requirements'.'Baselined Set of Requirements';
+            first start then 'Group Requirements';
+            flow from 'Group Requirements'.'Requirement Grouping' to 'Analyze Requirements'.'Requirement Grouping';
+            flow from 'Analyze Requirements'.'List of Work Efforts' to 'Author Requirements'.'List of Work Efforts';
+            flow from 'Author Requirements'.'Authored Requirements' to 'Establish Traceability'.'Authored Requirements';
             flow from 'Establish Traceability'.Requirements to 'Allocate Requirements'.Requirements;
             first 'Allocate Requirements' then done;
             binding bind 'Allocate Requirements'.'Authored Requirements' = 'Authored Requirements';
@@ -47,31 +47,31 @@ package 'Process Definition' {
                 out 'Set of Requirements';
                 doc /* It is important to be clear what is going to be baselined. These could be new updates from customer documents, maturing requirements you have authored, or establishing a new set of requirements you have authored for a new specification. Either way clearly define what is going to be baselined, and what the changes are from the previous baseline (if there is one).*/
             }
-            first start then 'Identify Set of Requirements to be baselined';
-            binding bind Requirements = 'Identify Set of Requirements to be baselined'.Requirements;
             action 'Peer Review Requirements' {
                 doc /* After identifying what the changes are, these are sent out to review. Each organization may have their own process for this and can have differing levels of formality.*/
                 in 'Set of Requirements';
                 out 'Set of Requirements to be Approved';
             }
-            flow from 'Identify Set of Requirements to be baselined'.'Set of Requirements' to 'Peer Review Requirements'.'Set of Requirements';
             action 'Approve Baseline' {
                 doc /* After the requirements have been reviewed, they need to be approved as the newest set of requirements to be worked to.*/
                 in 'Set of Requirements to be Approved';
                 out 'Approved Requirements';
             }
-            flow from 'Peer Review Requirements'.'Set of Requirements to be Approved' to 'Approve Baseline'.'Set of Requirements to be Approved';
             action 'Establish Baseline in Requirements Management Tool' {
                 doc /* After the approval, we need to identify and mark this baseline to create that "snapshot in time" as requirements may still be matured and redlined.*/
                 in 'Approved Requirements';
                 out Baseline;
             }
-            flow from 'Approve Baseline'.'Approved Requirements' to 'Establish Baseline in Requirements Management Tool'.'Approved Requirements';
             action 'Publish Baseline' {
                 doc /* When a new baseline is established, we need to make it available for others to use. This could be through the creation of a document, or sending notifications that there is something new.*/
                 in Baseline;
                 out 'Baselined Set of Requirements';
             }
+            binding bind Requirements = 'Identify Set of Requirements to be baselined'.Requirements;
+            first start then 'Identify Set of Requirements to be baselined';
+            flow from 'Identify Set of Requirements to be baselined'.'Set of Requirements' to 'Peer Review Requirements'.'Set of Requirements';
+            flow from 'Peer Review Requirements'.'Set of Requirements to be Approved' to 'Approve Baseline'.'Set of Requirements to be Approved';
+            flow from 'Approve Baseline'.'Approved Requirements' to 'Establish Baseline in Requirements Management Tool'.'Approved Requirements';
             flow from 'Establish Baseline in Requirements Management Tool'.Baseline to 'Publish Baseline'.Baseline;
             first 'Publish Baseline' then done;
             binding bind 'Publish Baseline'.'Baselined Set of Requirements' = 'Baselined Set of Requirements';
@@ -94,7 +94,6 @@ package 'Process Definition' {
             action 'Identify Requirements and Assumptions' {
                 doc /* Identify the requirements and any assumptions that are the foundation of the study. These must be met by the alternatives to be considered as the solution. */
             }
-            first start then 'Identify Requirements and Assumptions';
             action 'Identify Alternatives for Consideration' {
                 doc /* Select possible solutions to be compared. */
                 out 'List of Alternatives';
@@ -113,6 +112,7 @@ package 'Process Definition' {
             }
             action 'Record Results' {
                 doc /* Record the selected alternative along with reasoning and rationale for the decision being made.  */
+            first start then 'Identify Requirements and Assumptions';
             }
         }
     }
