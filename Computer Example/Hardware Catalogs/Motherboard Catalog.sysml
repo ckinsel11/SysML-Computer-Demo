@@ -3,6 +3,7 @@ package 'Motherboard Catalog' {
     private import 'Motherboard'::*;
     private import 'CPU Sockets'::*;
     private import 'Cable Connector Library'::*;
+    private import 'Combined Interfaces Library'::*;
 
     private import Chipsets::*;
     package ASUS {
@@ -13,8 +14,8 @@ package 'Motherboard Catalog' {
             port :>> 'Memory Slots' [4];
             port :>> Socket : AM5;
             port HDMI1 [1]: 'HDMI Connectors'::'Type A';
-            port 'USB-A' [9] : USB::'Standard-A';
-            port 'USB-C' [4] : USB::'Type-C';
+            port 'USB-A' [9] : 'USB A Standard Interface'; 
+            port 'USB-C' [4] : 'USB C Standard Interface';
             port 'Line Out' [1] : Audio::'3.5 mm';
             port '5G' [1];
             port 'SPDIF' [1]; 
@@ -26,8 +27,8 @@ package 'Motherboard Catalog' {
             port :>> Socket : LGA1151;
             port :>> 'Memory Slots' [4];
             port HDMI1 [1]: 'HDMI Connectors'::'Type A'; /* HDMI 1.4B*/
-            port 'USB-A' [5] : USB::'Standard-A'; /* 1x 3.1, 4x 3.0*/
-            port 'USB-C' [1] : USB::'Type-C'; /* USB 3.1*/
+            port 'USB-A' [5] : 'USB A Standard Interface'; /* 1x 3.1, 4x 3.0*/
+            port 'USB-C' [1] : 'USB C Standard Interface'; /* USB 3.1*/
             port 'Gigabit Lan' [1];
             port 'PS/2' [1];
             port 'DisplayPort1' [1] : DisplayPort::DisplayPort;

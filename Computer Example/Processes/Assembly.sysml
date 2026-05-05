@@ -30,7 +30,6 @@ package 'Assembly Process' {
             doc /* Connect all necessary power and data cables to ensure the computer functions correctly. */
         }
 
-
         first start then 'Install CPU';
         first 'Install CPU' then 'Install RAM';
         first 'Install RAM' then 'Any M.2 Drives?';
@@ -46,7 +45,5 @@ package 'Assembly Process' {
         first 'Install GPU' then 'Install Power Supply';
         first 'Install Power Supply' then 'Wire Computer';
         first 'Wire Computer' then done;
-
     }
-
 }

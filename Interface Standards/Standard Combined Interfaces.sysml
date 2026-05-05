@@ -19,13 +19,24 @@ package 'Combined Interfaces Library' {
     } 
     port def 'USB A Standard Interface'{
         doc /* The typical commercial USB Type A interface */
-        port connector : 'USB'::'Standard-A';
+        port connector : 'USB'::'Standard-A Connector';
         port signal : 'Peripheral Interfaces'::USB;
 
         ref connection connect connector.CA.'1' to signal.'VBus';
         ref connection connect connector.CA.'2' to signal.'D-';
         ref connection connect connector.CA.'3' to signal.'D+';
         ref connection connect connector.CA.'4' to signal.'GND';
+    }
+    port def 'USB 3.2 A Standard Interface' :> 'USB A Standard Interface' {
+        doc /* The typical commercial USB Type A interface with USB 3.2 support */
+        port connector :>> connector : 'USB'::'Standard-A SuperSpeed Connector';
+        port signal :>> signal : 'Peripheral Interfaces'::'USB 3.2';
+
+        ref connection connect connector.'CA-SuperSpeed'.'5' to signal.'SSRX-';
+        ref connection connect connector.'CA-SuperSpeed'.'6' to signal.'SSRX+';
+        ref connection connect connector.'CA-SuperSpeed'.'7' to signal.'GND';
+        ref connection connect connector.'CA-SuperSpeed'.'8' to signal.'SSTX-';
+        ref connection connect connector.'CA-SuperSpeed'.'9' to signal.'SSTX+';
     }
     port def 'USB C Standard Interface'{
         doc /* The typical commercial USB Type C interface */

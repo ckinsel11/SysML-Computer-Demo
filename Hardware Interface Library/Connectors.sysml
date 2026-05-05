@@ -18,9 +18,13 @@ library package 'Cable Connector Library' {
         }
     }
     package USB {
-        port def 'Standard-A' :> 'Cable Connector' {
+        port def 'Standard-A Connector' :> 'Cable Connector' {
             doc /*  */
-                port :>> CA : 'USB Contact Arrangements'::'USB Type A';
+                port CA :>> CA : 'USB Contact Arrangements'::'USB Type A';
+        }
+        port def 'Standard-A SuperSpeed Connector' :> 'Standard-A Connector' {
+            doc /*  */
+                port 'CA-SuperSpeed' :>> CA : 'USB Contact Arrangements'::'USB Type A SuperSpeed';
         }
         port def 'Standard-B' :> 'Cable Connector' {
             doc /*  */

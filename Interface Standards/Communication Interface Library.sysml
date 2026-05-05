@@ -60,21 +60,8 @@ library package 'Communication Interface Library' {
                 doc /* Ground */
             }
         }
-        port def 'USB 1.0' :> USB {
+        abstract port def 'USB Superspeed' :> 'USB' {
             doc /*  */
-            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
-        }
-        port def 'USB 1.1' :> 'USB 1.0' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
-        }
-        port def 'USB 2.0' :> 'USB 1.1' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 480 ['Mbit/s'];
-        }
-        port def 'USB 3.0' :> USB {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 5 ['Gbit/s'];
             port 'SSTX+' {
                 doc /* SuperSpeed Transmit+ */
             }
@@ -88,19 +75,36 @@ library package 'Communication Interface Library' {
                 doc /* SuperSpeed Receive- */
             }
         }
-        port def 'USB 3.1' :> USB {
+
+        port def 'USB 1.0' :> USB {
+            doc /*  */
+            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
+        }
+        port def 'USB 1.1' :> USB {
+            doc /*  */
+            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
+        }
+        port def 'USB 2.0' :> USB {
+            doc /*  */
+            attribute :>> 'Signaling Rate' = 480 ['Mbit/s'];
+        }
+        port def 'USB 3.0' :> 'USB Superspeed' {
+            doc /*  */
+            attribute :>> 'Signaling Rate' = 5 ['Gbit/s'];
+        }
+        port def 'USB 3.1' :> 'USB Superspeed' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 10 ['Gbit/s'];
         }
-        port def 'USB 3.2' :> USB {
+        port def 'USB 3.2' :> 'USB Superspeed' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 20 ['Gbit/s'];
         }
-        port def 'USB4' :> USB {
+        port def 'USB4' :> 'USB Superspeed' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 40 ['Gbit/s'];
         }
-        port def 'USB4 2.0' :> USB {
+        port def 'USB4 2.0' :> 'USB Superspeed' {
             doc /*  */
             attribute :>> 'Signaling Rate' = 80 ['Gbit/s'];
         }

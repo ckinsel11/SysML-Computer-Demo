@@ -7,3 +7,11 @@ Rename the property during the redfinition and set the value.
 Keep the property name and set the Value
     attribute :>> 'Old Name' = New Value;
     attribute redefines 'Old Name' = New Value;
+
+Redefine the part/port
+    part :>> 'Old Name' : Type;
+    part 'Old Name' : Type :>> 'Old Name';
+    
+Rename and redefine the part/port
+    part 'New Name' :>> 'Old Name' : Type;
+    part 'New Name' : Type :>> 'Old Name';
