@@ -71,7 +71,7 @@ package 'Computer System' {
         doc /* The Motherboard must have enough memory slots for the RAM */
         in MBCnst[1] : Motherboard;
         in RAMCnst[1..4] : Memory;
-        /*MBCnst.'Memory Slots' >= size(RAMCnst)*/
+        //MBCnst.'Memory Slots' >= size(RAMCnst)
     }
     constraint def SizeCompatibility{
         doc /* The PC Case must be compatible with the size of the Motherboard */

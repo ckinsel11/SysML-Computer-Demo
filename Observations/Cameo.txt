@@ -1,0 +1,5 @@
+Text Files with errors
+    Cameo will not save changes to text files if there are any errors in it.
+    If there are any open files with errors, files with no errors cannot be saved either.
+    Graphical notation can both create elements with errors, and overwrite text no matter if there are errors.
+    
