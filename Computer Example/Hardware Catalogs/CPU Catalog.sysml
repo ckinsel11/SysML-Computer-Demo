@@ -1,6 +1,6 @@
 package 'CPU Catalog' {
     private import CPU::*;
-    private import 'CPU Sockets'::*;
+    private import CPU::'CPU Sockets'::*;
     private import 'Unit Library'::Frequency::*;
     private import 'Unit Library'::'Digital Storage'::*;
     private import SI::*;

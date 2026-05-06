@@ -1,6 +1,6 @@
 package Motherboard {
     private import ScalarValues::*;
-    private import 'CPU Sockets'::*;
+    private import CPU::'CPU Sockets'::*;
     private import 'Chipsets'::*;
 
     part def Motherboard {

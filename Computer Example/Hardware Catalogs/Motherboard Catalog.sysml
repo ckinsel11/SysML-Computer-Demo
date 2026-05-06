@@ -1,7 +1,7 @@
 package 'Motherboard Catalog' {
     private import 'Unit Library':: 'Digital Storage'::*;
     private import 'Motherboard'::*;
-    private import 'CPU Sockets'::*;
+    private import CPU::'CPU Sockets'::*;
     private import 'Cable Connector Library'::*;
     private import 'Combined Interfaces Library'::*;
 
