@@ -19,7 +19,5 @@ package 'Cory Computer' {
         part :>>Cooler : MSI::'MAG Coreliquid A13';
         part :>>CPU : AMD::'Ryzen 7 9800 X3D';
         part :>>GPU : 'GPU Catalog'::ASUS::'ASUS Prime OC RTX 5080';
-
-        connection connect CPU.Socket to MB.Socket;
     }
 }

@@ -1,0 +1,23 @@
+Layer 1 - Logical Data Model
+
+What are logical data models?
+    Models that establish the structure and relationship of data elements for the system. 
+    These can establish the "has a" or "is a" relationship and should define all of the attributes needed for your model.
+    Logical data models are agnostic of system (names are not specific to a tool implementation)
+
+Why are Logical data models important?
+    These define the attributes/properties that help establish how to set up profiles/constructs for those realizations.
+
+Who should be making logical data models?
+    These should only be made by the modeler/modeling team that is in charge of the methodology.
+
+When do you define logical data models?
+    These should be defined early so that the profiles/constructs can be defined as reusable elements.
+    This should be done in collaboration with process SMEs.
+
+Where do you define a logical data model?
+    These are defined as part of the profile at a high level.
+    The elements can/should be hidden from most common users as they don't need to see/interact with these elements at all.
+
+How do logical data models get updated?
+    These get updated as processes mature and requests are made to add attributes to X construct/stereotype/metadata.

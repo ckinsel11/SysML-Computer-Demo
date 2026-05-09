@@ -3,7 +3,9 @@ library package 'Communication Interface Library' {
     private import 'Unit Library'::'Data Transfer'::*;
 
     package 'Abstract Definitions' {
-        
+        abstract port def 'Physical Mount' {
+            doc /*  */
+        }
     }
     package 'Video Interfaces' {
         port def DisplayPort {

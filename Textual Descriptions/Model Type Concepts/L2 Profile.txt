@@ -1,0 +1,27 @@
+Layer 2 - Profile
+
+What are Profiles? 
+    Profiles are the realization and implementation of the logical data model within a SysML context.
+    These include stereotype definitions, construct defintions, and process definitions. 
+    These should contain all of the templates and broadly reusable elements across different products and industries.
+
+Why are Profiles important? 
+    Profiles provide the pre-constructed elements/stereotypes for reuse allowing other engineers to focus on the engineering. 
+
+
+Who needs Profiles?
+    Profiles are important to those implementing SysML models as they provide the templated constructs, stereotypes, and process helpers. 
+
+Who should be making Profiles?
+    This should be done by a dedicated methodology team.
+
+When do you define a Profile?
+    After you define the logical data model, or sometimes concurrently. This does need to be early in development so the elements can be used.
+
+Where do you define a Profile?
+    Profiles are typically defined in their own project space as they are used across programs/industry spaces. 
+    Some industries can have their own profile to capture some data realizations specific to them.
+
+How do Profiles get updated?
+    These should be done upon request and feedback by the customers using the profile.
+    Profiles can always be a bit under development, so it's important to take feedback from the users and try to make it as easy as possible for them to use.

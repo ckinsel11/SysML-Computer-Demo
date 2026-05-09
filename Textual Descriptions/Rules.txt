@@ -1,0 +1,12 @@
+This document is the list of general rules that I follow while defining/creating an architecture.
+
+Definitions vs Usages
+    Parts:
+        Definitions: Used when describing the object as a part on a shelf that you can go pick up and buy.
+        Usage: Used when included as a specific component in a system.
+
+Abstract
+    Something is abstract when:
+        1. It's never meant to be used as a typing element in the official design. 
+
+Naming Case Convention

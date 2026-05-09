@@ -1,0 +1,28 @@
+Layer 3 - Metamodel
+
+What are metamodels?
+    Metamodels are usually pictoral views of a generic architecture that describe how all elements are to be used and connected in that architecture. 
+
+Why are metamodels important?
+    Metamodels visually help the end users understand whether what they're doing is "right" or "wrong".
+    They can also form the foundation for establishing validation rules. 
+
+Who needs metamodels?
+    These are used by the end users early on to understand how to build the model.
+    When there are complete constructs and work instructions, metamodels can be almost pushed to irrelevant.
+
+Who should be making metamodels?
+    There should be one for the profiles created and maintained by the methodology team. Projects may have their own for unique data and element types.
+
+When do you define metamodels?
+    These are done after the profiles are created and before getting too deep into an architecture so that it can help enforce consistency.
+    Consistency is key for modeling and it's best to get that established as early as possible.
+
+Where do you define a metamodel?
+    Metamodels can be cross cutting. 
+    There should be one on in the profile that demonstrates the usages of the constructs/stereotypes.
+    Each project can have their own that extends the metamodel in the profile for anything that is domain specific.
+
+How do metamodels get updated?
+    Metamodels don't change very much after the modeling decisions get made. 
+    However, these  will get updated when something about the model gets matured. (e.g. Going from a "has a" to a "is a" relationship)

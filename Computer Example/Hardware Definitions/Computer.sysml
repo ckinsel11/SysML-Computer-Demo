@@ -22,6 +22,9 @@ package 'Computer System' {
         part 'PC Case'[1] : Case;
         part 'Power'[1] : 'Power Supply';
 
+        connection connect CPU.Socket to MB.Socket;
+        connection connect Cooler.'Mounting Bracket' to MB.'Cooler Mount';
+
         assert constraint socketCompatibility : SocketCompatibility {
             in CPUCnst = CPU;
             in MBCnst = MB;
@@ -43,6 +46,10 @@ package 'Computer System' {
             in CaseCnst = 'PC Case';
             in MBCnst = MB;
         }
+        assert constraint coolingCompatibility : CoolingCompatibility {
+            in CoolerCnst = Cooler;
+            in MBCnst = MB;
+        }
     }
 
     constraint def SocketCompatibility {
@@ -51,7 +58,6 @@ package 'Computer System' {
         in MBCnst[1] : Motherboard;
         CPUCnst.Socket == MBCnst.Socket
     }
-
     constraint def PowerAvailability {
         doc /* The Power Supply must provide enough wattage for the components */
         in PSCnst[1] : 'Power Supply';
@@ -59,14 +65,12 @@ package 'Computer System' {
         in GPUCnst[1] : 'Video Card';
         PSCnst.Wattage >= (CPUCnst.'Thermal Design Power' + GPUCnst.'Thermal Design Power')
     }
-
     constraint def MemoryAvailability {
         doc /* The CPU must support the amount of RAM */
         in CPUCnst[1] :'Central Processing Unit';
         in RAMCnst[1..4] : Memory;
         sum(RAMCnst.'Module Size') <= CPUCnst.'Maximum Supported Memory'
     }
-
     constraint def MemorySlots {
         doc /* The Motherboard must have enough memory slots for the RAM */
         in MBCnst[1] : Motherboard;
@@ -78,5 +82,11 @@ package 'Computer System' {
         in CaseCnst[1] : Case;
         in MBCnst[1] : Motherboard;
         notEmpty(intersection(CaseCnst.'Supported Motherboard Sizes', MBCnst.'Form Factor'))
+    }
+    constraint def CoolingCompatibility {
+        doc /* The CPU Cooler must be compatible with the CPU socket */
+        in CoolerCnst[1] :'CPU Cooler';
+        in MBCnst[1] : Motherboard;
+        CoolerCnst.'Mounting Bracket' == MBCnst.'Cooler Mount'
     }
 }
