@@ -1,7 +1,7 @@
 package Motherboard {
     private import ScalarValues::*;
     private import CPU::'CPU Sockets'::*;
-    private import 'Communication Interface Library'::'Abstract Definitions'::*;
+    private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
     part def Motherboard {
         doc /* The main printed circuit board (PCB) in general purpose computers and other expandable systems */
@@ -11,7 +11,7 @@ package Motherboard {
         
         port Socket : 'CPU Socket';
         port PowerIn;
-        port 'Memory Slots'[1..*];
+        port 'Memory Slots'[1..*] : 'Module Format';
         port 'Cooler Mount' : 'Physical Mount';
     }
 

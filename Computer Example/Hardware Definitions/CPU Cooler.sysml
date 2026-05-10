@@ -1,6 +1,6 @@
 package 'CPU Cooler' {
     private import ScalarValues::*;
-    private import 'Communication Interface Library'::'Abstract Definitions'::*;
+    private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
     part def 'CPU Cooler' {
         doc /* A device that dissipates heat from the CPU */

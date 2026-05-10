@@ -1,5 +1,6 @@
 package Memory {
     private import ScalarValues::*;
+    private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
     part def Memory {
         doc /* A device that stores data temporarily while the computer is running */
@@ -7,5 +8,6 @@ package Memory {
         attribute 'CAS Latency' : Real;
         attribute Speed;
         attribute 'Module Size' : Real;
+        port Module : 'Module Format';
     }
 }

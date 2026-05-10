@@ -4,3 +4,4 @@
 4. CPU Cooler Mount interface. Need to show that one comes installed by default but then swapped out to other via hardware in box.
 5. Define rules for using abstract
 6. Define rules for naming convention (camelcase vs lower vs upper vs normal)
+7. Male vs Female RAM
