@@ -220,4 +220,48 @@ package 'Contact Arrangements' {
             port '7';
         }
     }
+    package 'Phone Connectors' {
+        port def 'TS'{
+            port 'Tip';
+            port 'Sleeve';
+        }
+        port def 'TRS'{
+            port 'Tip';
+            port 'Ring';
+            port 'Sleeve';
+        }
+        port def 'TRRS'{
+            port 'Tip';
+            port 'Ring 1';
+            port 'Ring 2';
+            port 'Sleeve';
+        }
+        port def 'TRRRS'{
+            port 'Tip';
+            port 'Ring 1';
+            port 'Ring 2';
+            port 'Ring 3';
+            port 'Sleeve';
+        }
+    }
+    package 'XLR Connectors' {
+        port def 'XLR 3-Pin' {
+            port '1';
+            port '2';
+            port '3';
+        }
+        port def 'XLR 4-Pin' {
+            port '1';
+            port '2';
+            port '3';
+            port '4';
+        }
+        port def 'XLR 5-Pin' {
+            port '1';
+            port '2';
+            port '3';
+            port '4';
+            port '5';
+        }
+    }
 }

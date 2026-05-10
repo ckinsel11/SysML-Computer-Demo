@@ -128,5 +128,34 @@ library package 'Communication Interface Library' {
             abstract port def 'Power System Device' {
                 doc /*  */
             }
+    }
+    package 'Audio Interfaces'{
+            port def 'XLR3'{
+                doc /* */
+                port Hot{
+                    doc /* Positive polarity terminal for balanced audio circuits */
+                }
+                port Cold{
+                    doc /* Negative polarity terminal for balanced audio circuits */
+                }
+                port 'GND'{
+                    doc /* Chassis Ground */
+                }
+            }
+            port def CTIA{
+                doc /*  */
+                port 'Left Audio'{
+                    doc /*  */
+                }
+                port 'Right Audio'{
+                    doc /*  */
+                }
+                port GND{
+                    doc /* Ground */
+                }
+                port 'Microphone'{
+                    doc /*  */
+                }
+            }
     }   
 }

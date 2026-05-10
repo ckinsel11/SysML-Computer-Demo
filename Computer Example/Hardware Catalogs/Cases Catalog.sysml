@@ -15,8 +15,8 @@ package 'Cases Catalog' {
             attribute :>> 'Supported Motherboard Sizes' = ('enum_Motherboard Form Factor'::ATX, 'enum_Motherboard Form Factor'::'Micro-ATX', 'enum_Motherboard Form Factor'::'Mini-ITX');
             port 'USB 3.2 Type A'[4] : 'USB 3.2 A Standard Interface';
             port 'USB 3.2 Type C'[1] : 'USB C Standard Interface';
-            port 'Microphone' : '3.5 mm';
-            port 'Headphone' : '3.5 mm';
+            port 'Microphone' : '3.5 mm - 4-Contact';
+            port 'Headphone' : '3.5 mm - 4-Contact';
         }
     }
     package DIYPC {
@@ -25,8 +25,8 @@ package 'Cases Catalog' {
             attribute :>>'Internal 3.5 Bays' = 3;
             port 'USB 2.0 Type A'[2] : 'USB A Standard Interface';
             port 'USB 3.0 Type A'[2] : 'USB A Standard Interface';
-            port 'Microphone' : '3.5 mm';
-            port 'Headphone' : '3.5 mm';
+            port 'Microphone' : '3.5 mm - 4-Contact';
+            port 'Headphone' : '3.5 mm - 4-Contact';
         }
     }
 }

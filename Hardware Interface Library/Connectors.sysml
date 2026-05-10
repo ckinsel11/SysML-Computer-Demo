@@ -1,19 +1,19 @@
-library package 'Cable Connector Library' {
+library package 'Cable Connector Library'{
     private import 'Contact Arrangements'::*;
 
-    abstract port def 'Cable Connector' {
+    abstract port def 'Cable Connector'{
         doc /*  */
-        port 'CA' ;
+        port 'CA';
     }
 
-    package 'HDMI Connectors' {
+    package 'HDMI Connectors'{
         port def 'Type A' :> 'Cable Connector' {
             doc /*  */
             port :>> CA : HDMI::'HDMI Type A';
         }
     }
-    package DisplayPort {
-        port def 'DisplayPort' {
+    package DisplayPort{
+        port def 'DisplayPort'{
             doc /*  */
         }
     }
@@ -54,11 +54,13 @@ library package 'Cable Connector Library' {
         }
     }
     package Audio {
-        port def '3.5 mm' {
+        port def '3.5 mm - 4-Contact' :> 'Cable Connector'{
             doc /*  */
+            port CA :>> CA : 'Phone Connectors'::TRRS;
         }
-        port def XLR {
+        port def XLR :> 'Cable Connector'{
             doc /*  */
+            port CA :>> CA : 'XLR Connectors'::'XLR 3-Pin';
         }
     }
 }
