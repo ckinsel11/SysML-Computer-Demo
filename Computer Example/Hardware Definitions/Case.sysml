@@ -1,7 +1,7 @@
 package Case {
     private import ScalarValues::*;
     private import CollectionFunctions::*;
-    private import Motherboard::*;
+    private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
     part def Case {
         doc /* The enclosure that contains the computer components. */
@@ -11,6 +11,7 @@ package Case {
         attribute 'Supported Motherboard Sizes' : Set;
         
         port PWRButton;
+        port 'Card Mount' : 'Physical Mount';
     }
 
     enum def 'enum_Case Type' {

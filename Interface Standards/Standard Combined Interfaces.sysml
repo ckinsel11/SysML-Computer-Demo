@@ -1,6 +1,7 @@
 package 'Combined Interfaces Library' {
     private import 'Communication Interface Library'::*;
     private import 'Cable Connector Library'::*;
+    private import 'Physical Interface Library'::*;
 
     port def 'HDMI Standard A Interface'{
         doc /* The typical commercial HDMI Type A interface */
@@ -67,6 +68,25 @@ package 'Combined Interfaces Library' {
         ref connection connect connector.CA.B10 to signal.'SSRX-';
         ref connection connect connector.CA.B11 to signal.'SSRX+';
         ref connection connect connector.CA.B12 to signal.'GND';
- 
+    }
+    port def 'PCIe-1x Standard Interface'{
+        doc /* The typical commercial 1-lane PCIe interface */
+        port connector : 'Edge Connectors'::'PCIe-1x-Edge';
+        port signal : 'Expansion Buses'::'PCIe-1x';
+    }
+    port def 'PCIe-4x Standard Interface' :>'PCIe-1x Standard Interface'{
+        doc /* The typical commercial 4-lane PCIe interface */
+        port connector :>> connector : 'Edge Connectors'::'PCIe-4x-Edge';
+        port signal :>> signal : 'Expansion Buses'::'PCIe-4x';
+    }
+    port def 'PCIe-8x Standard Interface' :>'PCIe-4x Standard Interface'{
+        doc /* The typical commercial 8-lane PCIe interface */
+        port connector :>> connector : 'Edge Connectors'::'PCIe-8x-Edge';
+        port signal :>> signal : 'Expansion Buses'::'PCIe-8x';
+    }
+    port def 'PCIe-16x Standard Interface' :>'PCIe-8x Standard Interface'{
+        doc /* The typical commercial 16-lane PCIe interface */
+        port connector :>> connector : 'Edge Connectors'::'PCIe-16x-Edge';
+        port signal :>> signal : 'Expansion Buses'::'PCIe-16x';
     }
 }

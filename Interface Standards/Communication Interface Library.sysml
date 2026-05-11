@@ -154,5 +154,19 @@ library package 'Communication Interface Library' {
                     doc /*  */
                 }
             }
-    }   
+    }
+    package 'Expansion Buses'{
+        port def 'PCIe-1x'{
+            doc /* Single Lane PCIe Interface */
+        }
+        port def 'PCIe-4x' :> 'PCIe-1x'{
+            doc /* 4 Lane PCIe Interface */
+        }
+        port def 'PCIe-8x' :> 'PCIe-4x'{
+            doc /* 8 Lane PCIe Interface */
+        }
+        port def 'PCIe-16x' :> 'PCIe-8x'{
+            doc /* 16 Lane PCIe Interface */
+        }
+    }
 }

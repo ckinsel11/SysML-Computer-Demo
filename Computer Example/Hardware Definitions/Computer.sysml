@@ -24,6 +24,9 @@ package 'Computer System' {
 
         connection connect CPU.Socket to MB.Socket;
         connection connect Cooler.'Mounting Bracket' to MB.'Cooler Mount';
+        connection connect RAM.Module to MB.'Memory Slots';
+        connection connect GPU.PCIe to MB.'PCIe';
+        connection connect GPU.'Case Mount' to 'PC Case'.'Card Mount';
 
         assert constraint socketCompatibility : SocketCompatibility {
             in CPUCnst = CPU;
