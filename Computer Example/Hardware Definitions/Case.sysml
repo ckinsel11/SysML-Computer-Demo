@@ -12,6 +12,8 @@ package Case {
         
         port PWRButton;
         port 'Card Mount' : 'Physical Mount';
+        port 'PS Mount' : 'Physical Mount';
+        port 'MB Mount' : 'Physical Mount';
     }
 
     enum def 'enum_Case Type' {

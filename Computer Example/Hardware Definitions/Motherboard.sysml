@@ -14,6 +14,7 @@ package Motherboard {
         port 'Memory Slots'[1..*] : 'Module Format';
         port 'Cooler Mount' : 'Physical Mount';
         port 'PCIe'[1..*];
+        port 'Case Mount' : 'Physical Mount';
     }
 
     enum def 'enum_Motherboard Form Factor' {
