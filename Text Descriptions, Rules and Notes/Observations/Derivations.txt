@@ -1,0 +1,37 @@
+Derivation connection definitions have their ends typed, but usages do not. The example below is using requirment definitions.
+    #derivation connection def 'Solid State Drive Derivation' {
+        end #original r1 : 'Part Vendors'::'SSD Vendor';
+        end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+    }
+
+Most situations for requirement derivation will be using a derivation usage, never a definition. These use requirement usages and should look like this:
+    #derivation connection 'Solid State Drive Derivation' {
+        end #original r1 :>> 'Part Vendors'::'SSD Vendor';
+        end #derive r1_1 :>> 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+    }
+
+From a text-based point of view, it is easy to miscreate these items and combine the two methods because they look very similar. It is using requirement definitions.
+    #derivation connection 'Solid State Drive Derivation' {
+        end #original r1 : 'Part Vendors'::'SSD Vendor';
+        end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+    }
+
+    This is legal from a rule standpoint in that there are no errors from either Syside or Cameo when entering these via text. 
+        Getting there graphically is much harder.
+
+
+Let's look at some errors 
+
+Using requirement usages, not definitions yields:
+    #derivation connection def 'Solid State Drive Derivation' {
+        end #original r1 : 'Part Vendors'::'SSD Vendor';
+        end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+    }
+    ERROR: Usages should only be typed by classifiers.
+
+Using requirement definitions instead of usages yields:
+    #derivation connection def 'Solid State Drive Derivation' {
+        end #original r1 :>> 'Part Vendors'::'SSD Vendor';
+        end #derive r1_1 :>> 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+    }
+    ERROR: Expected feature element but found requirement definition

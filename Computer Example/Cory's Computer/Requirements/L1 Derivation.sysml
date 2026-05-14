@@ -22,7 +22,7 @@ package 'L1 Derivation' {
             @'Base Requirement' {
                 'Object Type' = 'enum_Requirement Category'::Heading;
             }
-                requirement def <'ASys 1.1'> 'Solid-State Drive Manufacturer' {
+                requirement <'ASys 1.1'> 'Solid-State Drive Manufacturer' {
                    doc /* The manufacturer of any solid-state drive shall be Samsung. */
                     @'Base Requirement' {
                         'Object Type' = 'enum_Requirement Category'::Threshold;
@@ -34,8 +34,8 @@ package 'L1 Derivation' {
 
         /* Step 4: Establish Traceability. This is done by creating a connection between parent/child requirements. */
         #derivation connection 'Solid State Drive Derivation' {
-            end #original r1 : 'Part Vendors'::'SSD Vendor';
-            end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';
+            end #original r1 :>> 'Part Vendors'::'SSD Vendor';
+            end #derive r1_1 :>> 'Solid-State Drive'::'Solid-State Drive Manufacturer';
         }
 
         /* Step 5. Allocate Requirements. This is done by creating a connection to the reference architecture. */

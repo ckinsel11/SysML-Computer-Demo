@@ -3,6 +3,7 @@ This document is the list of general rules that I follow while defining/creating
 Definitions vs Usages
     Parts:
         Definitions: Used when describing the object as a part on a shelf that you can go pick up and buy.
+            Definitions have no context and can stand alone.
         Usage: Used when included as a specific component in a system.
 
 Abstract

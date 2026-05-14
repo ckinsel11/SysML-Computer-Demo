@@ -37,14 +37,14 @@ package ' Template Flow Down ' {
         }
         
         comment /* Step 4: Establish Traceability. This is done by creating a connection between parent/child requirements. */
-        #derivation connection def 'Template Derivation' {
+        #derivation connection 'Template Derivation' {
             /* Use the format below to create a derivation relationship. The first line should be the parent requirement.
             * and uses #original with r1 just being the name of the end and typed by the parent requirement. Any line below 
             * will be child requirements named r1_X and typed by the child requirement definition. You can remove the ;
             * and uncomment the rest of the line and replace the text in caps with the appropriate requirement. */
             
-            end #original r1; /* : PARENT REQUIREMENT DEF; */
-            end #derive r1_1; /* : CHILD REQUIREMENT DEF; */
+            end #original r1; /* :>> PARENT REQUIREMENT; */
+            end #derive r1_1; /* :>> CHILD REQUIREMENT; */
         }
 
         comment /* Step 5. Allocate Requirements. This is done by creating a connection to the reference architecture. */
