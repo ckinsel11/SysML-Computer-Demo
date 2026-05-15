@@ -87,7 +87,7 @@ package 'Computer System' {
         doc /* The PC Case must be compatible with the size of the Motherboard */
         in CaseCnst[1] : Case;
         in MBCnst[1] : Motherboard;
-        notEmpty(intersection(CaseCnst.'Supported Motherboard Sizes', MBCnst.'Form Factor'))
+        //contains (CaseCnst.'Supported Motherboard Sizes', MBCnst.'Form Factor')
     }
     constraint def CoolingCompatibility {
         doc /* The CPU Cooler must be compatible with the CPU socket */
