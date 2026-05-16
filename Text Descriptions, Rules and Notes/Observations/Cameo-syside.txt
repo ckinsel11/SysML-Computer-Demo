@@ -10,3 +10,13 @@ For set definitions i.e. attribute :>> 'Supported Motherboard Sizes' = ('enum_Mo
 For redefinition trees (i.e. configuration management version changes over time)
     Syside gives this error 'Cannot override a binding feature value' when trying to redefined a previously redfined value in the tree.
     Cameo has no issue with this practice.
+
+For connections within a port:
+        port def 'USB A Standard Interface'{
+            port connector : 'USB'::'Standard-A Connector';
+            port signal : 'Peripheral Interfaces'::USB;
+
+            ref connection connect connector.CA.'1' to signal.'VBus';
+        }
+    Syside gives an error if "ref" is not included: Owned usages of a port definition other than ports must be referential
+    Cameo has no issue not using refs. And will actually remove ref when updated.
