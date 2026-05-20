@@ -1,0 +1,33 @@
+Change Management. A concept that seems so simple and helpful, but is the bane of many's existence. 
+
+When should you implement a Change Management process?
+    Change Management should be implemented after you establish the baseline for your model. This shouldn't be extremely early in the development,
+    as you will probably slow yourself down too much with added process. 
+
+How do you go about change management for a SysML model?
+    1. Plan. You don't have to be agile necessarily, but have a release plan of "versions" of the model.
+        I  like using semantic versioning for my releases of a product. 
+            Establish rules for what is a major/minor/patch release. 
+        Plan out what you want the next version(s) to look like and write tasks to achieve those goals. 
+
+    2. Execute on those tasks.
+        Work to the plan and burn down the tasks for the next release.
+
+    3. Verify completion of tasks
+        Have another person verify the results of that task, so that it is independently verified.
+    
+    4. Generate Artifacts
+        The model itself is an artifact, but there are also other documents (ICDs, Specs, etc.) that can be generated from the model.
+        All of these need to be generated. 
+    
+    5. Review Artifacts
+        Diffs can easily be generated for those document-based artifacts. 
+            That will be the real test if the changes are accurate because those artifacts tend to be other team's touch points to the model.
+        For the model, you can do a diff of all of the content, however SysML v1 does not make this easy, but in V2 the textual notation can be diffed.
+            This text diff will give every change imaginable other than pixel shifts on diagrams, and may not be the most helpful out of context.
+    
+    6. Approve the changes. 
+
+    7. Release the products and artifacts.
+        Snap your baseline and generate the final artifacts from that approved baseline.
+        

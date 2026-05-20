@@ -175,6 +175,12 @@ package 'Logical Data Model' {
             doc /* The hierarchical location of an object within the source document*/
         }
     }
+    package 'Types of Source Documents'{
+        item def 'Requirement Specification' :> 'Source Document Attributes'::'Source Document'{
+            doc /*  */
+            item Requirement [1..*] : 'Requirement Attributes'::Requirement;
+        }
+    }
     package 'Analysis Attributes' {
         item def 'Analytic Context' {
             item 'Analysis Name' : 'Analysis Attributes'::'Analysis Name';
@@ -235,6 +241,10 @@ package 'Logical Data Model' {
     package 'Analyses and Procedures' {
         item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
             doc /* An anlysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
+
+            item 'Scoping Requirement' [1..*] : 'Requirement Derivation Abstraction Levels'::'Scoping Requirement';
+            item 'Analysis Result' [1] : 'Analysis Results'::'Analysis Result';
+
             item def 'Functional Analysis' :> 'Analysis Case' {
                 doc /* A functional case derives requirements that describe behaviors and functionality of the system when interacted with by an actor. In an ideal state, the behavior should be defined agnostic of the system. */
                 item 'Use Case Actor' : 'Analysis Attributes'::'Use Case Actor';
@@ -279,6 +289,24 @@ package 'Logical Data Model' {
             }
             item def 'Disposal Procedure' :> 'Procedure Case' {
                 doc /* Process to bring the system or retired elements of the system to end of life */
+            }
+        }
+    }
+    package 'Analysis Results' {
+        item def 'Analysis Result' {
+            doc /*  */
+
+            item def 'Function Block' :> 'Analysis Result'{
+                doc /*  */
+            }
+            item def 'Goal Value' :> 'Analysis Result'{
+                doc /*  */
+            }
+            item def 'Constraint Requirement Block' :> 'Analysis Result'{
+                doc /*  */
+            }
+            item def 'Chosen Alternative' :> 'Analysis Result'{
+                doc /*  */
             }
         }
     }
