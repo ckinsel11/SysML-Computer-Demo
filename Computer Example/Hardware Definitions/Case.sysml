@@ -4,7 +4,7 @@ package Case {
     private import 'Physical Interface Library'::'Abstract Definitions'::*;
     private import Motherboard::*;
 
-    part def Case {
+    abstract part def Case {
         doc /* The enclosure that contains the computer components. */
         attribute 'Case Type' : 'enum_Case Type';
         attribute 'Internal 3.5 Bays' : Integer;

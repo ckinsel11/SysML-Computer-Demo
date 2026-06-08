@@ -1,10 +1,9 @@
 package CPU {
     private import ScalarValues::*;
-    private import 'CPU Sockets'::*;
 
-    part def 'Central Processing Unit' {
+    abstract part def 'Central Processing Unit' {
         doc /* Primary Processor of a Computer */
-        port Socket :'CPU Socket';
+        port Socket : 'CPU Sockets' :: 'CPU Socket';
         attribute 'Performance Core Clock' : Real;
         attribute 'Performance Core Boost Clock' : Real;
         attribute 'Thermal Design Power' : Real;
@@ -16,6 +15,7 @@ package CPU {
 
     package 'CPU Sockets' {
         abstract port def 'CPU Socket' {
+            doc /* Physical interface on a motherboard that connects the CPU to the system */
             attribute 'Pin Count' : Integer;
         }
         port def AM4 :> 'CPU Socket' {

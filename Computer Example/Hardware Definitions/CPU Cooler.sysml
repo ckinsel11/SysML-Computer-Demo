@@ -2,7 +2,7 @@ package 'CPU Cooler' {
     private import ScalarValues::*;
     private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
-    part def 'CPU Cooler' {
+    abstract part def 'CPU Cooler' {
         doc /* A device that dissipates heat from the CPU */
         attribute 'Fan RPM' : Real;
         attribute 'Noise Level' : Real;

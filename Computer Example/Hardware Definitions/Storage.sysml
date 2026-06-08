@@ -1,7 +1,7 @@
 package Storage {
     private import ScalarValues::*;
 
-    part def Storage {
+    abstract part def Storage {
         doc /* A device that stores data persistently */
         attribute Capacity : Real;
         attribute 'Drive Type' : String;

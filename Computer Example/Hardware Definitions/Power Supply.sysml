@@ -3,7 +3,7 @@ package 'Power Supply' {
     private import ScalarValues::Integer;
     private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
-    part def 'Power Supply' {
+    abstract part def 'Power Supply' {
         doc /* An electrical device that converts electric current from a source into the correct form for use by the computer */
         attribute 'Efficiency Rating';
         attribute Wattage : Real;

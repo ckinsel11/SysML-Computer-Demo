@@ -1,4 +1,4 @@
-1. Walk through configuration managment example over time (i.e. Old computer upgrades to newer configuration)
+1. Walk through configuration management example over time (i.e. Old computer upgrades to newer configuration)
 2. Define Process for how I assembled my computer and not generic process
 3. Figure out how to show interface between cpu and cpu cooler 
 4. CPU Cooler Mount interface. Need to show that one comes installed by default but then swapped out to other via hardware in box.

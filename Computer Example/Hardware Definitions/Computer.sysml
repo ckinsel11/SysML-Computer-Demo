@@ -11,7 +11,7 @@ package 'Computer System' {
     private import Case::*;
     private import 'Power Supply'::*;
 
-    part def Computer {
+    abstract part def Computer {
         doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
         part CPU[1] :'Central Processing Unit';
         part Cooler[1] :'CPU Cooler';

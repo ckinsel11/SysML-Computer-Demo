@@ -2,7 +2,7 @@ package Memory {
     private import ScalarValues::*;
     private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
-    part def Memory {
+    abstract part def Memory {
         doc /* A device that stores data temporarily while the computer is running */
         attribute 'First Word Latency' : Real;
         attribute 'CAS Latency' : Real;

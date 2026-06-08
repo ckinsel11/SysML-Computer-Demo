@@ -3,7 +3,7 @@ package Motherboard {
     private import CPU::'CPU Sockets'::*;
     private import 'Physical Interface Library'::'Abstract Definitions'::*;
 
-    part def Motherboard {
+    abstract part def Motherboard {
         doc /* The main printed circuit board (PCB) in general purpose computers and other expandable systems */
         attribute 'Form Factor' : 'enum_Motherboard Form Factor';
         attribute 'Max Memory' : Integer;

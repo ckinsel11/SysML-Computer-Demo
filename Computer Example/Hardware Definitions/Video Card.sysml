@@ -2,7 +2,7 @@ package 'Video Card' {
     private import ScalarValues::*;
     private import 'Physical Interface Library'::*;
     
-    part def 'Video Card' {
+    abstract part def 'Video Card' {
         doc /* A video card, also known as a graphics card, is a hardware component responsible for rendering images and video output. */
         attribute Chipset;
         attribute Memory : Real;

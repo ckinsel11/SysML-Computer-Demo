@@ -179,6 +179,33 @@ package 'Logical Data Model' {
         item def 'Requirement Specification' :> 'Source Document Attributes'::'Source Document'{
             doc /*  */
             item Requirement [1..*] : 'Requirement Attributes'::Requirement;
+
+            item def 'System Requirement Specification' :> 'Requirement Specification' {
+                doc /*  */
+                item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'System Requirement';
+                
+                item def 'System Requirement Specification Baseline' :> 'System Requirement Specification', 'Requirement Specification Baseline' {
+                    doc /*  */
+                }
+            }
+            item def 'Subystem Requirement Specification' :> 'Requirement Specification' {
+                doc /*  */
+                item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'Subsystem Requirement';
+
+                item def 'Subsystem Requirement Specification Baseline' :> 'Subystem Requirement Specification', 'Requirement Specification Baseline' {
+                    doc /*  */
+                }
+            }
+            item def 'Component Requirement Specification' :> 'Requirement Specification' {
+                doc /*  */
+                item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'Component Requirement';
+                item def 'Component Requirement Specification Baseline' :> 'Component Requirement Specification', 'Requirement Specification Baseline' {
+                    doc /*  */
+                }
+            }
+            item def 'Requirement Specification Baseline' {
+                doc /*  */
+            }
         }
     }
     package 'Analysis Attributes' {
@@ -295,6 +322,8 @@ package 'Logical Data Model' {
     package 'Analysis Results' {
         item def 'Analysis Result' {
             doc /*  */
+            item 'Resulting Requirement' [1..*] :'Requirement Derivation Abstraction Levels'::'Resulting Requirement';
+            // There is a relation of 1..* "Architecture Element" here.
 
             item def 'Function Block' :> 'Analysis Result'{
                 doc /*  */
@@ -313,10 +342,12 @@ package 'Logical Data Model' {
     package 'Configuration Item Attributes' {
         item def 'Configuration Item' {
             doc /* A product, allocated component of a product, or both that satisfies an end use function, has distinct requirements, functionality and/or product relationships, and is designated for distinct control in the configuration-management system. */
-            item 'Part Number' : 'Configuration Item Attributes'::'Part Number';
-            item 'Revision' : 'Configuration Item Attributes'::'Part Number Revision';
-            item 'Structure Name' : 'Configuration Item Attributes'::'Product Structure Name';
-            item 'Abbreviation' : 'Configuration Item Attributes'::'CI Abbreviation';
+            item 'Part Number' [1] : 'Configuration Item Attributes'::'Part Number';
+            item 'Revision' [1] : 'Configuration Item Attributes'::'Part Number Revision';
+            item 'Structure Name' [1] : 'Configuration Item Attributes'::'Product Structure Name';
+            item 'Abbreviation' [1] : 'Configuration Item Attributes'::'CI Abbreviation';
+            item 'Source Document'[0..*] : 'Source Document Attributes'::'Source Document';
+            item 'Requirement Specification' [0..1] : 'Types of Source Documents' ::'Requirement Specification';
             
             item def 'Hardware CI' :> 'Configuration Item' {
                 doc /* A specific piece of hardware, or an aggregation of hardware and related software, designated for tracking within a Configuration Management (CM) system */
@@ -525,5 +556,9 @@ package 'Logical Data Model' {
     }
     package 'Agile Task Attributes' {
         
+    }
+    package 'Architecture Elements' {
+        /* There are definitions of context, system, subsystem, and componenents here, with relationships to a usage. This needs to be revisited in the context of V2.
+        * I also think this needs to be revisited in terms of compositionally as it seems to imply that systems can only be composed of subsystems.*/
     }
 }
