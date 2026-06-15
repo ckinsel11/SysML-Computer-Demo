@@ -23,7 +23,7 @@ package 'Cable Connectors' {
     item def Keying {
         doc /* Mechanical feature, such as notches or slots, designed to ensure cables mate in the correct orientation */
     }
-    item def Shielding {
+    abstract item def Shielding {
         doc /* Indicates type of shielding termination in a cable connector */
         item def 'No Shield' :> Shielding {
             doc /* No shielding terminated at the cable connector */

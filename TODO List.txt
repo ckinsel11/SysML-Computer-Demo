@@ -8,3 +8,4 @@
 8. Make an example of a "custom connector". Since computers are all standards based I'm combining the connector with the communication in a singular port. However this isn't how to do it on a custom box, as you don't need to store that combination then use it. You can just make it defined with the box.
 9. Review Edge Connectors. Do they need contact arrangements?
 10. comparison on multiplicity of values to a single value if any are equal (in Computer constraint for mb form factor)
+11. Review derived values/items (weighted score calculated via raw score and weight factor)

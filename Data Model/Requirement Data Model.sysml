@@ -1,22 +1,24 @@
 package 'Requirement Attributes' {
+    private import 'Analysis Attributes'::*;
     item def Requirement {
         doc /* A requirement is a documented, verifiable statement that indicates a function, capability, constraint, or or performance that a system, product or part needs to meet. */
-        item 'Requirement Name' : 'Requirement Attributes'::'Requirement Name';
-        item 'Requirement ID' : 'Requirement Attributes'::'Requirement ID';
-        item 'Requirement Text' : 'Requirement Attributes'::'Requirement Text';
-        item 'Requirement Type' : 'Requirement Attributes'::'Requirement Type';
-        item 'Requirement Status' : 'Requirement Attributes'::'Requirement Status';
-        item 'Requirement Location' : 'Requirement Attributes'::'Requirement Location';
-        item 'Requirement Category' : 'Requirement Attributes'::'Requirement Category';
-        item 'Requirement Rationale' : 'Requirement Attributes'::'Requirement Rationale';
-        item 'Requirement Comment' : 'Requirement Attributes'::'Requirement Comment';
-        item 'Notional Verification' : 'Requirement Attributes'::'Notional Verification';
-        item 'Verification Method' : 'Requirement Attributes'::'Verification Method';
-        item 'Verification Frequency' : 'Requirement Attributes'::'Verification Frequency';
-        item 'Verification Status' : 'Requirement Attributes'::'Verification Status';
-        item 'Verification Rationale' : 'Requirement Attributes'::'Verification Rationale';
+        item 'requirement Name' : 'Requirement Attributes'::'Requirement Name';
+        item 'requirement ID' : 'Requirement Attributes'::'Requirement ID';
+        item 'requirement Text' : 'Requirement Attributes'::'Requirement Text';
+        item 'requirement Type' : 'Requirement Attributes'::'Requirement Type';
+        item 'requirement Status' : 'Requirement Attributes'::'Requirement Status';
+        item 'requirement Location' : 'Requirement Attributes'::'Requirement Location';
+        item 'requirement Category' : 'Requirement Attributes'::'Requirement Category';
+        item 'requirement Rationale' : 'Requirement Attributes'::'Requirement Rationale';
+        item 'requirement Comment' : 'Requirement Attributes'::'Requirement Comment';
+        item 'notional Verification' : 'Requirement Attributes'::'Notional Verification';
+        item 'verification Method' : 'Requirement Attributes'::'Verification Method';
+        item 'verification Frequency' : 'Requirement Attributes'::'Verification Frequency';
+        item 'verification Status' : 'Requirement Attributes'::'Verification Status';
+        item 'verification Rationale' : 'Requirement Attributes'::'Verification Rationale';
+        item 'requirement Parameter' [0..*] : 'Given Value'::'Requirement Parameter';
     }
-    item def 'Requirement Status' {
+    abstract item def 'Requirement Status' {
         doc /* Current Status of the requirement */
         item def New :> 'Requirement Attributes'::'Requirement Status' {
             doc
@@ -43,7 +45,7 @@ package 'Requirement Attributes' {
             /* These are requirements that are work in progress (i.e. just written) that are not ready for peer review. */
         }
     }
-    item def 'Verification Method' {
+    abstract item def 'Verification Method' {
         doc /* How a requirement is intended to be verified. */
         item def Analysis :> 'Verification Method' {
             doc
@@ -62,7 +64,7 @@ package 'Requirement Attributes' {
             /* The use of an end product to obtain detailed data needed to verify performance or provide sufficient information to verify performance through further analysis. Testing can be conducted on final end products, breadboards, brassboards, or prototypes. Testing produces data at discrete points for each specified requirement under controlled conditions and is the most resource-intensive verification technique. As the saying goes, “Test as you fly, and fly as you test.” (See Section 5.3.2.5 in the NASA Expanded Guidance for Systems Engineering at https://nen.nasa.gov/web/se/doc-repository) */
         }
     }
-    item def 'Verification Status' {
+    abstract item def 'Verification Status' {
         doc /* Current status of verification efforts for the requirement. */
         item def 'Complete - Failed' :> 'Requirement Attributes'::'Verification Status' {
             doc
@@ -81,7 +83,7 @@ package 'Requirement Attributes' {
             /* This status indicates that the requirement has not entered any verification process yet. */
         }
     }
-    item def 'Requirement Category' {
+    abstract item def 'Requirement Category' {
         doc /* This lists out the type of object the requirement is. Requirement objects are not exclusively shall statements and this helps differentiate those types of elements. */
         item def Heading :> 'Requirement Attributes'::'Requirement Category' {
             doc
@@ -116,7 +118,7 @@ package 'Requirement Attributes' {
         doc
         /* A short summary of the requirement element. These do need to be unique. */
     }
-    item def 'Requirement Type' {
+    abstract item def 'Requirement Type' {
         doc /* This is the descriptive kind of requirement. These typically inlcude "Functional", "Performance", "Constraint" and "Interface". */
         item def Functional :> 'Requirement Attributes'::'Requirement Type' {
             doc
@@ -147,7 +149,7 @@ package 'Requirement Attributes' {
     item def 'Notional Verification' {
         doc /* This is a description of how the requirement will be verified. */
     }
-    item def 'Verification Frequency' {
+    abstract item def 'Verification Frequency' {
         doc /* Indicates when/how many times the requirement needs to be verified. */
         item def 'Non-Recurring' :> 'Requirement Attributes'::'Verification Frequency' {
             doc /* Used to indentify requirements that are only verified once. */
@@ -173,11 +175,9 @@ package 'Requirement Abstraction Levels' {
 } 
 package 'Requirement Derivation Abstraction Levels' {
     item def 'Scoping Requirement' :> 'Requirement Attributes'::Requirement {
-        doc
-        /* This is a requirement that forms the basis for some requirement derivation effort. */
+        doc /* This is a requirement that forms the basis for some requirement derivation effort. */
     }
     item def 'Resulting Requirement' :> 'Requirement Attributes'::Requirement {
-        doc
-        /* This is a requirement authored from some requirement derivation effort. */
+        doc /* This is a requirement authored from some requirement derivation effort. */
     }
 }

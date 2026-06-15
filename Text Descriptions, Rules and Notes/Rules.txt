@@ -11,3 +11,16 @@ Abstract
         1. It's never meant to be used as a typing element in the official design. 
 
 Naming Case Convention
+    Definitions: CamelCase
+    Usages: lowercase
+
+Definition Order
+    part def Name {
+        doc
+        attribute
+        part
+        port
+        connection
+        assert constraint
+    }
+        

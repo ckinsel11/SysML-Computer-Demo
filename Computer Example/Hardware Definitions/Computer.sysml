@@ -13,48 +13,48 @@ package 'Computer System' {
 
     abstract part def Computer {
         doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
-        part CPU[1] :'Central Processing Unit';
-        part Cooler[1] :'CPU Cooler';
-        part MB[1] : Motherboard;
-        part RAM[1..4] : Memory;
-        part Drive[1..*] : Storage;
-        part GPU[1] : 'Video Card';
-        part 'PC Case'[1] : Case;
-        part 'Power'[1] : 'Power Supply';
+        part cpu[1] :'Central Processing Unit';
+        part cooler[1] :'CPU Cooler';
+        part motherboard[1] : Motherboard;
+        part ram[1..4] : Memory;
+        part drive[1..*] : Storage;
+        part gpu[1] : 'Video Card';
+        part 'case'[1] : Case;
+        part 'power'[1] : 'Power Supply';
 
-        connection connect CPU.Socket to MB.Socket;
-        connection connect Cooler.'Mounting Bracket' to MB.'Cooler Mount';
-        connection connect RAM.Module to MB.'Memory Slots';
-        connection connect GPU.PCIe to MB.'PCIe';
+        connection connect cpu.Socket to motherboard.Socket;
+        connection connect cooler.'Mounting Bracket' to motherboard.'Cooler Mount';
+        connection connect ram.Module to motherboard.'Memory Slots';
+        connection connect gpu.PCIe to motherboard.'PCIe';
         
-        connection connect GPU.'Case Mount' to 'PC Case'.'Card Mount';
-        connection connect Power.'Case Mount' to 'PC Case'.'PS Mount';
-        connection connect MB.'Case Mount' to 'PC Case'.'MB Mount';
+        connection connect gpu.'Case Mount' to 'case'.'card Mount';
+        connection connect power.'Case Mount' to 'case'.'ps Mount';
+        connection connect motherboard.'Case Mount' to 'case'.'mb Mount';
 
         assert constraint socketCompatibility : SocketCompatibility {
-            in CPUCnst = CPU;
-            in MBCnst = MB;
+            in CPUCnst = cpu;
+            in MBCnst = motherboard;
         }
         assert constraint powerAvailability : PowerAvailability {
-            in PSCnst = 'Power';
-            in CPUCnst = CPU;
-            in GPUCnst = GPU;
+            in PSCnst = power;
+            in CPUCnst = cpu;
+            in GPUCnst = gpu;
         }
         assert constraint memoryAvailability : MemoryAvailability {
-            in CPUCnst = CPU;
-            in RAMCnst = RAM;
+            in CPUCnst = cpu;
+            in RAMCnst = ram;
         }
         assert constraint memorySlots : MemorySlots {
-            in MBCnst = MB;
-            in RAMCnst = RAM;
+            in MBCnst = motherboard;
+            in RAMCnst = ram;
         }
         assert constraint sizeCompatibility : SizeCompatibility {
-            in CaseCnst = 'PC Case';
-            in MBCnst = MB;
+            in CaseCnst = 'case';
+            in MBCnst = motherboard;
         }
         assert constraint coolingCompatibility : CoolingCompatibility {
-            in CoolerCnst = Cooler;
-            in MBCnst = MB;
+            in CoolerCnst = cooler;
+            in MBCnst = motherboard;
         }
     }
 

@@ -10,11 +10,11 @@ package 'CPU Cooler' {
         port 'Mounting Bracket' : 'Physical Mount';
     }
 
-    part def 'Liquid CPU Cooler' :> 'CPU Cooler' {
+    abstract part def 'Liquid CPU Cooler' :> 'CPU Cooler' {
         attribute :>>'Cooling Type' = "Liquid";
         attribute 'Radiator Size' : Real;
     }
-    part def 'Air Cooler' :> 'CPU Cooler' {
+    abstract part def 'Air Cooler' :> 'CPU Cooler' {
         attribute :>>'Cooling Type' = "Air";
     }
 }

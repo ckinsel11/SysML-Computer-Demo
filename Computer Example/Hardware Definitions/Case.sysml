@@ -12,9 +12,9 @@ package Case {
         attribute 'Supported Motherboard Sizes' : 'enum_Motherboard Form Factor'[0..*];
         
         port PWRButton;
-        port 'Card Mount' : 'Physical Mount';
-        port 'PS Mount' : 'Physical Mount';
-        port 'MB Mount' : 'Physical Mount';
+        port 'card Mount' : 'Physical Mount';
+        port 'ps Mount' : 'Physical Mount';
+        port 'mb Mount' : 'Physical Mount';
     }
 
     enum def 'enum_Case Type' {

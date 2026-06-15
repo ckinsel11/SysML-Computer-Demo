@@ -9,12 +9,12 @@ package Storage {
         attribute 'Drive Interface';
     }
 
-    part def SSD :> Storage {
+    abstract part def SSD :> Storage {
         doc /* Solid-State Drive */
         attribute :>>'Drive Type' = "Solid-State Drive";
         attribute :>>'Form Factor' : 'enum_SSD Form Factor';
     }
-    part def HDD :> Storage {
+    abstract part def HDD :> Storage {
         doc /* Hard Disk Drive */
         attribute :>>'Drive Type' = "Hard Disk Drive";
         attribute :>>'Form Factor' : 'enum_HDD Form Factor'; 

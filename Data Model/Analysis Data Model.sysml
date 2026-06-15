@@ -1,5 +1,5 @@
 package 'Analysis Attributes' {
-    item def 'Analytic Context' {
+    abstract item def 'Analytic Context' {
         item 'Analysis Name' : 'Analysis Attributes'::'Analysis Name';
         item Goal : 'Analysis Attributes'::Goal;
         item 'Analysis Priority' : 'Analysis Attributes'::'Analysis Priority';
@@ -12,7 +12,7 @@ package 'Analysis Attributes' {
     item def Goal {
         doc /* This is a textual description of the desired result from executing the analysis */
     }
-    item def 'Analysis Priority' {
+    abstract item def 'Analysis Priority' {
         doc /* Discretionary descriptor for organizing analysis efforts. Each team may have different ways of assigning priority and this attribute allows those to be assigned.*/
         item def 'High Priority' :> 'Analysis Attributes'::'Analysis Priority' {
             doc /* Highest Priority*/
@@ -53,6 +53,19 @@ package 'Analysis Attributes' {
     }
     item def 'Procedure Step' {
         doc /* An individual interaction with the system. */
+    }
+    item def 'Goal Value' {
+        doc /* Desired value of an analysis. AKA what we are solving for.*/
+    }
+    item def 'Given Value' {
+        doc /* A known value for an analysis. */
+
+        item def 'Assumption Parameter' :> 'Given Value' {
+            doc /* A value asserted for purpose of an analysis */
+        }
+        item def 'Requirement Parameter' :> 'Given Value'{
+            doc /* A value coming for */
+        }
     }
 }
 package 'Analyses and Procedures' {
@@ -134,7 +147,7 @@ package 'Trade Study Attributes' {
         doc /*  */
         item 'raw Score' : 'Raw Score';
         item 'weight Factor' : 'Weight Factor';
-        item 'weighted Score' : 'Weighted Score'; // Is there a way to show this as being calculated/derived rather than a standalone property?
+        item 'weighted Score' : 'Weighted Score' = 'raw Score' * 'weight Factor'; // Is there a way to show this as being calculated/derived rather than a standalone property?
     }
     item def 'Raw Score' {
         doc /*  */
