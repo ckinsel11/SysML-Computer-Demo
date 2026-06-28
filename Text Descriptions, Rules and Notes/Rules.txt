@@ -23,4 +23,7 @@ Definition Order
         connection
         assert constraint
     }
-        
+
+
+Definitions do not own other definitions.
+    Exception: Data model where you are specifying the choices in something like an Enum.

@@ -9,17 +9,17 @@ package 'Report Mouse Position' {
             event occurrence setMousePosition;
         }
         actor user {
-            event occurrence setMousePhysicalLocation;
+            event occurrence sendev1;
         }
         part mouse : Mouse {
-            event occurrence getMousePhysicalLocation;
+            event occurrence receiveev1;
             then event occurrence setMouseLocationDelta;
         }
         part monitor {
 
         }
 
-        message set_position from user.setMousePhysicalLocation to mouse.getMousePhysicalLocation;
+        message set_position from user.sendev1 to mouse.receiveev1;
         message set_delta from mouse.setMouseLocationDelta to self;
     }
 }

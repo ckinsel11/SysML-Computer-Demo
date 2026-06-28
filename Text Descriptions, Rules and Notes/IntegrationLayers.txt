@@ -40,9 +40,8 @@ In an interconnect view, the wires will be exposed and should be lined up for pi
 
 Connecting Layers 1 and 2 
 This connection is done within a singular box context. 
-To connect the Functional and communication layers create a relationship between the functional port and the communication port. 
-    In SysML v1, this would have been an assign relationship to identify the behavior as being assigned to the communication port(s).
-        There could be a 1:1 or 1:Many between the function (singular) and communication ports.
+To connect the Functional and communication layers create a connector between the functional port and the communication port. 
+    There could be a 1:1 or 1:Many between the function (singular) and communication ports.
 
 Connecting Layers 2 and 3: Part A
 This connection is done within a singular box context and is commonly referred to as a pin out.
