@@ -1,0 +1,12 @@
+Decomposition is a "dirty" word.
+
+The underlying flaw I see with decomposition as it is widely used is the addition of unnecessary elements through partial duplication. I'll explain this more through some examples below. A lot of this is viewed through a lens with various layers of abstraction and decisions can changed based on your particular scope. 
+
+Interfaces
+Interfaces need to change locations based on the amount of abstraction of your system. For example, let's use an HDMI port for a computer. If the computer is a black box, then having the HDMI interface on the computer itself is the "correct" decision as it is an interface of the computer. When we start maturing the black box and showing components of the computer, that HDMI interface needs to move to the video card instead as that interface is on the card and not on the computer itself. Having the HDMI interface in both locations (computer system and video card) duplicates the interface and obfuscates where the interface truly is. 
+
+Functions
+Functions do not need to have representations at each layer of abstraction. Put the functions on the parts of the system that actually do that function. 
+
+Requirements
+Requirements do not have to have a representation at each layer of abstraction in your specification tree. 
