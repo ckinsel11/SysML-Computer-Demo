@@ -87,7 +87,9 @@ package 'Process Definition' {
                 doc /* We always want to verify our work. For requirement synchronization, we are looking for 1) the full set of requirements was synchronized, 2) that the necessary attributes are successfully transferred and 3) that we also have the unique identifiers from our requirements managment tool. This will enable our traceability from our authored requirements can be established to the appropriate source.*/
             }
         }
-        action def 'Synchronize Authored Requirements';
+        action def 'Synchronize Authored Requirements'{
+            doc /* This is the process for synchronizing a set of authored requirements from a system architecture/system analysis tool to a requirements management tool. */
+        }
         action def 'Trade Study' {
             doc /* After identifying a scenario with multiple options, we will work to evaluate those options for suitability and pick one of those options as our solution going forward. Note: These can be revisited as assumptions change and the design matures. */
             out 'Selected Alternative';

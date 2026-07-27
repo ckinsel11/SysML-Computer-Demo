@@ -52,6 +52,7 @@ package 'Requirements Profile' {
             }
         }
         enum def 'enum_Requirement Category' {
+            doc /* This is the type of element from a requirement management point of view */
             enum Heading;
             enum Threshold;
             enum Objective;
@@ -60,17 +61,20 @@ package 'Requirements Profile' {
             enum Table;
         }
         enum def 'enum_Requirement Type' {
+            doc /* This is the type of system attributes the requirement is constraining */
             enum Functional;
             enum Performance;
             enum Constraint;
             enum Interface;
         }
         enum def 'enum_Verification Frequency' {
+            doc /* How often a requirement needs to be verified */
             enum 'Non-Recurring';
             enum Recurring;
             enum Mission;
         }
         enum def 'enum_Priority' {
+            doc /* Importance of an item for ordering */
             enum High;
             enum 'Above Normal';
             enum Normal;

@@ -128,7 +128,7 @@ library package 'Communication Interface Library' {
     }
     package 'Audio Interfaces'{
             port def 'XLR3'{
-                doc /* */
+                doc /*  */
                 port Hot{
                     doc /* Positive polarity terminal for balanced audio circuits */
                 }

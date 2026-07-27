@@ -1,10 +1,10 @@
 package 'Physical Interface Library' {
     package 'Abstract Definitions' {
         abstract port def 'Physical Mount' {
-            doc /*  */
+            doc /* Interface where a component is physically connected to another */
         }
         abstract port def 'Module Format' {
-            doc /*  */
+            doc /* Memory Module Format */
         }
     }
     package 'Edge Connectors'{
