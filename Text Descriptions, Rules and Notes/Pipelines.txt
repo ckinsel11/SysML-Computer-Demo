@@ -1,4 +1,4 @@
-Use Cases for Pipelines:
+Use Cases for Continuous System Integration (CSI) Pipelines:
     1. Style Guide Checks
         What are we monitoring? 
             The entire repository
