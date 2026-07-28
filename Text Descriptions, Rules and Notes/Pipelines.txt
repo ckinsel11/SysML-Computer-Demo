@@ -11,6 +11,7 @@ Use Cases for Pipelines:
             Some specific files/maybe the entire repository
         What is the pipeline doing?
             Basically checking the design against all of the known constraints/design restrictions and rules to verify we have a valid design.
+    2a. Simulation constraint checks
     3. Artifact Generation
         What are we monitoring?
             The entire repository
@@ -21,8 +22,12 @@ Use Cases for Pipelines:
             Specific file(s)
         What is this pipeline doing?
                 It is checking a particular file that we will use to kick of an analysis of the design space. For an aoa, we could change our options, commit, and then a pipeline would see those changes and start the pipeline for the automatic evalutions.
-    5. Data "Integration" 
+    5. Data "Integration" (Views that aren't authoritative to be ingested/used by something else)
         What are we monitoring?
             Specific file(s)
         What is the pipeline doing?
             Taking data from the architecture description and putting in into a known location for another tool to ingest. Essentially an Extract/Transform/Load
+
+Other Side-Ideas
+    6. CDRL CM of integrating our code base into somebody else's code base (Dev into Prod, publishing to a customer)
+        Packaging Models, putting wrappers around the code base
