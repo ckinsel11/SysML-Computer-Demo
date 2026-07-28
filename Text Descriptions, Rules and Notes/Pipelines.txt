@@ -1,4 +1,4 @@
-Use Cases for Pipelines:
+Use Cases for Continuous System Integration (CSI) Pipelines:
     1. Style Guide Checks
         What are we monitoring? 
             The entire repository
@@ -6,11 +6,13 @@ Use Cases for Pipelines:
             It will check every file against a set of "coding standard rules" that are pre-defined. This could be as simple as definitions need to have documentation, to properties being typed and having units when necessary. 
         What about built-in validation rules?
             The value here is that this prevents any conflicts with personal configurations of an IDE or any development environment factors. For example, for sysml v1 i set auto-validation basically to never run due to performance issues and other annoyances. This means i could miss something critical that affects the model "quality" where as having a pipeline run everything on a neutral machine, there is a "known" environment to compare everything against. Tools like cameo and syside can do some of this and provide a great first-line of defense but again running everything again through a pipeline ensures better accuracy and accounting of any issues that get through. We are all human after-all.
+            *This helps ensure the interoperability of models across organizations, customers and suppliers.*
     2. Design "Verification"
         What are we monitoring?
             Some specific files/maybe the entire repository
         What is the pipeline doing?
             Basically checking the design against all of the known constraints/design restrictions and rules to verify we have a valid design.
+            *This is especially important for Technical Performance Measures (TPMs) the program is tracking.*
     2a. Simulation constraint checks
     3. Artifact Generation
         What are we monitoring?
@@ -22,6 +24,7 @@ Use Cases for Pipelines:
             Specific file(s)
         What is this pipeline doing?
                 It is checking a particular file that we will use to kick of an analysis of the design space. For an aoa, we could change our options, commit, and then a pipeline would see those changes and start the pipeline for the automatic evalutions.
+                *This is especially important for Technical Performance Measures (TPMs) the program is tracking.*
     5. Data "Integration" (Views that aren't authoritative to be ingested/used by something else)
         What are we monitoring?
             Specific file(s)
