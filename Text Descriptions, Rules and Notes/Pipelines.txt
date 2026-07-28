@@ -6,6 +6,7 @@ Use Cases for Continuous System Integration (CSI) Pipelines:
             It will check every file against a set of "coding standard rules" that are pre-defined. This could be as simple as definitions need to have documentation, to properties being typed and having units when necessary. 
         What about built-in validation rules?
             The value here is that this prevents any conflicts with personal configurations of an IDE or any development environment factors. For example, for sysml v1 i set auto-validation basically to never run due to performance issues and other annoyances. This means i could miss something critical that affects the model "quality" where as having a pipeline run everything on a neutral machine, there is a "known" environment to compare everything against. Tools like cameo and syside can do some of this and provide a great first-line of defense but again running everything again through a pipeline ensures better accuracy and accounting of any issues that get through. We are all human after-all.
+            *This helps ensure the interoperability of models across organizations, customers and suppliers.*
     2. Design "Verification"
         What are we monitoring?
             Some specific files/maybe the entire repository
