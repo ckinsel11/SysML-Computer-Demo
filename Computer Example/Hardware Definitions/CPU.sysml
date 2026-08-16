@@ -3,7 +3,6 @@ package CPU {
 
     abstract part def 'Central Processing Unit' {
         doc /* Primary Processor of a Computer */
-        port Socket : 'CPU Sockets' :: 'CPU Socket';
         attribute 'Performance Core Clock' : Real;
         attribute 'Performance Core Boost Clock' : Real;
         attribute 'Thermal Design Power' : Real;
@@ -11,6 +10,7 @@ package CPU {
         attribute 'Core Count' : Integer;
         attribute 'Thread Count' : Integer;
         attribute 'Maximum Supported Memory' : Real;
+        port Socket : 'CPU Sockets' :: 'CPU Socket';
     }
 
     package 'CPU Sockets' {
