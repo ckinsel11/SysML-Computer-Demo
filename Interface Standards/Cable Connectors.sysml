@@ -2,7 +2,7 @@ library package 'Cable Connector Library'{
     private import 'Contact Arrangements'::*;
 
     abstract port def 'Cable Connector'{
-        doc /*  */
+        doc /* Generic cable connector definition to establish property spaces */
         port 'CA';
     }
 
@@ -19,7 +19,7 @@ library package 'Cable Connector Library'{
     }
     package USB {
         port def 'Standard-A Connector' :> 'Cable Connector' {
-            doc /*  */
+            doc /*  USB A Standard physical connector not tied to the communication interface*/
                 port CA :>> CA : 'USB Contact Arrangements'::'USB Type A';
         }
         port def 'Standard-A SuperSpeed Connector' :> 'Standard-A Connector' {

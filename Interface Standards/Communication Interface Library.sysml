@@ -44,7 +44,7 @@ library package 'Communication Interface Library' {
     }
     package 'Peripheral Interfaces' {
         abstract port def 'USB' {
-            doc /*  */
+            doc /* Generic Standard USB Communication Interface */
             attribute 'Signaling Rate' : Real;
             port VBus {
                 doc /* +5 V */
