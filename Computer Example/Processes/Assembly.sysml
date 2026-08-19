@@ -37,8 +37,7 @@ package 'Assembly Process' {
         succession '[YES]' first 'Any M.2 Drives?' then 'Install M.2 Drives';
         first 'Install M.2 Drives'  then merge1;
 
-        succession '[NO]' first 'Any M.2 Drives?' then 'Install Motherboard';
-        first 'Any M.2 Drives?' then merge1;
+        succession '[NO]' first 'Any M.2 Drives?' then merge1;
 
         first merge1 then 'Install CPU Cooler';
         first 'Install CPU Cooler' then 'Install GPU';
