@@ -11,7 +11,7 @@ package Case {
         attribute Volume : Real;
         attribute 'Supported Motherboard Sizes' : 'enum_Motherboard Form Factor'[0..*];
         
-        port PWRButton;
+        port PWRButton; //TODO: Type this switch
         port 'card Mount' : 'Physical Mount';
         port 'ps Mount' : 'Physical Mount';
         port 'mb Mount' : 'Physical Mount';

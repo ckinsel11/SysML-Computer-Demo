@@ -30,6 +30,13 @@ package 'Computer System' {
         connection connect gpu.'Case Mount' to 'case'.'card Mount';
         connection connect power.'Case Mount' to 'case'.'ps Mount';
         connection connect motherboard.'Case Mount' to 'case'.'mb Mount';
+        
+        //connection connect power supply to motherboard
+        //connection connect power supply to gpu
+        //connection power supply
+        //connection connect power supply to hdd (not necessarily)
+        //connection connect sdd to motherboard
+        //connection connect
 
         assert constraint socketCompatibility : SocketCompatibility {
             in CPUCnst = cpu;

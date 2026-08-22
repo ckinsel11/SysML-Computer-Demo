@@ -8,7 +8,7 @@ package 'Combined Interfaces Library' {
         port connector : 'HDMI Connectors'::'Type A';
         port signal : 'Video Interfaces'::HDMI;
 
-        ref connection connect connector.CA.'1' to signal.'data 2 +'; /* TODO: Evaluate whether ref is good or bad here.*/
+        ref connection connect connector.CA.'1' to signal.'data 2 +';
         ref connection connect connector.CA.'2' to signal.'data 2 GND';
         ref connection connect connector.CA.'3' to signal.'data 2 -';
         ref connection connect connector.CA.'4' to signal.'data 1 +';

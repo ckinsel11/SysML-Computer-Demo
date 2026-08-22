@@ -26,10 +26,12 @@ package 'Assembly Process' {
         action 'Install Power Supply' {
             doc /* Install the power supply unit (PSU) into the computer case. */
         }
+        action 'Install Other Drives' {
+            doc /* Install any 3.5 inch optical, 2.5 inch solid state, or disc drives */
+        }
         action 'Wire Computer' {
             doc /* Connect all necessary power and data cables to ensure the computer functions correctly. */
-        }
-
+        } 
         first start then 'Install CPU';
         first 'Install CPU' then 'Install RAM';
         first 'Install RAM' then 'Any M.2 Drives?';
@@ -37,11 +39,13 @@ package 'Assembly Process' {
         succession '[YES]' first 'Any M.2 Drives?' then 'Install M.2 Drives';
         first 'Install M.2 Drives'  then merge1;
 
-        succession '[NO]' first 'Any M.2 Drives?' then merge1;
+        succession '[NO]' first 'Any M.2 Drives?' then merge1; //TODO: Visualizer has this going to any merge drives.
 
-        first merge1 then 'Install CPU Cooler';
+        first merge1 then 'Install Motherboard';
+        first 'Install Motherboard' then 'Install CPU Cooler';
         first 'Install CPU Cooler' then 'Install GPU';
-        first 'Install GPU' then 'Install Power Supply';
+        first 'Install GPU' then 'Install Other Drives';
+        first 'Install Other Drives' then 'Install Power Supply';
         first 'Install Power Supply' then 'Wire Computer';
         first 'Wire Computer' then done;
     }

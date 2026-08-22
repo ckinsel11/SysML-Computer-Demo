@@ -10,4 +10,14 @@ package Memory {
         attribute 'Module Size' : Real;
         port Module : 'Module Format';
     }
+
+    abstract port def 'Module Format' {
+        doc /* Memory Module Format */
+    }
+    port def '288-Pin DIMM' :> 'Module Format'{
+        doc /* DDR4 SDRAM and DDR5 SDRAM */
+    }
+    port def '240-Pin DIMM' :> 'Module Format'{
+        doc /* DDR2 SDRAM and DDR3 SDRAM */
+    }
 }

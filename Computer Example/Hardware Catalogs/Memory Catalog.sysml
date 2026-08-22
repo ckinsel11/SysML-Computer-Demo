@@ -1,5 +1,5 @@
 package 'Memory Catalog' {
-    private import Memory::Memory;
+    private import Memory::*;
     private import 'Unit Library'::'Digital Storage'::*;
     private import 'Physical Interface Library'::'Edge Connectors'::*;
     

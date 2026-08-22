@@ -1,5 +1,6 @@
 package 'Requirements Profile' {
     private import ScalarValues::*;
+    private import VerificationCases::*;
     package Enumerations {
         enum def 'enum_Requirement Status' {
             doc /* This enumeration provides a listing to help indicate a current status of a requirement.*/
@@ -36,6 +37,7 @@ package 'Requirements Profile' {
             enum Test {
                 doc /* The use of an end product to obtain detailed data needed to verify performance or provide sufficient information to verify performance through further analysis. Testing can be conducted on final end products, breadboards, brassboards, or prototypes. Testing produces data at discrete points for each specified requirement under controlled conditions and is the most resource-intensive verification technique. As the saying goes, “Test as you fly, and fly as you test.” (See Section 5.3.2.5 in the NASA Expanded Guidance for Systems Engineering at https://nen.nasa.gov/web/se/doc-repository)*/
             }
+            //TODO: Try to relate/use the VerificationMethodKind found in the SysML v2 Standard. are we doing two different things?
         }
         enum def 'enum_Verification Status' {
             enum 'Complete - Passed' {
@@ -50,6 +52,7 @@ package 'Requirements Profile' {
             enum 'Incomplete - Not Started' {
                 doc /* Verification activities have not started.*/
             }
+            //TODO: Evaluate this against the VerdictKind enum found in the SysML v2 standard.
         }
         enum def 'enum_Requirement Category' {
             doc /* This is the type of element from a requirement management point of view */
@@ -85,7 +88,7 @@ package 'Requirements Profile' {
     package Stereotypes {
         metadata def 'Base Requirement' {
             attribute 'Requirement Status' : Enumerations::'enum_Requirement Status';
-            attribute 'Verification Method' : Enumerations::'enum_Verification Method';
+            attribute 'Verification Method'[1..*] : Enumerations::'enum_Verification Method';
             attribute 'Verification Status' : Enumerations::'enum_Verification Status';
             attribute 'Object Type' : Enumerations::'enum_Requirement Category';
             attribute 'Requirement Type' : Enumerations::'enum_Requirement Type';

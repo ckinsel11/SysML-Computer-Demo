@@ -17,4 +17,11 @@ package 'CPU Cooler' {
     abstract part def 'Air Cooler' :> 'CPU Cooler' {
         attribute :>>'Cooling Type' = "Air";
     }
+
+    port def 'AMD Bracket' :> 'Physical Mount' {
+        doc /* Bracket that is attached to the CPU Cooler that can mount to an AMD CPU Motherboard */
+    }
+    port def 'Intel Bracket' :> 'Physical Mount' {
+        doc /* Bracket that is attached to the CPU Cooler that can mount to an Intel CPU Motherboard */
+    }
 }

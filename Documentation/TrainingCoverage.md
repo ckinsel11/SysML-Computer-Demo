@@ -29,7 +29,7 @@ Comments from the SysML perspective are elements that are created as part of the
 There are multiple syntactical ways to create a comment, name a comment, or specifically indicate what the comment is annotating. For me, I tend to not even use the key word comment. I'm a bit more shorthand about it and it's clear from my programming experience and background that it is in fact a comment and knowing SysML v2, there will be an element created as a comment.
 
 ### Commenting your "Code"
-Let's say we have work that needs further development or issues, or we want to leave further breadcrumbs for future us and we want to "comment" our "code" like good developers. We can use // to leave what is referred to in SysML v2 as a note. This does not create any element in the model but allows your text to be in place and either "comment out" errors or leave those breadcrumbs.
+Let's say we have work that needs further development or issues, or we want to leave further breadcrumbs for future us and we want to "comment" our "code" like good developers. We can use // to leave what is referred to in SysML v2 as a note. You will see this same syntax as a single line comment in other programming lanagues such as C, C++ and Java. This does not create any element in the model but allows your text to be in place and either "comment out" errors or leave those breadcrumbs.
 
 ```
         //contains (CaseCnst.'Supported Motherboard Sizes', MBCnst.'Form Factor')
@@ -57,7 +57,7 @@ Generalizations create a "is a" relationship. One element is going to inherit al
 ```
 In this example, I am establishing Core i7-14700K is a CPU and thus gets all of the properties of a CPU.
 # 4. Subsetting
-Subsetting creates another from of "is a" relationship, however it is slightly different from a generalization. It is a part usage inheriting another usage.
+Subsetting creates another form of "is a" relationship, however it is slightly different from a generalization. It is a part usage inheriting another usage.
 ## Subsetting Example
 The interesting thing is that subsetting uses the exact same symbolic syntax as a generalization (:>). However, if you choose to write out the keywords, subsetting has a different keyword than a generalization.
 ```
@@ -111,7 +111,7 @@ Parts are usages of another part or part definition.
     }
 ```
 ## Parts Example 2
-A part can be typed by another part, not just a part definition.
+A part can be added to another part, not just a part definition. This is useful when you are quickly concepting to get something captured without extracting the definition.
 ```
 TODO: Have an example where this is shown or explain why this isn't typically used
 ```
@@ -175,7 +175,9 @@ A conjugated port allows for a common use of an port definition but flip the flo
 TODO: Have an example where this is shown or explain why this isn't typically used
 ```
 # 11. Interfaces
-To be honest, I haven't found a good use case for this construct as it puts the connection between two boxes on the line connecting the boxes. Interface (not sysml) definitions should be done on the box in a single-sided fashion.
+To be honest, I haven't found a good use case for this construct especially as a definition as it puts the connection between two boxes on the line connecting the boxes. Interface (not sysml) definitions should be done on the box in a single-sided fashion.
+
+Interfaces are meant to show items flowing on the line, not that a connection exists. Examples include fluids and electrical power. I
 ## Interface Example
 ## Interface Decomposition Example
 # 12. Binding Connectors
@@ -186,11 +188,13 @@ To be honest, I haven't found a good use case for this construct as it puts the 
 ## Flow Usage Example
 ## Flow Interface Example
 # 14. Action Definitions
+Actions represent the activity or process based behaviors. Action definitions set the expected process flow.
 ## Action Definition Example
 ## Action Shorthand Example
 ## Action Succession Example 1
 ## Action Succession Example 1
 # 15. Actions
+Action usages are taking action definitions of a process and including them into a larger process. 
 ## Action Decompostion
 # 16. Conditional Succession
 ## Conditional Succession Example 1
