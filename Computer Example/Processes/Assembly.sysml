@@ -40,7 +40,7 @@ package 'Assembly Process' {
         first 'Install M.2 Drives'  then merge1;
 
         succession '[NO]' first 'Any M.2 Drives?' then merge1; //TODO: Visualizer has this going to any merge drives.
-
+//TODO: I can simplify these to remove first and just use then X. BUT, on the decision node, i need something to render out as a BOOL, which would then require the PC as an input and then navigate down through drive to see if any drive has an m2 form factor.
         first merge1 then 'Install Motherboard';
         first 'Install Motherboard' then 'Install CPU Cooler';
         first 'Install CPU Cooler' then 'Install GPU';
