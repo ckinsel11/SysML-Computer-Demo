@@ -1,4 +1,4 @@
-Derivation connection definitions have their ends typed, but usages do not. The example below is using requirment definitions.
+Derivation connection definitions have their ends typed, but usages do not. The example below is using requirement definitions.
     #derivation connection def 'Solid State Drive Derivation' {
         end #original r1 : 'Part Vendors'::'SSD Vendor';
         end #derive r1_1 : 'Solid-State Drive'::'Solid-State Drive Manufacturer';

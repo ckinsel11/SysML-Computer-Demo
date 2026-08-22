@@ -5,7 +5,7 @@ package ' Template Flow Down ' {
     private import RequirementDerivation::*;
 
     case def 'Template Flow Down' {
-         doc /* This case takes a subset of parent requirements and derives lower level children reqiurements. */
+         doc /* This case takes a subset of parent requirements and derives lower level children requirements. */
     
         comment /* Step 1 : Group Requirements. This is done by creating a dependency from the case to the scoping requirements */
     

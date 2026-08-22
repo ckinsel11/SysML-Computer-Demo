@@ -1,6 +1,6 @@
 There are 2 x 2 ways to redefine properties.
 
-Rename the property during the redfinition and set the value.
+Rename the property during the redefinition and set the value.
     attribute 'New Name' = New Value :>> 'Old Name';
     attribute 'New Name' = New Value redefines 'Old Name';
 

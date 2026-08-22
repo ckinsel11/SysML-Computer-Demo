@@ -1,7 +1,7 @@
 package 'Logical Data Model' {
     package 'Source Document Attributes' {
         item def 'Source Document' {
-            doc /* A record that contains details about a requirment, process, or practice. These can be standards.*/
+            doc /* A record that contains details about a requirement, process, or practice. These can be standards.*/
             item 'Source Document ID' : 'Source Document Attributes'::'Source Document ID';
             item 'Source Document Name' : 'Source Document Attributes'::'Source Document Name';
             item 'Source Document Version' : 'Source Document Attributes'::'Source Document Version';
@@ -33,11 +33,11 @@ package 'Logical Data Model' {
                     doc /*  */
                 }
             }
-            item def 'Subystem Requirement Specification' :> 'Requirement Specification' {
+            item def 'Subsystem Requirement Specification' :> 'Requirement Specification' {
                 doc /*  */
                 item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'Subsystem Requirement';
 
-                item def 'Subsystem Requirement Specification Baseline' :> 'Subystem Requirement Specification', 'Requirement Specification Baseline' {
+                item def 'Subsystem Requirement Specification Baseline' :> 'Subsystem Requirement Specification', 'Requirement Specification Baseline' {
                     doc /*  */
                 }
             }
@@ -87,7 +87,7 @@ package 'Logical Data Model' {
         item def 'Software' {
             doc /* A Computer Program */
             item def 'System Software' :> 'Software' {
-                doc /* Software that works with hardware of the computer and performs tasks that are machine oriented. It can also provide a platoform for other software */
+                doc /* Software that works with hardware of the computer and performs tasks that are machine oriented. It can also provide a platform for other software */
                 item def 'Operating System' :> 'System Software' {
                     doc /* Software that supports a computer's basic functions */
                 }
@@ -234,7 +234,7 @@ package 'Logical Data Model' {
         
     }
     package 'Architecture Elements' {
-        /* There are definitions of context, system, subsystem, and componenents here, with relationships to a usage. This needs to be revisited in the context of V2.
+        /* There are definitions of context, system, subsystem, and components here, with relationships to a usage. This needs to be revisited in the context of V2.
         * I also think this needs to be revisited in terms of compositionally as it seems to imply that systems can only be composed of subsystems.*/
     }
 }

@@ -1,7 +1,7 @@
 package 'Process Definition' {
     package Processes {
         action def 'Requirement Derivation' {
-            doc /* Starting with a baselined set of requirements sychronized from a requirements management tool, we will derive a lower level set of requirements*/
+            doc /* Starting with a baselined set of requirements synchronized from a requirements management tool, we will derive a lower level set of requirements*/
             in 'Baselined Set of Requirements';
             out 'Authored Requirements';
             action 'Group Requirements' {
@@ -39,7 +39,7 @@ package 'Process Definition' {
             binding bind 'Allocate Requirements'.'Authored Requirements' = 'Authored Requirements';
         }
         action def 'Baseline Requirements' {
-            doc /* The process of baselining a set of requirements takes a set of requirements, reviews them, and publishes a new identifable set (baseline) to work to. */
+            doc /* The process of baselining a set of requirements takes a set of requirements, reviews them, and publishes a new identifiable set (baseline) to work to. */
             in Requirements;
             out 'Baselined Set of Requirements';
             action 'Identify Set of Requirements to be baselined' {
@@ -84,7 +84,7 @@ package 'Process Definition' {
                 doc /* It is important to establish the authoritative source of truth (ASoT) for your data. Each type of data can have its ASoT be a different database. We also need to ensure that you can only modify a baseline in that data's ASoT. To help mitigate risks of overwriting our requirements as we perform our derivation analyses, all of these synchronizations will be in a singular direction.*/
             }
             action 'Verify Synchronization' {
-                doc /* We always want to verify our work. For requirement synchronization, we are looking for 1) the full set of requirements was synchronized, 2) that the necessary attributes are successfully transferred and 3) that we also have the unique identifiers from our requirements managment tool. This will enable our traceability from our authored requirements can be established to the appropriate source.*/
+                doc /* We always want to verify our work. For requirement synchronization, we are looking for 1) the full set of requirements was synchronized, 2) that the necessary attributes are successfully transferred and 3) that we also have the unique identifiers from our requirements management tool. This will enable our traceability from our authored requirements can be established to the appropriate source.*/
             }
         }
         action def 'Synchronize Authored Requirements'{

@@ -4,7 +4,7 @@ Activities (Activity Diagrams) can be much easier to do in a graphical format th
 Activities can be very hierarchical. A process is made up of steps, and each of those steps can kick off another process.
 
 # Activity Definition (action def key words)
-Activies in SysML v2 are created using the keyword action. Following a definition/usage pattern, we are going to define a process thus prompting the def key word. The action key word will create the particular step of a process within the activity itself.
+Activities in SysML v2 are created using the keyword action. Following a definition/usage pattern, we are going to define a process thus prompting the def key word. The action key word will create the particular step of a process within the activity itself.
 
 I'm going some of the activity constructs and try to touch on when to use others that may not be in the current example. We're going to start by making the process definition and giving a clear definition and scope in the documentation.
 ```

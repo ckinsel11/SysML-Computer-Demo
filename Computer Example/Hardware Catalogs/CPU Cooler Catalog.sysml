@@ -11,5 +11,5 @@ package 'CPU Cooler Catalog' {
             doc /* Specific Model of CPU Cooler */
         }
     }
-    //TODO: By defalt the bracket installed is for Intel CPUs, but is hot-swappable to AMD. How to show this?
+    //TODO: By default the bracket installed is for Intel CPUs, but is hot-swappable to AMD. How to show this?
 }

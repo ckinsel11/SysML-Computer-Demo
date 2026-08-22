@@ -1,7 +1,7 @@
 The stimulus response model is prevalent and ubiquitous in systems design I might go so far as to describe it as the "universal behavior".
 
 What does this look like?
-    Generically, Box A sends signal to Box B. Box B recieves the signal and then does something, and responds back to Box A.
+    Generically, Box A sends signal to Box B. Box B receives the signal and then does something, and responds back to Box A.
     Specifically, user enters a website into their browser, the browser then fetches the page, and displays it back to the user.
 This is probably the most simplistic behavioral interaction and is used by itself and in combination with other behavior patterns.
 
@@ -21,4 +21,4 @@ Why these requirements?
     Verifiable: Sending signals is always verifiable, this can be verified through checking wires on the box for example.
     Verifiable: A box responds to a stimulus. You can verify any response to a stimulus that when a box does get a message, that it does respond in the appropriate way.
 
-    Not-Verifiable: A box recieved the message. Even if a signal was sent, we can't verify that the box received it. Messages can get lost in traffic.
+    Not-Verifiable: A box received the message. Even if a signal was sent, we can't verify that the box received it. Messages can get lost in traffic.

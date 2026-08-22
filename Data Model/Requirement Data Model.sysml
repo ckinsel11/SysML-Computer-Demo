@@ -63,7 +63,7 @@ package 'Requirement Attributes' {
             doc /* This status indicates that the requirement has passed verification. */
         }
         item def 'In Process' :> 'Requirement Attributes'::'Verification Status' {
-            doc /* This status indicates the requirment is in the process of being verified. */
+            doc /* This status indicates the requirement is in the process of being verified. */
         }
         item def 'Incomplete - Not Started' :> 'Requirement Attributes'::'Verification Status' {
             doc /* This status indicates that the requirement has not entered any verification process yet. */
@@ -81,10 +81,10 @@ package 'Requirement Attributes' {
             doc /* These statements include an explicit shall. These are things that are strictly required. */
         }
         item def Information :> 'Requirement Attributes'::'Requirement Category' {
-            doc /* These statements are additional context informataion to a requirement. They are for informational purposes only. */
+            doc /* These statements are additional context information to a requirement. They are for informational purposes only. */
         }
         item def Figure :> 'Requirement Attributes'::'Requirement Category' {
-            doc /* These objects are graphical presentations of information related to a requirement. These could be graphs, or other pictoral views. */
+            doc /* These objects are graphical presentations of information related to a requirement. These could be graphs, or other pictorial views. */
         }
         item def Table :> 'Requirement Attributes'::'Requirement Category' {
             doc /* These objects are tabular views of information related to the set of requirements */
@@ -97,7 +97,7 @@ package 'Requirement Attributes' {
         doc /* A short summary of the requirement element. These do need to be unique. */
     }
     abstract item def 'Requirement Type' {
-        doc /* This is the descriptive kind of requirement. These typically inlcude "Functional", "Performance", "Constraint" and "Interface". */
+        doc /* This is the descriptive kind of requirement. These typically include "Functional", "Performance", "Constraint" and "Interface". */
         item def Functional :> 'Requirement Attributes'::'Requirement Type' {
             doc /* A requirement that describes a function or capability of the system. */
         }
@@ -126,7 +126,7 @@ package 'Requirement Attributes' {
     abstract item def 'Verification Frequency' {
         doc /* Indicates when/how many times the requirement needs to be verified. */
         item def 'Non-Recurring' :> 'Requirement Attributes'::'Verification Frequency' {
-            doc /* Used to indentify requirements that are only verified once. */
+            doc /* Used to identify requirements that are only verified once. */
         }
         item def Recurring :> 'Requirement Attributes'::'Verification Frequency' {
             doc /* Used to identify requirements that are verified on every production unit. */
@@ -136,7 +136,7 @@ package 'Requirement Attributes' {
         }
     }
     item def 'Verification Rationale' {
-        doc /* A statement that outlines the reasoning fo rthe verification */
+        doc /* A statement that outlines the reasoning for the verification */
     }
     item def 'Requirement Location' {
         doc /* The hierarchical location of the requirement. */

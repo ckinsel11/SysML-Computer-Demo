@@ -70,7 +70,7 @@ package 'Analysis Attributes' {
 }
 package 'Analyses and Procedures' {
     item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
-        doc /* An anlysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
+        doc /* An analysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
 
         item 'Scoping Requirement' [1..*] : 'Requirement Derivation Abstraction Levels'::'Scoping Requirement';
         item 'Analysis Result' [1] : 'Analysis Results'::'Analysis Result';
@@ -94,13 +94,13 @@ package 'Analyses and Procedures' {
         doc /* An analysis that identifies a preferred solution out of a list of possible solutions. These are done throughout the lifecycle and work to find a balance of technical requirements including cost, schedule, and performance.*/
     }
     item def 'Analysis of Alternatives' :> 'Analysis Attributes'::'Analytic Context' {
-        doc /* An analysis performed at a high level that evaulates operational effective and suitability of solutions for capability needs.*/
+        doc /* An analysis performed at a high level that evaluates operational effective and suitability of solutions for capability needs.*/
     }
     item def 'Threat Scenario' :> 'Analysis Attributes'::'Analytic Context' {
         doc /* This analysis looks at the functionality of a the system and it's response under attack from external systems or actors. This is different from functional analyses in that there aren't lower-level requirements being authored.*/
     }
     item def 'Procedure Case' :> 'Analysis Attributes'::'Analytic Context'{
-        doc /* Describes proceses that are executed with the physical manifestation of the system or sub-elements */
+        doc /* Describes processes that are executed with the physical manifestation of the system or sub-elements */
         item def 'Verification Procedure' :> 'Procedure Case' {
             doc /* Process to provide objective evidence that a system or element meets the specified requirement(s) */
             item 'Verification Procedure Step' : 'Analysis Attributes'::'Procedure Step';
@@ -112,7 +112,7 @@ package 'Analyses and Procedures' {
             doc /* Process to take a system and install it making it operational. It is the transition from "nothing" to a fully integrated and installed system over time. */
         }
         item def 'Validation Procedure' :> 'Procedure Case' {
-            doc /* Process to provide objective evidence that the sytem fufills its intended purpose. This should answer "Did we build the right thing?" */
+            doc /* Process to provide objective evidence that the system fulfills its intended purpose. This should answer "Did we build the right thing?" */
         }
         item def 'Maintenance Procedure' :> 'Procedure Case' {
             doc /* Process to sustain/service the system and keep it operational */

@@ -27,6 +27,7 @@ package 'Combined Interfaces Library' {
         ref connection connect connector.CA.'2' to signal.'D-';
         ref connection connect connector.CA.'3' to signal.'D+';
         ref connection connect connector.CA.'4' to signal.'GND';
+        //TODO Discuss male/female interfaces
     }
     port def 'USB 3.2 A Standard Interface' :> 'USB A Standard Interface' {
         doc /* The typical commercial USB Type A interface with USB 3.2 support */

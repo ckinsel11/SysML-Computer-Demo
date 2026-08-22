@@ -2,7 +2,7 @@ package 'Agile Tasking States' {
     exhibit state 'Agile Tasking States' parallel {
         doc /* This is a state machine that defines the various states that a task can be in during an agile development process. */
         state 'Task States' {
-            doc /* This is a state machine that desccribes the states within the workflow for an agile task*/
+            doc /* This is a state machine that describes the states within the workflow for an agile task*/
             state 'Backlog' {
             doc /* This is the state of a task that has been identified as something that needs to be done, but has not yet been prioritized for work. */
             }

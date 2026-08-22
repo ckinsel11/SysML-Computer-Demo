@@ -9,7 +9,7 @@ package 'Computer System' {
 Documentation can be put on virtually any element of the model by using the key word doc followed by block comment indicators that look like this:  /* INSERT TEXT HERE */. Because the documentation is owned by the element, good practice is to indent it on a new line.
 ```
 abstract part def Computer {
-    doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
+    doc /* A machine that can be programmed to carry out sequences of arithmetic or logical operations */
 }
 ```
 ## Comment Example
@@ -29,7 +29,7 @@ Comments from the SysML perspective are elements that are created as part of the
 There are multiple syntactical ways to create a comment, name a comment, or specifically indicate what the comment is annotating. For me, I tend to not even use the key word comment. I'm a bit more shorthand about it and it's clear from my programming experience and background that it is in fact a comment and knowing SysML v2, there will be an element created as a comment.
 
 ### Commenting your "Code"
-Let's say we have work that needs further development or issues, or we want to leave further breadcrumbs for future us and we want to "comment" our "code" like good developers. We can use // to leave what is referred to in SysML v2 as a note. You will see this same syntax as a single line comment in other programming lanagues such as C, C++ and Java. This does not create any element in the model but allows your text to be in place and either "comment out" errors or leave those breadcrumbs.
+Let's say we have work that needs further development or issues, or we want to leave further breadcrumbs for future us and we want to "comment" our "code" like good developers. We can use // to leave what is referred to in SysML v2 as a note. You will see this same syntax as a single line comment in other programming languages such as C, C++ and Java. This does not create any element in the model but allows your text to be in place and either "comment out" errors or leave those breadcrumbs.
 
 ```
         //contains (CaseCnst.'Supported Motherboard Sizes', MBCnst.'Form Factor')
@@ -76,7 +76,7 @@ There are multiple syntactical ways to create a generalization. I prefer the sym
     }
 ```
 ## Redefinition Problems
-This is a common error in the software code and development space but can also occur in SysML v2. Let's look at a definition of what a redefintion error is: "A redefinition error happens when your code defines the same variable, function, class, or struct more than once in the same scope." 
+This is a common error in the software code and development space but can also occur in SysML v2. Let's look at a definition of what a redefinition error is: "A redefinition error happens when your code defines the same variable, function, class, or struct more than once in the same scope." 
 
 This type of error can occur when you have redefined the same property using the same names across an inheritance chain. 
 # 6. Enumeration Definitions
@@ -99,7 +99,7 @@ Parts are usages of another part or part definition.
 ## Parts Example 1
 ```
     abstract part def Computer {
-        doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
+        doc /* A machine that can be programmed to carry out sequences of arithmetic or logical operations */
         part cpu[1] :'Central Processing Unit';
         part cooler[1] :'CPU Cooler';
         part motherboard[1] : Motherboard;
@@ -195,7 +195,7 @@ Actions represent the activity or process based behaviors. Action definitions se
 ## Action Succession Example 1
 # 15. Actions
 Action usages are taking action definitions of a process and including them into a larger process. 
-## Action Decompostion
+## Action Decomposition
 # 16. Conditional Succession
 ## Conditional Succession Example 1
 ## Conditional Succession Example 2
@@ -234,7 +234,7 @@ Action usages are taking action definitions of a process and including them into
 ## Interaction Example 2
 ## Interaction Realization 1
 ## Interaction Realization 2
-## Time Slice and Snapshot Exampole
+## Time Slice and Snapshot Example
 # 28. Individuals
 ## Individuals and Roles
 ## Individuals and Snapshots

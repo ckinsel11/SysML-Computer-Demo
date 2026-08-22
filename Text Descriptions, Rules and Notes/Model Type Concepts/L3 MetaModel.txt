@@ -1,7 +1,7 @@
 Layer 3 - Metamodel
 
 What are metamodels?
-    Metamodels are usually pictoral views of a generic architecture that describe how all elements are to be used and connected in that architecture. 
+    Metamodels are usually pictorial views of a generic architecture that describe how all elements are to be used and connected in that architecture. 
 
 Why are metamodels important?
     Metamodels visually help the end users understand whether what they're doing is "right" or "wrong".

@@ -11,6 +11,7 @@ package CPU {
         attribute 'Thread Count' : Integer;
         attribute 'Maximum Supported Memory' : Real;
         port Socket : 'CPU Sockets' :: 'CPU Socket';
+        //TODO: Make a type for microarchitecture.
     }
 
     package 'CPU Sockets' {

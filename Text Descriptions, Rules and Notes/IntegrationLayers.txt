@@ -22,7 +22,7 @@ Generally referred to as cable connectors, these are the physical interfaces of 
     It could also need a wire/cable/harness to plug into it. (i.e. Power Supply cable is standalone and plugs both into wall and power supply)
 For a box, there are two major things that need to be defined, the connector housing/shell, and the contact arrangement.
     The housing/shell defines the physical shape/attributes of the connector (keying, materials, shape, etc). 
-    The contact arangement defines the number of pins and their layout within the shell.
+    The contact arrangement defines the number of pins and their layout within the shell.
 In an interconnect view, the cable connectors will be 1:1 connected to it's mate. Either in the form of a cable harness or another box.
     This connection is from Box A to Harness 1 OR Box A to Box B.
 

@@ -18,7 +18,7 @@ This leads us to the conclusion that I need to capture a PC definition, a list o
 For this demonstration, we'll start with defining a generic computer system which includes its major components. A generic definition is useful here because we are going to analyze multiple configurations of a computer system for comparison purposes. For context, this is everything that goes into the case. We will discuss other peripherals later.
 ```      
     abstract part def Computer {
-        doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
+        doc /* A machine that can be programmed to carry out sequences of arithmetic or logical operations */
         part cpu[1];
         part cooler[1];
         part motherboard[1];
@@ -94,7 +94,7 @@ Be consistent and organized in your code base. For part definitions, I like to a
 Now that we have the outline of generic components defined, let's mature our generic PC definition by typing the parts.
 ```
     abstract part def Computer {
-        doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
+        doc /* A machine that can be programmed to carry out sequences of arithmetic or logical operations */
         part cpu[1] :'Central Processing Unit';
         part cooler[1] :'CPU Cooler';
         part motherboard[1] : Motherboard;

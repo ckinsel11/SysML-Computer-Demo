@@ -8,7 +8,7 @@ For set definitions i.e. attribute :>> 'Supported Motherboard Sizes' = ('enum_Mo
     Syside gives an error "Motherboard::'enum_Motherboard Form Factor'::ATX does not conform to Collections::Set"
 
 For redefinition trees (i.e. configuration management version changes over time)
-    Syside gives this error 'Cannot override a binding feature value' when trying to redefined a previously redfined value in the tree.
+    Syside gives this error 'Cannot override a binding feature value' when trying to redefined a previously redefined value in the tree.
     Cameo has no issue with this practice.
 
 For connections within a port:

@@ -12,7 +12,7 @@ package 'Computer System' {
     private import 'Power Supply'::*;
 
     abstract part def Computer {
-        doc /* A machine that can be programmed to carry out sequences of artithmetic or logical operations */
+        doc /* A machine that can be programmed to carry out sequences of arithmetic or logical operations */
         part cpu[1] :'Central Processing Unit';
         part cooler[1] :'CPU Cooler';
         part motherboard[1] : Motherboard;
