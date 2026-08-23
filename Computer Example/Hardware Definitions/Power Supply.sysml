@@ -8,6 +8,8 @@ package 'Power Supply' {
         attribute Wattage : Real;
         attribute Modular : Boolean;
         port 'Case Mount' : 'Physical Mount';
+        port 'PwrIn'[1];
+        port 'PwrOut'[1..*];
     }
 
     //TODO: Figure out how I want to represent the power supplies with cables pre-attached, or those that are Modular.

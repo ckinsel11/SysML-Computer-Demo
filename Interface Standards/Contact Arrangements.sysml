@@ -134,6 +134,7 @@ package 'Contact Arrangements' {
     }
     package ATX {
         port def 'ATX 24-Pin' {
+            //NOTE: These are numbered as if looking into the Power Supply
             port '1';
             port '2';
             port '3';
@@ -158,6 +159,40 @@ package 'Contact Arrangements' {
             port '22';
             port '23';
             port '24';
+        }
+        port def 'ATX 18-Pin' {
+            //NOTE: These are numbered as if looking into the Power Supply
+            port '1';
+            port '2';
+            port '3';
+            port '4';
+            port '5';
+            port '6';
+            port '7';
+            port '8';
+            port '9';
+            port '10';
+            port '11';
+            port '12';
+            port '13';
+            port '14';
+            port '15';
+            port '16';
+            port '17';
+            port '18';
+        }
+        port def 'ATX 10-Pin' {
+        //NOTE: These are numbered as if looking into the Power Supply
+            port '1';
+            port '2';
+            port '3';
+            port '4';
+            port '5';
+            port '6';
+            port '7';
+            port '8';
+            port '9';
+            port '10';
         }
     }
     package EPS {

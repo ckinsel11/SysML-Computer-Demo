@@ -33,10 +33,10 @@ package 'Computer System' {
         
         //connection connect power supply to motherboard
         //connection connect power supply to gpu
-        //connection power supply
+        //connection connect power supply to ssd (not necessarily)
         //connection connect power supply to hdd (not necessarily)
-        //connection connect sdd to motherboard
-        //connection connect
+        //connection connect ssd to motherboard
+        //connection connect hdd to motherboard (not necessarily)
 
         assert constraint socketCompatibility : SocketCompatibility {
             in CPUCnst = cpu;

@@ -1,18 +1,18 @@
 library package 'Cable Connector Library'{
     private import 'Contact Arrangements'::*;
 
-    abstract port def 'Cable Connector'{
+    abstract port def 'Cable Connector' {
         doc /* Generic cable connector definition to establish property spaces */
         port 'CA';
     }
 
-    package 'HDMI Connectors'{
+    package 'HDMI Connectors' {
         port def 'Type A' :> 'Cable Connector' {
             doc /*  */
             port :>> CA : HDMI::'HDMI Type A';
         }
     }
-    package DisplayPort{
+    package DisplayPort {
         port def 'DisplayPort'{
             doc /*  */
         }
@@ -61,6 +61,36 @@ library package 'Cable Connector Library'{
         port def XLR :> 'Cable Connector'{
             doc /*  */
             port CA :>> CA : 'XLR Connectors'::'XLR 3-Pin';
+        }
+    }
+    package 'ATX Connectors' {
+        port def '24-Pin Connector' :> 'Cable Connector' {
+            doc /*  */
+            port :>> CA : ATX::'ATX 24-Pin';
+        }
+        port def '18-Pin Connector' :> 'Cable Connector' {
+            doc /*  */
+            port :>> CA : ATX::'ATX 18-Pin';
+        }
+        port def '10-Pin Connector' :> 'Cable Connector' {
+            doc /*  */
+            port :>> CA : ATX::'ATX 10-Pin';
+        }
+    }
+    package 'PCIe' {
+        port def 'PCIe 6-pin Power Connector' :> 'Cable Connector' {
+            doc /*  */
+            port :>> CA : 'PCI Express'::'PCIe 6-Pin';
+        }
+        port def 'PCIe 8-pin Power Connector' :> 'Cable Connector' {
+            doc /*  */
+            port :>> CA : 'PCI Express'::'PCIe 8-Pin';
+        }
+    }
+    package 'EPS Connectors' {
+        port def 'EPS 8-Pin Connector' {
+            doc /*  */
+            port CA : EPS::'EPS 8-Pin';
         }
     }
 }
