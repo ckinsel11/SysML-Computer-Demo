@@ -14,6 +14,7 @@ package 'CPU Catalog' {
             attribute :>>'Core Count' = 8;
             attribute :>>'Thread Count' = 16;
             attribute :>>'Maximum Supported Memory' = 192 [GB];
+            attribute :>>Microarchitecture = enum_Microarchitecture::'Zen 5'; 
             port :>> Socket : AM5;
         }
         part def 'Ryzen 7 9850 X3D' :> 'Central Processing Unit' {
@@ -24,6 +25,7 @@ package 'CPU Catalog' {
             attribute :>>'Core Count' = 8;
             attribute :>>'Thread Count' = 16;
             attribute :>>'Maximum Supported Memory' = 192 [GB];
+            attribute :>>Microarchitecture = 'enum_Microarchitecture'::'Zen 5';
             port :>> Socket : AM5;
         }
     }
@@ -36,6 +38,7 @@ package 'CPU Catalog' {
             attribute :>>'Core Count' = 20;
             attribute :>>'Thread Count' = 28;
             attribute :>>'Maximum Supported Memory' = 192 [GB];
+            attribute :>>Microarchitecture = enum_Microarchitecture::'Raptor Lake';
             port :>> Socket : LGA1700;
         }
         part def 'Core i7-7700K' :> 'Central Processing Unit' {
@@ -46,6 +49,7 @@ package 'CPU Catalog' {
             attribute :>>'Core Count' = 4;
             attribute :>>'Thread Count' = 8;
             attribute :>>'Maximum Supported Memory' = 64 [GB];
+            attribute :>> Microarchitecture = enum_Microarchitecture::'Kaby Lake';
             port :>> Socket : LGA1151;
         }
     }

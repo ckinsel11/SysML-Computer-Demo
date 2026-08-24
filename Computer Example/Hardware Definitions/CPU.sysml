@@ -6,12 +6,11 @@ package CPU {
         attribute 'Performance Core Clock' : Real;
         attribute 'Performance Core Boost Clock' : Real;
         attribute 'Thermal Design Power' : Real;
-        attribute Microarchitecture;
+        attribute Microarchitecture : enum_Microarchitecture;
         attribute 'Core Count' : Integer;
         attribute 'Thread Count' : Integer;
         attribute 'Maximum Supported Memory' : Real;
         port Socket : 'CPU Sockets' :: 'CPU Socket';
-        //TODO: Make a type for microarchitecture.
     }
 
     package 'CPU Sockets' {
@@ -34,6 +33,35 @@ package CPU {
         port def LGA1151 :> 'CPU Socket' {
             doc /* Specific microprocessor Socket */
             attribute :>>'Pin Count' = 1151;
+        }
+    }
+    enum def 'enum_Microarchitecture' {
+        doc /*  */
+        //Intel Microarchitecture
+        enum 'Kaby Lake' {
+            doc /*  */
+        }
+        enum 'Raptor Lake' {
+            doc /*  */
+        }
+        enum 'Rocket Lake' {
+            doc /*  */
+        }
+        enum 'Coffee Lake' {
+            doc /*  */
+        }
+        enum 'Alder Lake' {
+            doc /*  */
+        }
+        //AMD Microarchitecture
+        enum 'Zen 3' {
+            doc /*  */
+        }
+        enum 'Zen 4' {
+            doc /*  */
+        }
+        enum 'Zen 5' {
+            doc /*  */
         }
     }
 }

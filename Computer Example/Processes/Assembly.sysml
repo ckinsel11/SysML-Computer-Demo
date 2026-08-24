@@ -33,6 +33,7 @@ package 'Assembly Process' {
         action 'wire Computer': 'Wire Computer' {
             doc /* Connect all necessary power and data cables to ensure the computer functions correctly. */
         } 
+        //TODO: The following works great in cameo and renders a diagram that i want but not in a free visualizer extension.
         first start then 'Install CPU';
         first 'Install CPU' then 'Install RAM';
         first 'Install RAM' then 'Any M.2 Drives?';
@@ -40,8 +41,8 @@ package 'Assembly Process' {
         succession '[YES]' first 'Any M.2 Drives?' then 'Install M.2 Drives';
         first 'Install M.2 Drives' then merge1;
 
-        succession '[NO]' first 'Any M.2 Drives?' then merge1; //TODO: Visualizer has this going to any merge drives.
-//TODO: I can simplify these to remove first and just use then X. BUT, on the decision node, i need something to render out as a BOOL, which would then require the PC as an input and then navigate down through drive to see if any drive has an m2 form factor.
+        succession '[NO]' first 'Any M.2 Drives?' then merge1; //TODO: Visualizer has this going to any m2 drives.
+//TODO: I can simplify these to remove first and just use then X following the tutorial examples. BUT, on the decision node, i need something to render out as a BOOL, which would then require the PC as an input and then navigate down through drive to see if any drive has an m2 form factor.
         first merge1 then 'Install Motherboard';
         first 'Install Motherboard' then 'Install CPU Cooler';
         first 'Install CPU Cooler' then 'Install GPU';
