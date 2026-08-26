@@ -1,7 +1,8 @@
 package 'Combined Interfaces Library' {
-    private import 'Communication Interface Library'::*;
+    private import 'Common Interface Library'::*;
     private import 'Cable Connector Library'::*;
     private import 'Physical Interface Library'::*;
+    private import 'Serial Interfaces'::*;
 
     port def 'HDMI Standard A Interface' {
         doc /* The typical commercial HDMI Type A interface */
@@ -20,8 +21,8 @@ package 'Combined Interfaces Library' {
     } 
     port def 'USB A Standard Interface' {
         doc /* The typical commercial USB Type A interface */
-        port connector : 'USB'::'Standard-A Connector';
-        port signal : 'Peripheral Interfaces'::USB;
+        port connector : 'USB Connectors'::'Standard-A Connector';
+        port signal : USB;
 
         ref connection connect connector.CA.'1' to signal.'VBus';
         ref connection connect connector.CA.'2' to signal.'D-';
@@ -31,19 +32,19 @@ package 'Combined Interfaces Library' {
     }
     port def 'USB 3.2 A Standard Interface' :> 'USB A Standard Interface' {
         doc /* The typical commercial USB Type A interface with USB 3.2 support */
-        port connector :>> connector : 'USB'::'Standard-A SuperSpeed Connector';
-        port signal :>> signal : 'Peripheral Interfaces'::'USB 3.2';
+        port connector :>> connector : 'USB Connectors'::'Standard-A SuperSpeed Connector';
+        port signal :>> signal : 'USB 3.2';
 
         ref connection connect connector.'CA-SuperSpeed'.'5' to signal.'SSRX-';
         ref connection connect connector.'CA-SuperSpeed'.'6' to signal.'SSRX+';
-        ref connection connect connector.'CA-SuperSpeed'.'7' to signal.'GND';
+        ref connection connect connector.'CA-SuperSpeed'.'7' to signal.'GND_Drain';
         ref connection connect connector.'CA-SuperSpeed'.'8' to signal.'SSTX-';
         ref connection connect connector.'CA-SuperSpeed'.'9' to signal.'SSTX+';
     }
     port def 'USB C Standard Interface' {
         doc /* The typical commercial USB Type C interface */
-        port connector : 'USB'::'Type-C';
-        port signal : 'Peripheral Interfaces'::'USB 3.0';
+        port connector : 'USB Connectors'::'Type-C';
+        port signal : 'USB 3.0';
 
         ref connection connect connector.CA.A1 to signal.'GND';
         ref connection connect connector.CA.A2 to signal.'SSTX+';

@@ -2,7 +2,7 @@ package 'Cases Catalog' {
     private import Collections::*;
     private import Case::*;
     private import 'Combined Interfaces Library'::*;
-    private import 'Cable Connector Library'::USB::*;
+    private import 'Cable Connector Library'::'USB Connectors'::*;
     private import 'Cable Connector Library'::Audio::*;
     private import 'SI'::*;
     private import Motherboard::*;

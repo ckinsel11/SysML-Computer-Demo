@@ -8,3 +8,5 @@ Namespaces as unique elements are going to be separated out as individual .sysml
 I approach the architecture to my code base so that every Namespace is single topic and as narrowly scoped as possible and are organized into their own folders in my git repository. Every file is meant to be contained so there is clear scope, understandability, ease of use, re-use, and maintainability.
 
 Catalogs of components or standard interfaces will be very large files and that makes a lot of sense as it will contain all definitions for that kind of part. Generic definitions, processes, will each get their own file as well. 
+## Ownership
+An interesting consideration for architecting the code base of SysML is ownership of the content. One team may own the attributes and features, but another team owns and defines the interfaces. In more detail, a  SysML person may set out to define the abstract properties and features of Electrical power as a common standard. Electrical engineers may own and maintain the library of Electrical power interfaces (3.3 V DC In/out).

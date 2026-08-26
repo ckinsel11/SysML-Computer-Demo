@@ -17,7 +17,7 @@ library package 'Cable Connector Library'{
             doc /*  */
         }
     }
-    package USB {
+    package 'USB Connectors' {
         port def 'Standard-A Connector' :> 'Cable Connector' {
             doc /*  USB A Standard physical connector not tied to the communication interface*/
                 port CA :>> CA : 'USB Contact Arrangements'::'USB Type A';

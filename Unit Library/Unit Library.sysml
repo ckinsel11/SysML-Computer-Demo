@@ -60,4 +60,12 @@ package 'Unit Library' {
             }
         }
     }
+    package 'Time' {
+        attribute <ms> millisecond :> second {
+            :>>unitConversion:MeasurementReferences::ConversionByPrefix {
+                :>>prefix = milli;
+                :>>referenceUnit = second;
+            }
+        }
+    }
 }

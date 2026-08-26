@@ -1,7 +1,23 @@
-library package 'Communication Interface Library' {
+library package 'Common Interface Library' {
     private import ScalarValues::*;
     private import 'Unit Library'::'Data Transfer'::*;
 
+    abstract port def Signal {
+        doc /*  */
+    }
+
+    metadata def 'Mechanical Port' {
+        doc /*  */
+    }
+    metadata def 'HMI Port' {
+        doc /*  */
+    }
+    metadata def 'Communication Port' {
+        doc /*  */
+    }
+    metadata def 'Fluid Port' {
+        doc /*  */
+    }
     package 'Abstract Definitions' {
     }
     package 'Video Interfaces' {
@@ -40,72 +56,6 @@ library package 'Communication Interface Library' {
         }
         port def VGA {
             doc /* Video Graphics Array */
-        }
-    }
-    package 'Peripheral Interfaces' {
-        abstract port def 'USB' {
-            doc /* Generic Standard USB Communication Interface */
-            attribute 'Signaling Rate' : Real;
-            port VBus {
-                doc /* +5 V */
-            }
-            port 'D+' {
-                doc /* Data+ */
-            }
-            port 'D-' {
-                doc /* Data- */
-            }
-            port GND {
-                doc /* Ground */
-            }
-        }
-        abstract port def 'USB Superspeed' :> 'USB' {
-            doc /*  */
-            port 'SSTX+' {
-                doc /* SuperSpeed Transmit+ */
-            }
-            port 'SSTX-' {
-                doc /* SuperSpeed Transmit- */
-            }
-            port 'SSRX+' {
-                doc /* SuperSpeed Receive+ */
-            }
-            port 'SSRX-' {
-                doc /* SuperSpeed Receive- */
-            }
-        }
-
-        port def 'USB 1.0' :> USB {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
-        }
-        port def 'USB 1.1' :> USB {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 12 ['Mbit/s'];
-        }
-        port def 'USB 2.0' :> USB {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 480 ['Mbit/s'];
-        }
-        port def 'USB 3.0' :> 'USB Superspeed' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 5 ['Gbit/s'];
-        }
-        port def 'USB 3.1' :> 'USB Superspeed' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 10 ['Gbit/s'];
-        }
-        port def 'USB 3.2' :> 'USB Superspeed' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 20 ['Gbit/s'];
-        }
-        port def 'USB4' :> 'USB Superspeed' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 40 ['Gbit/s'];
-        }
-        port def 'USB4 2.0' :> 'USB Superspeed' {
-            doc /*  */
-            attribute :>> 'Signaling Rate' = 80 ['Gbit/s'];
         }
     }
     package 'Audio Interfaces'{
