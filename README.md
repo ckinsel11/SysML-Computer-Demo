@@ -6,21 +6,21 @@ This repository provides an example project demonstrating the use of SysML versi
 
 ## Project Structure
 
-- **Computer Example/**: Example model of a personal computer system
-  - **Hardware Catalogs/**: Library of hardware components by vendor (Cases, CPU, CPU Cooler, GPU, Memory, Motherboard, Power Supply, Storage)
-  - **Hardware Definitions/**: Typical definitions for hardware components (Case, Computer, CPU Cooler, CPU, Memory, Motherboard, Power Supply, Storage, Video Card)
-  - **Requirements/**: Example requirements and derivation for a personal computer system
+- **Computer Example**: Example model of a personal computer system
+  - **Hardware Catalogs**: Library of hardware components by vendor (Cases, CPU, CPU Cooler, GPU, Memory, Motherboard, Power Supply, Storage)
+  - **Hardware Definitions**: Typical definitions for hardware components (Case, Computer, CPU Cooler, CPU, Memory, Motherboard, Power Supply, Storage, Video Card)
+  - **Requirements**: Example requirements and derivation for a personal computer system
+  - **Processes**: Activity based processes around a the computer example such as assembly or wiring
 
-- **Data Model/**: Logical data model definitions
+- **Data Model**: Logical data model definitions
 
-- **Generic Three Layer Architecture/**: Generic Architecture and Approach using terms such as System, Subsystem, Component, where
- - there isn't any specific detail
+- **Generic Three Layer Architecture/**: Generic Architecture and Approach using terms such as System, Subsystem, Component, where there isn't any specific detail
 
 - **Hardware Interface Library/**: Library of hardware specific interfaces (Cable Connectors, CPU sockets etc.)
 
 - **Interface Standards/**: Library of standard communication type interfaces (HDMI, ETH, USB, etc.)
 
-- **Processes/**: Typical Systems Engineering Process definitions and are specifically used/referenced and executed in this project.
+- **SE Processes/**: Typical Systems Engineering Process definitions and are specifically used/referenced and executed in this project.
 
 - **Profile/**: SysML Profile. Place to set up and define broad use metadata.
 
