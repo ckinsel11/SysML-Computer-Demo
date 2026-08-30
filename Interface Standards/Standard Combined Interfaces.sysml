@@ -113,7 +113,7 @@ package 'Combined Interfaces Library' {
     }
     port def 'PCIe 6-Pin Power Standard Interface' {
         doc /* 6-pin power connector (75W) for PCIe */
-        port connector : PCIe::'PCIe 6-pin Power Connector';
+        port connector : 'PCIe Connectors'::'PCIe 6-pin Power Connector';
         port signal1; //+12V
         port signal2; //GND
         port signal3; //Sense
@@ -127,7 +127,7 @@ package 'Combined Interfaces Library' {
     } 
     port def 'PCIe 8-Pin Power Standard Interface' {
         doc /* 6-pin power connector (150W) for PCIe */
-        port connector : PCIe::'PCIe 8-pin Power Connector';
+        port connector : 'PCIe Connectors'::'PCIe 8-pin Power Connector';
         port signal1; //+12V
         port signal2; //GND
         port signal3; //Sense 0

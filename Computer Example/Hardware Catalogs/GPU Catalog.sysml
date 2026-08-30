@@ -11,7 +11,7 @@ package 'GPU Catalog' {
             attribute :>> 'Core Clock' = 2300 [MHz];
             attribute :>> Length = 306 [mm];
             port 'GPU-HDMI' [1] : 'HDMI Connectors'::'Type A';
-            port 'GPU-DP' [3] : DisplayPort::DisplayPort;
+            port 'GPU-DP' [3] : 'DisplayPort Connectors'::DisplayPort;
         }
     }
     package Gigabyte {
@@ -21,7 +21,7 @@ package 'GPU Catalog' {
             attribute :>> 'Boost Clock' = 1708 [MHz];
             attribute :>> Length = 293 [mm];
             port 'GPU-HDMI'[2] : 'HDMI Connectors'::'Type A';
-            port 'GPU-DP'[3] : DisplayPort::DisplayPort;
+            port 'GPU-DP'[3] : 'DisplayPort Connectors'::DisplayPort;
             port 'GPU-DVI'[1];
         }
     }

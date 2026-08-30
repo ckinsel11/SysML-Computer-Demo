@@ -16,7 +16,7 @@ package 'Motherboard Catalog' {
             port HDMI1 [1]: 'HDMI Connectors'::'Type A';
             port 'USB-A' [9] : 'USB A Standard Interface'; 
             port 'USB-C' [4] : 'USB C Standard Interface';
-            port 'Line Out' [1] : Audio::'3.5 mm - 4-Contact';
+            port 'Line Out' [1] : 'Audio Connectors'::'3.5 mm - 4-Contact';
             port '5G' [1];
             port 'SPDIF' [1]; 
         }
@@ -31,7 +31,7 @@ package 'Motherboard Catalog' {
             port 'USB-C' [1] : 'USB C Standard Interface'; /* USB 3.1*/
             port 'Gigabit Lan' [1];
             port 'PS/2' [1];
-            port 'DisplayPort1' [1] : DisplayPort::DisplayPort;
+            port 'DisplayPort1' [1] : 'DisplayPort Connectors'::DisplayPort;
             port 'DVI1' [1];
         }
     }

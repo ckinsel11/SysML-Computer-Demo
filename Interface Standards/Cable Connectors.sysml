@@ -9,10 +9,10 @@ library package 'Cable Connector Library'{
     package 'HDMI Connectors' {
         port def 'Type A' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : HDMI::'HDMI Type A';
+            port :>> CA : 'HDMI Contact Arrangements'::'HDMI Type A';
         }
     }
-    package DisplayPort {
+    package 'DisplayPort Connectors' {
         port def 'DisplayPort'{
             doc /*  */
         }
@@ -53,44 +53,44 @@ library package 'Cable Connector Library'{
             port :>> CA : 'USB Contact Arrangements'::'USB Type C';
         }
     }
-    package Audio {
+    package 'Audio Connectors'{
         port def '3.5 mm - 4-Contact' :> 'Cable Connector'{
             doc /*  */
-            port CA :>> CA : 'Phone Connectors'::TRRS;
+            port CA :>> CA : 'Phone Connectors Contact Arrangements'::TRRS;
         }
         port def XLR :> 'Cable Connector'{
             doc /*  */
-            port CA :>> CA : 'XLR Connectors'::'XLR 3-Pin';
+            port CA :>> CA : 'XLR Connector Contact Arrangements'::'XLR 3-Pin';
         }
     }
     package 'ATX Connectors' {
         port def '24-Pin Connector' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : ATX::'ATX 24-Pin';
+            port :>> CA : 'ATX Contact Arrangements'::'ATX 24-Pin';
         }
         port def '18-Pin Connector' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : ATX::'ATX 18-Pin';
+            port :>> CA : 'ATX Contact Arrangements'::'ATX 18-Pin';
         }
         port def '10-Pin Connector' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : ATX::'ATX 10-Pin';
+            port :>> CA : 'ATX Contact Arrangements'::'ATX 10-Pin';
         }
     }
-    package 'PCIe' {
+    package 'PCIe Connectors' {
         port def 'PCIe 6-pin Power Connector' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : 'PCI Express'::'PCIe 6-Pin';
+            port :>> CA : 'PCI Express Contact Arrangements'::'PCIe 6-Pin';
         }
         port def 'PCIe 8-pin Power Connector' :> 'Cable Connector' {
             doc /*  */
-            port :>> CA : 'PCI Express'::'PCIe 8-Pin';
+            port :>> CA : 'PCI Express Contact Arrangements'::'PCIe 8-Pin';
         }
     }
     package 'EPS Connectors' {
         port def 'EPS 8-Pin Connector' {
             doc /*  */
-            port CA : EPS::'EPS 8-Pin';
+            port CA : 'EPS Contact Arrangements'::'EPS 8-Pin';
         }
     }
 }

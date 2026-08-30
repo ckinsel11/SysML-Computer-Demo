@@ -93,3 +93,6 @@ The keyword connection creates the usage of a link between two elements, which i
 To get to the pins and signals you need to navigate the chain to those specific elements. For the pins, we go through the physical connector, which as the CA as an element, and then the CA defines the pins. The signal goes straight to the individual signals of the communication interface.
 
 For creating these connections, I go in pinout order, so that it can be easily rendered as a pin-out table.
+
+# Why this level of detail?
+This may seem like I am way to low level of detail for a systems architecture model by capturing pin outs, cable connectors and those interfaces. The major consideration for something at this level of detail is the verification of the design and that the cables do in-fact have the correct pin-to-pin connections and that the expected signal out of Box A reaches goes in to the expected signal for Box B. It is very easy on cable drawings to flip signs (+/-) or reverse the names of things. By capturing this data we can further verify the drawings are consistent with the architecture all before any metal is even ordered.

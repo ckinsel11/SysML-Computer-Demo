@@ -1,5 +1,5 @@
 package 'Contact Arrangements' {
-    package 'USB Contact Arrangements'{
+    package 'USB Contact Arrangements' {
         port def 'USB Type A' {
             port '1';
             port '2';
@@ -109,7 +109,7 @@ package 'Contact Arrangements' {
             port B12;
         }
     }
-    package HDMI{
+    package 'HDMI Contact Arrangements' {
         port def 'HDMI Type A' {
             port '1';
             port '2';
@@ -132,7 +132,7 @@ package 'Contact Arrangements' {
             port '19';
         }
     }
-    package ATX {
+    package 'ATX Contact Arrangements' {
         port def 'ATX 24-Pin' {
             //NOTE: These are numbered as if looking into the Power Supply
             port '1';
@@ -195,7 +195,7 @@ package 'Contact Arrangements' {
             port '10';
         }
     }
-    package EPS {
+    package 'EPS Contact Arrangements' {
         port def 'EPS 8-Pin' {
             port '1';
             port '2';
@@ -207,7 +207,7 @@ package 'Contact Arrangements' {
             port '8';
         }
     }
-    package 'PCI Express' {
+    package 'PCI Express Contact Arrangements' {
         port def 'PCIe 6-Pin' {
             port '1';
             port '2';
@@ -227,7 +227,7 @@ package 'Contact Arrangements' {
             port '8';
         }
     }
-    package 'SATA' {
+    package 'SATA Contact Arrangements' {
         port def 'SATA Power' {
             port '1';
             port '2';
@@ -255,7 +255,7 @@ package 'Contact Arrangements' {
             port '7';
         }
     }
-    package 'Phone Connectors' {
+    package 'Phone Connectors Contact Arrangements' {
         port def 'TS'{
             port 'Tip';
             port 'Sleeve';
@@ -279,7 +279,7 @@ package 'Contact Arrangements' {
             port 'Sleeve';
         }
     }
-    package 'XLR Connectors' {
+    package 'XLR Connector Contact Arrangements' {
         port def 'XLR 3-Pin' {
             port '1';
             port '2';

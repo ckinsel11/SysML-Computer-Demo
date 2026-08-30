@@ -3,7 +3,7 @@ package 'Cases Catalog' {
     private import Case::*;
     private import 'Combined Interfaces Library'::*;
     private import 'Cable Connector Library'::'USB Connectors'::*;
-    private import 'Cable Connector Library'::Audio::*;
+    private import 'Cable Connector Library'::'Audio Connectors'::*;
     private import 'SI'::*;
     private import Motherboard::*;
     
@@ -23,8 +23,8 @@ package 'Cases Catalog' {
         part def 'Vanguard-RGB' :> Case {
             attribute :>>'Case Type' = 'enum_Case Type'::'Mid-Tower';
             attribute :>>'Internal 3.5 Bays' = 3;
-            port 'USB 2.0 Type A'[2] : 'USB A Standard Interface';
-            port 'USB 3.0 Type A'[2] : 'USB A Standard Interface';
+            port 'USB 2.0 Type A'[2] : 'USB 2.0 Standard A Interface';
+            port 'USB 3.0 Type A'[2] : 'USB 3.2 A Standard Interface';
             port 'Microphone' : '3.5 mm - 4-Contact';
             port 'Headphone' : '3.5 mm - 4-Contact';
         }
