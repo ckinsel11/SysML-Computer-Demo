@@ -86,6 +86,11 @@ package 'Process Definition' {
             action 'Verify Synchronization' {
                 doc /* We always want to verify our work. For requirement synchronization, we are looking for 1) the full set of requirements was synchronized, 2) that the necessary attributes are successfully transferred and 3) that we also have the unique identifiers from our requirements management tool. This will enable our traceability from our authored requirements can be established to the appropriate source.*/
             }
+            
+            first start then 'Identify Requirements to be Synchronized';
+            first 'Identify Requirements to be Synchronized' then 'Synchronize from Requirements Management Tool to System Architecture Tool';
+            first 'Synchronize from Requirements Management Tool to System Architecture Tool' then 'Verify Synchronization';
+            first 'Verify Synchronization' then done;
         }
         action def 'Synchronize Authored Requirements'{
             doc /* This is the process for synchronizing a set of authored requirements from a system architecture/system analysis tool to a requirements management tool. */
@@ -114,7 +119,15 @@ package 'Process Definition' {
             }
             action 'Record Results' {
                 doc /* Record the selected alternative along with reasoning and rationale for the decision being made.  */
+
             first start then 'Identify Requirements and Assumptions';
+            first 'Identify Requirements and Assumptions' then 'Identify Alternatives for Consideration';
+            first 'Identify Alternatives for Consideration' then 'Identify Evaluation Criteria';
+            first 'Identify Evaluation Criteria' then 'Weight Selection Criteria';
+            first 'Weight Selection Criteria' then 'Define Criteria Scoring Scale';
+            first 'Define Criteria Scoring Scale' then 'Conduct Evaluation of Alternatives';
+            first 'Conduct Evaluation of Alternatives' then 'Record Results';
+            first 'Record Results' then done;
             }
         }
     }

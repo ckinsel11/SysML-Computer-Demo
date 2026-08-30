@@ -1,6 +1,5 @@
 library package 'Common Interface Library' {
     private import ScalarValues::*;
-    private import 'Unit Library'::'Data Transfer'::*;
 
     abstract port def Signal {
         doc /*  */

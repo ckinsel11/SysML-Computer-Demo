@@ -17,7 +17,7 @@ package 'Agile Tasking States' {
             state 'Verification' {
                 doc /*  */
             }
-            state 'Done' {
+            state 'Completed' { //I am using completed instead of done, to avoid conflicting with done keyword in sysML v2 language.
                 doc /* This is the state of a task that has been completed. */
             }
             state 'Overcome by Events' {
@@ -31,7 +31,7 @@ package 'Agile Tasking States' {
             transition 
                 first 'Verification'
                 do send new 'Done Decision'
-                then Done; //TODO: This is currently an error, but I want to trigger Unresolved to resolved based on this transition. 
+                then Completed; //TODO: This is currently an error, but I want to trigger Unresolved to resolved based on this transition. 
 
             transition Backlog2OBE 
                 first Backlog 

@@ -30,16 +30,36 @@ package 'Combined Interfaces Library' {
         ref connection connect connector.CA.'4' to signal.'GND';
         //TODO Discuss male/female interfaces
     }
-    port def 'USB 3.2 A Standard Interface' :> 'USB A Standard Interface' {
-        doc /* The typical commercial USB Type A interface with USB 3.2 support */
+    port def 'USB 1.0 Standard A Interface' :> 'USB A Standard Interface' {
+        doc /*  */
+        port signal :>> signal : 'USB 1.0';
+    }
+    port def 'USB 1.1 Standard A Interface' :> 'USB A Standard Interface' {
+        doc /*  */
+        port signal :>> signal : 'USB 1.1';
+    }
+    port def 'USB 2.0 Standard A Interface' :> 'USB A Standard Interface' {
+        doc /*  */
+        port signal :>> signal : 'USB 2.0';
+    }
+    port def 'USB 3.0 A Standard Interface' :> 'USB A Standard Interface' {
+        doc /* The typical commercial USB Type A interface with USB 3.0 support */
         port connector :>> connector : 'USB Connectors'::'Standard-A SuperSpeed Connector';
-        port signal :>> signal : 'USB 3.2';
+        port signal :>> signal : 'USB 3.0';
 
         ref connection connect connector.'CA-SuperSpeed'.'5' to signal.'SSRX-';
         ref connection connect connector.'CA-SuperSpeed'.'6' to signal.'SSRX+';
         ref connection connect connector.'CA-SuperSpeed'.'7' to signal.'GND_Drain';
         ref connection connect connector.'CA-SuperSpeed'.'8' to signal.'SSTX-';
         ref connection connect connector.'CA-SuperSpeed'.'9' to signal.'SSTX+';
+    }
+    port def 'USB 3.1 A Standard Interface' :> 'USB 3.0 A Standard Interface' {
+        doc /*  */
+        port signal :>> signal :'USB 3.1';
+    }
+        port def 'USB 3.2 A Standard Interface' :> 'USB 3.0 A Standard Interface' {
+        doc /*  */
+        port signal :>> signal :'USB 3.2';
     }
     port def 'USB C Standard Interface' {
         doc /* The typical commercial USB Type C interface */
