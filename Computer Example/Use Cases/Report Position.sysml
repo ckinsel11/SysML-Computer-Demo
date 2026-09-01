@@ -5,7 +5,7 @@ package 'Report Mouse Position' {
         objective {
             doc /* Control on-screen mouse position */
         }
-        subject computer : Computer{
+        subject computer : Computer {
             event occurrence setMousePosition;
         }
         actor user {

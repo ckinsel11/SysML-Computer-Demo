@@ -1,6 +1,6 @@
 package 'Agile Tasking States' {
-    item def 'OBE Decision';
-    item def 'Done Decision';
+    item def 'OBE Decision Signal';
+    item def 'Done Decision Signal';
     exhibit state 'Agile Tasking States' parallel {
         doc /* This is a state machine that defines the various states that a task can be in during an agile development process. */
         state 'Task States' {
@@ -30,22 +30,21 @@ package 'Agile Tasking States' {
             transition first 'In Progress' then 'Verification';
             transition 
                 first 'Verification'
-                do send new 'Done Decision'
+                do action send new 'Done Decision Signal'() to self //TODO evaluate this as this probably isn't to self or if it is i need to comment it
                 then Completed; //TODO: This is currently an error, but I want to trigger Unresolved to resolved based on this transition. 
 
             transition Backlog2OBE 
                 first Backlog 
-                accept 'OBE Decision' 
+                accept 'OBE Decision Signal' 
                 then 'Overcome by Events';
             transition TODO2OBE
                 first 'To Do'
-                accept 'OBE Decision'
+                accept 'OBE Decision Signal'
                 then 'Overcome by Events';
             transition InProgress2OBE
                 first 'In Progress'
-                accept 'OBE Decision'
+                accept 'OBE Decision Signal'
                 then 'Overcome by Events';
-
         }
         state Resolution {
             doc /* This is a state machine that describes the resolution states for an agile task */
@@ -58,7 +57,11 @@ package 'Agile Tasking States' {
             transition first start then Unresolved;
             transition 
                 first Unresolved 
-                accept 'OBE Decision' or 'Done Decision' //TODO: Would like to have 2 alternative triggers to this
+                accept 'OBE Decision Signal'
+                then Resolved;
+            transition 
+                first Unresolved 
+                accept 'Done Decision Signal' //TODO: could there be one transition with multiple triggers
                 then Resolved;
         }
     }
