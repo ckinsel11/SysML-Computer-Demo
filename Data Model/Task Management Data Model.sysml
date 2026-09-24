@@ -41,27 +41,27 @@ package 'Task and Release Management' {
     }
     package 'Task Attributes' {
         item def Summary {
-            doc /*  */
+            doc /* The title of the task */
         }
         item def Description {
-            doc /*  */
+            doc /* A detailed explanation of the task */
         }
         item def Status {
-            doc /*  */
+            doc /* The current status of the task. For example: To Do, In Progress, Done */
         }
         item def Assignee {
-            doc /*  */
+            doc /* The person responsible for completing the task */
         }
         item def Reporter {
-            doc /*  */
+            doc /* The person who reported the issue */
         }
         item def Priority {
-            doc /*  */
+            doc /* The priority of the task */
         }
     }
     package 'Product Release Attributes' {
         item def 'Product Release' {
-            doc /*  */
+            doc /* A versioned collection of features and fixes delivered as a single unit. */
             
             item ticket [1..*] : 'Types of Tickets'::Ticket;
         }

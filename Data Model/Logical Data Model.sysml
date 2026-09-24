@@ -22,11 +22,11 @@ package 'Logical Data Model' {
     }
     package 'Types of Source Documents'{
         item def 'Requirement Specification' :> 'Source Document Attributes'::'Source Document'{
-            doc /*  */
+            doc /* A requirement specification is a document that defines the requirements for a system or component. */
             item Requirement [1..*] : 'Requirement Attributes'::Requirement;
 
             item def 'System Requirement Specification' :> 'Requirement Specification' {
-                doc /*  */
+                doc /* A system requirement specification is a document that defines the system-level requirements. */
                 item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'System Requirement';
                 
                 item def 'System Requirement Specification Baseline' :> 'System Requirement Specification', 'Requirement Specification Baseline' {
@@ -34,7 +34,7 @@ package 'Logical Data Model' {
                 }
             }
             item def 'Subsystem Requirement Specification' :> 'Requirement Specification' {
-                doc /*  */
+                doc /* A subsystem requirement specification is a document that defines the subsystem-level requirements. */
                 item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'Subsystem Requirement';
 
                 item def 'Subsystem Requirement Specification Baseline' :> 'Subsystem Requirement Specification', 'Requirement Specification Baseline' {
@@ -42,14 +42,14 @@ package 'Logical Data Model' {
                 }
             }
             item def 'Component Requirement Specification' :> 'Requirement Specification' {
-                doc /*  */
+                doc /* A component requirement specification is a document that defines the component-level requirements. */
                 item Requirement [1..*] :>> Requirement : 'Requirement Abstraction Levels'::'Component Requirement';
                 item def 'Component Requirement Specification Baseline' :> 'Component Requirement Specification', 'Requirement Specification Baseline' {
                     doc /*  */
                 }
             }
             item def 'Requirement Specification Baseline' {
-                doc /*  */
+                doc /* A requirement specification baseline is a frozen version of a requirement specification that serves as a reference point for future comparisons and changes. */
             }
         }
     }

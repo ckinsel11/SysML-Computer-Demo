@@ -1,5 +1,6 @@
 package 'Analysis Attributes' {
     abstract item def 'Analytic Context' {
+        doc /* A general element that provides all the necessary attributes for an analysis. These are generally the header information */
         item 'Analysis Name' : 'Analysis Attributes'::'Analysis Name';
         item Goal : 'Analysis Attributes'::Goal;
         item 'Analysis Priority' : 'Analysis Attributes'::'Analysis Priority';
@@ -57,7 +58,7 @@ package 'Analysis Attributes' {
     item def 'Goal Value' {
         doc /* Desired value of an analysis. AKA what we are solving for.*/
     }
-    item def 'Given Value' {
+    abstract item def 'Given Value' {
         doc /* A known value for an analysis. */
 
         item def 'Assumption Parameter' :> 'Given Value' {
@@ -69,7 +70,7 @@ package 'Analysis Attributes' {
     }
 }
 package 'Analyses and Procedures' {
-    item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
+    abstract item def 'Analysis Case' :> 'Analysis Attributes'::'Analytic Context' {
         doc /* An analysis case is used to derive requirements from a set of higher level requirements to lower level architecture elements. */
 
         item 'Scoping Requirement' [1..*] : 'Requirement Derivation Abstraction Levels'::'Scoping Requirement';
@@ -99,7 +100,7 @@ package 'Analyses and Procedures' {
     item def 'Threat Scenario' :> 'Analysis Attributes'::'Analytic Context' {
         doc /* This analysis looks at the functionality of a the system and it's response under attack from external systems or actors. This is different from functional analyses in that there aren't lower-level requirements being authored.*/
     }
-    item def 'Procedure Case' :> 'Analysis Attributes'::'Analytic Context'{
+    abstract item def 'Procedure Case' :> 'Analysis Attributes'::'Analytic Context'{
         doc /* Describes processes that are executed with the physical manifestation of the system or sub-elements */
         item def 'Verification Procedure' :> 'Procedure Case' {
             doc /* Process to provide objective evidence that a system or element meets the specified requirement(s) */
@@ -124,38 +125,38 @@ package 'Analyses and Procedures' {
 }
 package 'Analysis Results' {
     item def 'Analysis Result' {
-        doc /*  */
+        doc /* The end result of an analysis. Usually, this will be a set of requirements */
         item 'Resulting Requirement' [1..*] :'Requirement Derivation Abstraction Levels'::'Resulting Requirement';
         // There is a relation of 1..* "Architecture Element" here.
 
         item def 'Function Block' :> 'Analysis Result'{
-            doc /*  */
+            doc /* Element that contains a behavior and set of specifying requirements */
         }
         item def 'Goal Value' :> 'Analysis Result'{
-            doc /*  */
+            doc /* The value calculated or derived during the analysis. This is the result of a performance analysis */
         }
         item def 'Constraint Requirement Block' :> 'Analysis Result'{
-            doc /*  */
+            doc /* A set of lower level requirements derived during a constraint analysis */
         }
         item def 'Chosen Alternative' :> 'Analysis Result'{
-            doc /*  */
+            doc /* The alternative that has been selected for implementation based on the trade study or analysis of alternatives */
         }
     }
 }
 package 'Trade Study Attributes' {
     item def 'Measure of Effectiveness'{
-        doc /*  */
+        doc /* A measure of effectiveness is a quantitative or qualitative metric used to evaluate the performance of a system or process. */
         item 'raw Score' : 'Raw Score';
         item 'weight Factor' : 'Weight Factor';
         item 'weighted Score' : 'Weighted Score' = 'raw Score' * 'weight Factor'; // Is there a way to show this as being calculated/derived rather than a standalone property?
     }
     item def 'Raw Score' {
-        doc /*  */
+        doc /* Raw Score is the unweighted measure of effectiveness. This can be a numerical value or a qualitative assessment on a scale. */
     }
     item def 'Weight Factor' {
-        doc /*  */
+        doc /* Weight Factor is the factor used to weight the raw score. Weight factors should total 1.0 across all measures of effectiveness.*/
     }
     item def 'Weighted Score' {
-        doc /*  */
+        doc /* Weighted Score is the product of the raw score and the weight factor */
     }
 }
